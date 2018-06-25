@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'org.jetbrains.dokka-android'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion rootProject.ext.compile_sdk_version
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.min_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api "com.android.support:appcompat-v7:$support_version"
+    api "com.android.support:support-v4:$support_version"
+//    api "com.android.support:recyclerview-v7:$support_version"
+    api "com.android.support:cardview-v7:$support_version"
+    api "com.android.support:design:$support_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_layout"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // ViewModel and LiveData
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    // Room
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    // Paging
+//    implementation 'android.arch.paging:runtime:1.0.0-alpha6'
+    // Test helpers for LiveData
+//    testImplementation 'android.arch.core:core-testing:1.1.0'
+    // Test helpers for Room
+//    testImplementation 'android.arch.persistence.room:testing:1.0.0'
+    // Java8 support for Lifecycles
+    implementation 'android.arch.lifecycle:common-java8:1.1.1'
+    annotationProcessor "com.android.databinding:compiler:$android_plugin_version"
+
+    api 'com.github.boybeak:selector:1.2.7'
+
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api 'io.reactivex.rxjava2:rxjava:2.1.14'
+}
+
+dokka {
+    outputFormat = 'html'
+    outputDirectory = '$buildDir/javadoc'
+}
+
+apply from: 'deploy.gradle'

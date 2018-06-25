@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.boybeak.starter" >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <activity android:name=".activity.PermissionAgentActivity"
+            android:theme="@style/TransparentTheme"/>
+    </application>
+</manifest>

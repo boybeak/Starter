@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="footer"
+            type="com.github.boybeak.starter.adapter.footer.Footer"/>
+    </data>
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:footerState="@{footer.state}"
+            app:footerMessage="@{footer.message}"
+            >
+            <ProgressBar
+                android:id="@+id/footer_pb"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:padding="8dp"
+                style="@style/Widget.AppCompat.ProgressBar"/>
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/footer_msg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="@string/font_family_thin"
+                android:textStyle="italic"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

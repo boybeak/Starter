@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_empty_default">无内容</string>
+    <string name="text_empty_default">无数据</string>
+    <string name="text_empty_button_default">重试</string>
+
+    <string name="text_dialog_positive">确定</string>
+    <string name="text_dialog_negative">取消</string>
+    <string name="text_dialog_forward">前往</string>
+    <string name="text_dialog_neutral_go_to_permission_setting">设置</string>
+    <string name="text_dialog_permission_need">应用需要权限\"%1$s\".</string>
+    <string name="text_dialog_permission_denied">\"%1$s\"权限被禁止.</string>
+</resources>

@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>BaseDialogFragment - starter</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.fragment</a>&nbsp;/&nbsp;<a href=".">BaseDialogFragment</a><br/>
+<br/>
+<h1>BaseDialogFragment</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BaseDialogFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">DialogFragment</span><span class="symbol">, </span><a href="../../com.github.boybeak.starter/-i-life/index.html"><span class="identifier">ILife</span></a></code>
+<p>Created by gaoyunfei on 2018/3/20.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">BaseDialogFragment</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Created by gaoyunfei on 2018/3/20.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="is-alive.html">isAlive</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">isAlive</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="activity.html">activity</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">activity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.activity/-base-activity/index.html"><span class="identifier">BaseActivity</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-dialog.html">getDialog</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getDialog</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">AlertDialog</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-activity-created.html">onActivityCreated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onActivityCreated</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.BaseDialogFragment$onActivityCreated(android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-apply-dialog-options.html">onApplyDialogOptions</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onApplyDialogOptions</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.BaseDialogFragment$onApplyDialogOptions(android.support.v7.app.AlertDialog.Builder)/builder">builder</span><span class="symbol">:</span>&nbsp;<span class="identifier">Builder</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-attach.html">onAttach</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onAttach</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.BaseDialogFragment$onAttach(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-create-dialog.html">onCreateDialog</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onCreateDialog</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.BaseDialogFragment$onCreateDialog(android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">AlertDialog</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-destroy-view.html">onDestroyView</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onDestroyView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-detach.html">onDetach</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onDetach</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-view-created.html">onViewCreated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onViewCreated</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.BaseDialogFragment$onViewCreated(android.view.View, android.os.Bundle)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.BaseDialogFragment$onViewCreated(android.view.View, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

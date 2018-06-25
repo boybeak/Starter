@@ -1,0 +1,18 @@
+<resources>
+    <string name="text_done" translatable="false"> -- Done -- </string>
+    <string name="text_failed" translatable="false"> -- Oops!! No Results -- </string>
+    <string name="text_no_more" translatable="false"> -- The End -- </string>
+    <string name="title_empty_default">Nothing here</string>
+    <string name="text_empty_default">No Data Received</string>
+    <string name="text_empty_button_default">Retry</string>
+
+    <string name="text_dialog_positive">OK</string>
+    <string name="text_dialog_negative">DISCARD</string>
+    <string name="text_dialog_forward">Forward</string>
+    <string name="text_dialog_neutral_go_to_permission_setting">Setting</string>
+    <string name="text_dialog_permission_need">This app need the permission \"%1$s\".</string>
+    <string name="text_dialog_permission_denied">Permission \"%1$s\" has been denied. </string>
+
+    <string name="aware_fab_scroll_behavior" translatable="false">com.github.boybeak.starter.widget.ScrollAwareFabBehavior</string>
+    <string name="bottom_hide_behavior" translatable="false">com.github.boybeak.starter.widget.BottomHideBehavior</string>
+</resources>

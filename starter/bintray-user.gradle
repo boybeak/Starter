@@ -1,0 +1,4 @@
+ext {
+    bintray_key='a9a1ffd8cc96b3ccd604dc7f0cdf05057960f9dd'
+
+}

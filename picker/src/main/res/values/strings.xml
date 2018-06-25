@@ -1,0 +1,5 @@
+<resources>
+    <string name="text_dialog_permission_denied">Can not pick images, because permission denied</string>
+    <string name="title_menu_finish">Finish</string>
+    <string name="title_activity_gallery">Gallery</string>
+</resources>

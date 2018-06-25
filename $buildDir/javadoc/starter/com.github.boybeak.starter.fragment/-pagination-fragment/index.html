@@ -1,0 +1,176 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PaginationFragment - starter</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.fragment</a>&nbsp;/&nbsp;<a href=".">PaginationFragment</a><br/>
+<br/>
+<h1>PaginationFragment</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PaginationFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-refresh-list-fragment/index.html"><span class="identifier">RefreshListFragment</span></a></code>
+<p>Created by gaoyunfei on 2018/1/29.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">PaginationFragment</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Created by gaoyunfei on 2018/1/29.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="is-loading.html">isLoading</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isLoading</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-create.html">onCreate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreate</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.PaginationFragment$onCreate(android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-destroy-view.html">onDestroyView</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onDestroyView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-save-instance-state.html">onSaveInstanceState</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onSaveInstanceState</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.PaginationFragment$onSaveInstanceState(android.os.Bundle)/outState">outState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-scroll-bottom.html">onScrollBottom</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">onScrollBottom</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-view-created.html">onViewCreated</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onViewCreated</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.PaginationFragment$onViewCreated(android.view.View, android.os.Bundle)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.PaginationFragment$onViewCreated(android.view.View, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="page.html">page</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">page</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="page-increase.html">pageIncrease</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">pageIncrease</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="page-reset.html">pageReset</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">pageReset</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-loading.html">setLoading</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setLoading</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.PaginationFragment$setLoading(kotlin.Boolean)/loading">loading</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-refresh-list-fragment/dismiss-empty-view.html">dismissEmptyView</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dismissEmptyView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-refresh-list-fragment/get-adapter.html">getAdapter</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getAdapter</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Adapter</span><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-refresh-list-fragment/get-layout-manager.html">getLayoutManager</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getLayoutManager</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LayoutManager</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-refresh-list-fragment/is-empty-view-showing.html">isEmptyViewShowing</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmptyViewShowing</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">isEmptyViewShowing</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$isEmptyViewShowing(android.view.ViewGroup)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-refresh-list-fragment/on-create-view.html">onCreateView</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-refresh-list-fragment/recycler-view.html">recyclerView</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">recyclerView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">RecyclerView</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-refresh-list-fragment/scroll-to-top.html">scrollToTop</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">scrollToTop</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-refresh-list-fragment/show-empty-view.html">showEmptyView</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.String, kotlin.String, kotlin.String, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.String, kotlin.String, kotlin.String, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.String, kotlin.String, kotlin.String, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.String, kotlin.String, kotlin.String, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/icon">icon</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/icon">icon</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/drawable/Drawable.html"><span class="identifier">Drawable</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.fragment.RefreshListFragment$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-refresh-list-fragment/swipe-refresh-layout.html">swipeRefreshLayout</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">swipeRefreshLayout</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">SwipeRefreshLayout</span><span class="symbol">?</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

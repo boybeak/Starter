@@ -1,0 +1,162 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GroupCardAdapter - starter</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.adapter.card</a>&nbsp;/&nbsp;<a href=".">GroupCardAdapter</a><br/>
+<br/>
+<h1>GroupCardAdapter</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">GroupCardAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Adapter</span><span class="symbol">&lt;</span><span class="identifier">ViewHolder</span><span class="symbol">&gt;</span></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-group-parser/index.html">GroupParser</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">GroupParser</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">GroupCardAdapter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$<init>(android.content.Context, kotlin.Boolean)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$<init>(android.content.Context, kotlin.Boolean)/footerEnable">footerEnable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">GroupCardAdapter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$<init>(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add-group.html">addGroup</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addGroup</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$addGroup(com.github.boybeak.starter.adapter.expandable.Group)/group">group</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.adapter.expandable/-group/index.html"><span class="identifier">Group</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.adapter/-data-change/index.html"><span class="identifier">DataChange</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">addGroup</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$addGroup(com.github.boybeak.starter.adapter.card.GroupCardAdapter.addGroup.T, com.github.boybeak.starter.adapter.card.GroupCardAdapter.GroupParser((com.github.boybeak.starter.adapter.card.GroupCardAdapter.addGroup.T)))/t">t</span><span class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$addGroup(com.github.boybeak.starter.adapter.card.GroupCardAdapter.addGroup.T, com.github.boybeak.starter.adapter.card.GroupCardAdapter.GroupParser((com.github.boybeak.starter.adapter.card.GroupCardAdapter.addGroup.T)))/parser">parser</span><span class="symbol">:</span>&nbsp;<a href="-group-parser/index.html"><span class="identifier">GroupParser</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.adapter/-data-change/index.html"><span class="identifier">DataChange</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="add-groups.html">addGroups</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">addGroups</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$addGroups(kotlin.collections.MutableList((com.github.boybeak.starter.adapter.expandable.Group)))/groups">groups</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../../com.github.boybeak.starter.adapter.expandable/-group/index.html"><span class="identifier">Group</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.adapter/-data-change/index.html"><span class="identifier">DataChange</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">addGroups</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$addGroups(kotlin.collections.MutableList((com.github.boybeak.starter.adapter.card.GroupCardAdapter.addGroups.T)), com.github.boybeak.starter.adapter.card.GroupCardAdapter.GroupParser((com.github.boybeak.starter.adapter.card.GroupCardAdapter.addGroups.T)))/groups">groups</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$addGroups(kotlin.collections.MutableList((com.github.boybeak.starter.adapter.card.GroupCardAdapter.addGroups.T)), com.github.boybeak.starter.adapter.card.GroupCardAdapter.GroupParser((com.github.boybeak.starter.adapter.card.GroupCardAdapter.addGroups.T)))/parser">parser</span><span class="symbol">:</span>&nbsp;<a href="-group-parser/index.html"><span class="identifier">GroupParser</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.adapter/-data-change/index.html"><span class="identifier">DataChange</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-context.html">getContext</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getContext</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-group.html">getGroup</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getGroup</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$getGroup(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.adapter.expandable/-group/index.html"><span class="identifier">Group</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-item-count.html">getItemCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-item-view-type.html">getItemViewType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemViewType</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$getItemViewType(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="is-empty.html">isEmpty</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmpty</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="notify-empty-footer.html">notifyEmptyFooter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifyEmptyFooter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$notifyEmptyFooter(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifyEmptyFooter</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="notify-failed-footer.html">notifyFailedFooter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifyFailedFooter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$notifyFailedFooter(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifyFailedFooter</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="notify-footer.html">notifyFooter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifyFooter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$notifyFooter(kotlin.Int, kotlin.String)/state">state</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$notifyFooter(kotlin.Int, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifyFooter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$notifyFooter(kotlin.Int)/state">state</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="notify-loading-footer.html">notifyLoadingFooter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifyLoadingFooter</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="notify-success-footer.html">notifySuccessFooter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifySuccessFooter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$notifySuccessFooter(kotlin.Int)/msgRes">msgRes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifySuccessFooter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$notifySuccessFooter(kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifySuccessFooter</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-bind-view-holder.html">onBindViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onBindViewHolder</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$onBindViewHolder(android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$onBindViewHolder(android.support.v7.widget.RecyclerView.ViewHolder, kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-create-view-holder.html">onCreateViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateViewHolder</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/viewType">viewType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ViewHolder</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="remove-group.html">removeGroup</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeGroup</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$removeGroup(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.adapter/-data-change/index.html"><span class="identifier">DataChange</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="remove-item-in-group.html">removeItemInGroup</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">removeItemInGroup</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$removeItemInGroup(kotlin.Int, kotlin.Int)/groupPosition">groupPosition</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.card.GroupCardAdapter$removeItemInGroup(kotlin.Int, kotlin.Int)/itemPosition">itemPosition</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.adapter/-data-change/index.html"><span class="identifier">DataChange</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

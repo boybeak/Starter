@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>com.github.boybeak.starter.adapter - starter</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">starter</a>&nbsp;/&nbsp;<a href=".">com.github.boybeak.starter.adapter</a><br/>
+<br/>
+<h2>Package com.github.boybeak.starter.adapter</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-abs-adapter/index.html">AbsAdapter</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbsAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Adapter</span><span class="symbol">&lt;</span><a href="-abs-data-binding-holder/index.html"><span class="identifier">AbsDataBindingHolder</span></a><span class="symbol">&lt;</span><a href="-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-abs-data-binding-holder/index.html">AbsDataBindingHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbsDataBindingHolder</span><span class="symbol">&lt;</span><span class="identifier">Layout</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="-abs-data-binding-holder/index.html"><span class="identifier">AbsDataBindingHolder</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier">B</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-base-data-binding-holder/index.html"><span class="identifier">BaseDataBindingHolder</span></a><span class="symbol">&lt;</span><span class="identifier">B</span><span class="symbol">&gt;</span></code>
+<p>Created by gaoyunfei on 2018/3/8.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-base-data-binding-holder/index.html">BaseDataBindingHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BaseDataBindingHolder</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">B</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span></code>
+<p>Created by gaoyunfei on 2018/3/7.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-base-layout-impl/index.html">BaseLayoutImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">BaseLayoutImpl</span><span class="symbol">&lt;</span><span class="identifier">Data</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">VH</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-abs-data-binding-holder/index.html"><span class="identifier">AbsDataBindingHolder</span></a><span class="symbol">&lt;</span><a href="-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><span class="identifier">Data</span><span class="symbol">,</span>&nbsp;<span class="identifier">VH</span><span class="symbol">&gt;</span></code>
+<p>Created by gaoyunfei on 2018/3/8.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-converter/index.html">Converter</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Converter</span><span class="symbol">&lt;</span><span class="identifier">Data</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">Layout</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="-abs-data-binding-holder/index.html"><span class="identifier">AbsDataBindingHolder</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-data-binding-adapter/index.html">DataBindingAdapter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataBindingAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-abs-adapter/index.html"><span class="identifier">AbsAdapter</span></a></code>
+<p>Created by gaoyunfei on 2018/3/7.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-data-change/index.html">DataChange</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">DataChange</span></code>
+<p>Created by gaoyunfei on 2017/4/27.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-footer-adapter/index.html">FooterAdapter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">FooterAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-data-binding-adapter/index.html"><span class="identifier">DataBindingAdapter</span></a></code>
+<p>Created by gaoyunfei on 2018/3/9.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-layout-impl/index.html">LayoutImpl</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">LayoutImpl</span><span class="symbol">&lt;</span><span class="identifier">Data</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">VH</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="-abs-data-binding-holder/index.html"><span class="identifier">AbsDataBindingHolder</span></a><span class="symbol">&lt;</span><a href="-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Created by gaoyunfei on 2018/3/8.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="-parser/index.html">Parser</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Parser</span><span class="symbol">&lt;</span><span class="identifier">Data</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">&gt;</span></code>
+<p>Created by gaoyunfei on 2018/3/7.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

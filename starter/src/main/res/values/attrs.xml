@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="widthRatio" format="integer"/>
+    <attr name="heightRatio" format="integer"/>
+
+    <declare-styleable name="RatioCardView">
+        <attr name="widthRatio"/>
+        <attr name="heightRatio"/>
+    </declare-styleable>
+    <declare-styleable name="RatioImageView">
+        <attr name="widthRatio"/>
+        <attr name="heightRatio"/>
+    </declare-styleable>
+    <declare-styleable name="RatioViewPager">
+        <attr name="widthRatio"/>
+        <attr name="heightRatio"/>
+    </declare-styleable>
+
+    <declare-styleable name="ViewPagerLayout">
+        <attr name="vpWidthRatio" format="integer"/>
+        <attr name="vpHeightRatio" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="Chip">
+        <attr name="text" format="string"/>
+        <attr name="showImage" format="boolean"/>
+        <attr name="showAction" format="boolean"/>
+        <attr name="actionIcon" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="ProgressBar">
+        <attr name="progressColor" format="color|reference" />
+    </declare-styleable>
+</resources>

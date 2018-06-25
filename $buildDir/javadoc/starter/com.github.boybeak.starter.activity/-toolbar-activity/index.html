@@ -1,0 +1,187 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>ToolbarActivity - starter</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.activity</a>&nbsp;/&nbsp;<a href=".">ToolbarActivity</a><br/>
+<br/>
+<h1>ToolbarActivity</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ToolbarActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-base-activity/index.html"><span class="identifier">BaseActivity</span></a></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">ToolbarActivity</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-base-activity/is-alive.html">isAlive</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">var </span><span class="identifier">isAlive</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="content-layout.html">contentLayout</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">contentLayout</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/FrameLayout.html"><span class="identifier">FrameLayout</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="is-empty-view-showing.html">isEmptyViewShowing</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">isEmptyViewShowing</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-create.html">onCreate</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreate</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$onCreate(android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-content-view.html">setContentView</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setContentView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$setContentView(kotlin.Int)/layoutResID">layoutResID</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setContentView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$setContentView(android.view.View)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setContentView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$setContentView(android.view.View, android.view.ViewGroup.LayoutParams)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$setContentView(android.view.View, android.view.ViewGroup.LayoutParams)/params">params</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup/LayoutParams.html"><span class="identifier">LayoutParams</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="show-empty-view.html">showEmptyView</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/icon">icon</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/drawable/Drawable.html"><span class="identifier">Drawable</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.ToolbarActivity$showEmptyView(android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="toolbar.html">toolbar</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toolbar</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Toolbar</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-base-activity/content-view.html">contentView</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">contentView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-base-activity/decor-view.html">decorView</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">decorView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-base-activity/dismiss-empty-view.html">dismissEmptyView</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">dismissEmptyView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-base-activity/get-toolbar-elevation.html">getToolbarElevation</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getToolbarElevation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-base-activity/is-empty-view-showing.html">isEmptyViewShowing</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">isEmptyViewShowing</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$isEmptyViewShowing(android.view.ViewGroup)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-base-activity/on-destroy.html">onDestroy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onDestroy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-base-activity/on-options-item-selected.html">onOptionsItemSelected</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onOptionsItemSelected</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$onOptionsItemSelected(android.view.MenuItem)/item">item</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/MenuItem.html"><span class="identifier">MenuItem</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-base-activity/set-support-action-bar.html">setSupportActionBar</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSupportActionBar</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$setSupportActionBar(android.support.v7.widget.Toolbar)/toolbar">toolbar</span><span class="symbol">:</span>&nbsp;<span class="identifier">Toolbar</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">setSupportActionBar</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$setSupportActionBar(android.support.v7.widget.Toolbar, kotlin.Boolean)/toolbar">toolbar</span><span class="symbol">:</span>&nbsp;<span class="identifier">Toolbar</span><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$setSupportActionBar(android.support.v7.widget.Toolbar, kotlin.Boolean)/backEnable">backEnable</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-base-activity/show-empty-view.html">showEmptyView</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int)/messageRes">messageRes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyView</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/icon">icon</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyView(kotlin.Int, kotlin.Int, kotlin.Int, kotlin.Int, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-base-activity/show-empty-view-in.html">showEmptyViewIn</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">showEmptyViewIn</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/params">params</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup/LayoutParams.html"><span class="identifier">LayoutParams</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/icon">icon</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/drawable/Drawable.html"><span class="identifier">Drawable</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/autoDismiss">autoDismiss</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-data-binding-toolbar-activity/index.html">DataBindingToolbarActivity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataBindingToolbarActivity</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">B</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ToolbarActivity</span></code>
+<p>Created by gaoyunfei on 2018/2/6.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../-srl-rv-activity/index.html">SrlRvActivity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">SrlRvActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ToolbarActivity</span><span class="symbol">, </span><span class="identifier">OnRefreshListener</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>PagerStateAdapter - starter</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.widget</a>&nbsp;/&nbsp;<a href=".">PagerStateAdapter</a><br/>
+<br/>
+<h1>PagerStateAdapter</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PagerStateAdapter</span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">FragmentStatePagerAdapter</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">PagerStateAdapter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.PagerStateAdapter$<init>(android.support.v4.app.FragmentManager)/fm">fm</span><span class="symbol">:</span>&nbsp;<span class="identifier">FragmentManager</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="destroy-item.html">destroyItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">destroyItem</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.PagerStateAdapter$destroyItem(android.view.ViewGroup, kotlin.Int, kotlin.Any)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.widget.PagerStateAdapter$destroyItem(android.view.ViewGroup, kotlin.Int, kotlin.Any)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.widget.PagerStateAdapter$destroyItem(android.view.ViewGroup, kotlin.Int, kotlin.Any)/object">object</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-fragment-at.html">getFragmentAt</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFragmentAt</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.PagerStateAdapter$getFragmentAt(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-item.html">getItem</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getItem</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.PagerStateAdapter$getItem(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="instantiate-item.html">instantiateItem</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">instantiateItem</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.PagerStateAdapter$instantiateItem(android.view.ViewGroup, kotlin.Int)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.widget.PagerStateAdapter$instantiateItem(android.view.ViewGroup, kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">T</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

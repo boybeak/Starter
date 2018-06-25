@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Router - base</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">base</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter</a>&nbsp;/&nbsp;<a href=".">Router</a><br/>
+<br/>
+<h1>Router</h1>
+<code><span class="keyword">class </span><span class="identifier">Router</span></code>
+<p>Created by gaoyunfei on 2018/1/30.</p>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="category.html">category</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">category</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.github.boybeak.starter.Router$category(kotlin.Array((kotlin.String)))/categories">categories</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="data.html">data</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">data</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router$data(android.net.Uri)/uri">uri</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="go-to.html">goTo</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">goTo</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router$goTo(java.lang.Class((android.app.Activity)))/clz">clz</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/lang/Class.html"><span class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Activity.html"><span class="identifier">Activity</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">goTo</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router$goTo(kotlin.String)/action">action</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="with-boolean.html">withBoolean</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">withBoolean</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router$withBoolean(kotlin.String, kotlin.Boolean)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.Router$withBoolean(kotlin.String, kotlin.Boolean)/boolean">boolean</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="with-int.html">withInt</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">withInt</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router$withInt(kotlin.String, kotlin.Int)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.Router$withInt(kotlin.String, kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="with-parcelable.html">withParcelable</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">withParcelable</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router$withParcelable(kotlin.String, android.os.Parcelable)/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.Router$withParcelable(kotlin.String, android.os.Parcelable)/parcelable">parcelable</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="with-parcelable-list.html">withParcelableList</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">withParcelableList</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router$withParcelableList(kotlin.String, kotlin.collections.List((android.os.Parcelable)))/key">key</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.Router$withParcelableList(kotlin.String, kotlin.collections.List((android.os.Parcelable)))/parcelables">parcelables</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span class="identifier">List</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/os/Parcelable.html"><span class="identifier">Parcelable</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="with-shared-element.html">withSharedElement</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">withSharedElement</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router$withSharedElement(android.view.View, kotlin.String)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.Router$withSharedElement(android.view.View, kotlin.String)/translationName">translationName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">withSharedElement</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router$withSharedElement(android.view.View, kotlin.Int)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.Router$withSharedElement(android.view.View, kotlin.Int)/translationNameRes">translationNameRes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="with.html">with</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router.Companion$with(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router.Companion$with(android.view.View)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">with</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.Router.Companion$with(android.app.Fragment)/fragment">fragment</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/app/Fragment.html"><span class="identifier">Fragment</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Router</span></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AbsAdapter - starter</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.adapter</a>&nbsp;/&nbsp;<a href=".">AbsAdapter</a><br/>
+<br/>
+<h1>AbsAdapter</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbsAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Adapter</span><span class="symbol">&lt;</span><a href="../-abs-data-binding-holder/index.html"><span class="identifier">AbsDataBindingHolder</span></a><span class="symbol">&lt;</span><a href="../-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AbsAdapter</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.AbsAdapter$<init>(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="get-item.html">getItem</a></p>
+</td>
+<td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getItem</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.AbsAdapter$getItem(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span class="symbol">,</span>&nbsp;<a href="../-abs-data-binding-holder/index.html"><span class="identifier">AbsDataBindingHolder</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-item-id.html">getItemId</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemId</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.AbsAdapter$getItemId(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-item-view-type.html">getItemViewType</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getItemViewType</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.AbsAdapter$getItemViewType(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-bind-view-holder.html">onBindViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onBindViewHolder</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.AbsAdapter$onBindViewHolder(com.github.boybeak.starter.adapter.AbsDataBindingHolder((com.github.boybeak.starter.adapter.LayoutImpl((kotlin.Any, com.github.boybeak.starter.adapter.AbsDataBindingHolder((, android.databinding.ViewDataBinding)))), )), kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<a href="../-abs-data-binding-holder/index.html"><span class="identifier">AbsDataBindingHolder</span></a><span class="symbol">&lt;</span><a href="../-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.AbsAdapter$onBindViewHolder(com.github.boybeak.starter.adapter.AbsDataBindingHolder((com.github.boybeak.starter.adapter.LayoutImpl((kotlin.Any, com.github.boybeak.starter.adapter.AbsDataBindingHolder((, android.databinding.ViewDataBinding)))), )), kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-create-view-holder.html">onCreateViewHolder</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateViewHolder</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.AbsAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.AbsAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/viewType">viewType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-abs-data-binding-holder/index.html"><span class="identifier">AbsDataBindingHolder</span></a><span class="symbol">&lt;</span><a href="../-layout-impl/index.html"><span class="identifier">LayoutImpl</span></a><span class="symbol">&lt;</span><span class="identifier">*</span><span class="symbol">,</span>&nbsp;<span class="identifier">*</span><span class="symbol">&gt;</span><span class="symbol">,</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../../com.github.boybeak.starter.adapter.card/-card-adapter/index.html">CardAdapter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CardAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AbsAdapter</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-data-binding-adapter/index.html">DataBindingAdapter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">DataBindingAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AbsAdapter</span></code>
+<p>Created by gaoyunfei on 2018/3/7.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../../com.github.boybeak.starter.adapter.expandable/-expandable-adapter/index.html">ExpandableAdapter</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ExpandableAdapter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AbsAdapter</span></code>
+<p>Created by gaoyunfei on 2018/3/28.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
