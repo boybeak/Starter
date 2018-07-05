@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AbsTheme" parent="Theme.AppCompat.Light">
+    <!--<style name="AbsTheme" parent="Theme.AppCompat.Light">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-    </style>
+    </style>-->
     <style name="ToolbarStyle">
         <item name="android:background">@android:color/white</item>
         <item name="android:minHeight">?attr/actionBarSize</item>

@@ -1,13 +1,13 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
-apply from: 'bintray-user.gradle'
+apply from: '../bintray-user.gradle'
 
 ext {
     // This configuration will result in:
     // compile '<groupId>:<artifactId>:<libVersion>'
     groupId = 'com.github.boybeak' // package name of the project
-    artifactId = "starter" // module name of the library
-    libVersion = "0.0.3"
+    artifactId = "safr" // module name of the library
+    libVersion = "0.0.1"
 }
 version = libVersion
 group = groupId
@@ -23,7 +23,7 @@ bintray {
     // properties (like userOrg, desc, etc).
     pkg {
         repo = "nulldreams" //bintray repo
-        name = "starter" //bintray package
+        name = "safr" //bintray package
         version {
             name = libVersion
         }

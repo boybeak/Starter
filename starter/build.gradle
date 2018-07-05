@@ -45,10 +45,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     // ViewModel and LiveData
-    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    api 'android.arch.lifecycle:extensions:1.1.1'
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
     // Room
-    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    api 'android.arch.persistence.room:runtime:1.1.1'
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
     // Paging
 //    implementation 'android.arch.paging:runtime:1.0.0-alpha6'
@@ -57,7 +57,7 @@ dependencies {
     // Test helpers for Room
 //    testImplementation 'android.arch.persistence.room:testing:1.0.0'
     // Java8 support for Lifecycles
-    implementation 'android.arch.lifecycle:common-java8:1.1.1'
+    api 'android.arch.lifecycle:common-java8:1.1.1'
     annotationProcessor "com.android.databinding:compiler:$android_plugin_version"
 
     api 'com.github.boybeak:selector:1.2.7'
@@ -71,4 +71,4 @@ dokka {
     outputDirectory = '$buildDir/javadoc'
 }
 
-apply from: 'deploy.gradle'
+apply from: 'deploy-starter.gradle'
