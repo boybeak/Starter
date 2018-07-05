@@ -3,6 +3,7 @@ package com.github.boybeak.safr
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 
 class SAFRActivity : Activity() {
 
@@ -14,13 +15,14 @@ class SAFRActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(View(this))
 
         id = intent.getStringExtra(SAFR.KEY_ID)
 
         val it = Intent()
         val extras = intent.extras
         it.putExtras(extras)
+        it.type = intent.getStringExtra(SAFR.KEY_TYPE)
 
         val action = intent.getStringExtra(SAFR.KEY_ACTION)
         if (action != null) {
