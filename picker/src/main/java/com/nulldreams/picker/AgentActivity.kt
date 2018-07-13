@@ -71,7 +71,6 @@ class AgentActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK) {
             if (requestCode == REQUEST_CODE_SYSTEM_GALLERY) {
-
                 val file = File(getPath(this, data!!.data))
                 PickerManager.instance().singleFinish(file)
             } else if (requestCode == REQUEST_CODE_SMART_GALLERY) {
@@ -82,9 +81,9 @@ class AgentActivity : AppCompatActivity() {
                     }
                     PickerManager.MODE_MULTIPLE -> {
                         val pathList = data!!.getStringArrayListExtra("paths")
-                        val fileList = List<File>(pathList.size, {
+                        val fileList = List<File>(pathList.size) {
                             File(pathList[it])
-                        })
+                        }
                         PickerManager.instance().multipleFinish(fileList)
                     }
                 }
