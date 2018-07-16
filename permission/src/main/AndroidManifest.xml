@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.boybeak.permission">
+
+    <application>
+        <activity android:name=".PermissionAgentActivity"
+            android:theme="@style/PermissionAgent"/>
+    </application>
+
+</manifest>

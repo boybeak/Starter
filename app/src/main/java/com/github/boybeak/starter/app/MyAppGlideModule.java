@@ -1,4 +1,4 @@
-package com.github.boybeak.starter;
+package com.github.boybeak.starter.app;
 
 import com.bumptech.glide.annotation.GlideModule;
 import com.bumptech.glide.module.AppGlideModule;

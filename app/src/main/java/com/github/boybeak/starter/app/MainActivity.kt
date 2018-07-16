@@ -1,4 +1,4 @@
-package com.github.boybeak.starter
+package com.github.boybeak.starter.app
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -16,5 +16,9 @@ class MainActivity : AppCompatActivity() {
 
     fun goToPicker(view: View) {
         startActivity(Intent(this, PickerActivity::class.java))
+    }
+
+    fun gotoPermission(view: View) {
+        startActivity(Intent(this, PermissionActivity::class.java))
     }
 }

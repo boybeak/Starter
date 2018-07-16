@@ -1,12 +1,10 @@
-package com.github.boybeak.starter
+package com.github.boybeak.starter.app
 
 import android.Manifest
 import android.content.DialogInterface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
-import android.support.v7.widget.AppCompatImageView
-import android.support.v7.widget.RecyclerView
 import android.view.*
 import android.widget.Toast
 import com.bumptech.glide.Glide
@@ -15,19 +13,74 @@ import java.io.File
 import android.net.Uri
 import android.support.v4.content.FileProvider
 import android.support.v7.app.AlertDialog
-import com.bumptech.glide.load.resource.bitmap.BitmapTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.github.boybeak.picker.*
+import com.github.boybeak.starter.adapter.Converter
+import com.github.boybeak.starter.adapter.DataBindingAdapter
+import com.github.boybeak.starter.app.adapter.FileImpl
+import com.github.boybeak.starter.app.adapter.FooterImpl
 
 
 class PickerActivity : AppCompatActivity() {
 
-    private val adapter = ImageAdapter()
+    private var adapter: DataBindingAdapter? = null
+
+    private val footerEvent = object : FooterEvent {
+        override fun onFooterClick() {
+            AlertDialog.Builder(this@PickerActivity)
+                    .setItems(R.array.get_image, object : DialogInterface.OnClickListener {
+                        override fun onClick(dialog: DialogInterface?, which: Int) {
+                            when(which) {
+                                0 -> {
+                                    Picker.gallery().image().multiple(true).go(this@PickerActivity, object : MultipleCallback {
+                                        override fun onGet(id: String, uris: MutableList<Uri>, files: MutableList<File>) {
+                                            adapter!!.addAll(files, object : Converter<File, FileImpl> {
+                                                override fun convert(data: File?, adapter: DataBindingAdapter?): FileImpl {
+                                                    return FileImpl(data)
+                                                }
+                                            }).autoNotify()
+                                        }
+
+                                        override fun onCancel(id: String) {
+
+                                        }
+
+                                    })
+                                }
+                                1 -> {
+                                    val dir = File(externalCacheDir, "images")
+                                    if (!dir.exists()) {
+                                        dir.mkdirs()
+                                    }
+
+                                    val cameraTempFile = File(dir, System.currentTimeMillis().toString() + ".jpg")
+                                    val uri = FileProvider.getUriForFile(this@PickerActivity, "$packageName.provider", cameraTempFile)
+                                    Picker.camera().image().output(uri, cameraTempFile).go(this@PickerActivity, object : SingleCallback {
+                                        override fun onGet(id: String, uri: Uri, file: File) {
+                                            adapter!!.add(FileImpl(file)).autoNotify()
+                                        }
+
+                                        override fun onCancel(id: String) {
+
+                                        }
+
+                                    })
+                                }
+                            }
+                        }
+
+                    })
+                    .show()
+        }
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_picker)
 
+        adapter = DataBindingAdapter(this)
+        adapter!!.addFooter(FooterImpl(footerEvent))
         recycler_view.adapter = adapter
 
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), 100)
@@ -119,7 +172,7 @@ class PickerActivity : AppCompatActivity() {
     private fun getSingleImage() {
         Picker.gallery().image().go(this, object : SingleCallback {
             override fun onGet(id: String, uri: Uri, file: File) {
-                adapter.add(file)
+//                adapter!!.add()
             }
 
             override fun onCancel(id: String) {
@@ -132,7 +185,7 @@ class PickerActivity : AppCompatActivity() {
     private fun getMultipleImages() {
         Picker.gallery().image().multiple(true).go(this, object : MultipleCallback {
             override fun onGet(id: String, uris: MutableList<Uri>, files: MutableList<File>) {
-                adapter.addAll(files)
+//                adapter!!.addAll()
             }
 
             override fun onCancel(id: String) {
@@ -211,36 +264,4 @@ class PickerActivity : AppCompatActivity() {
         })
     }
 
-    private class ImageHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        val image = itemView.findViewById<AppCompatImageView>(R.id.image)!!
-    }
-
-    private class ImageAdapter : RecyclerView.Adapter<ImageHolder>(){
-
-        private val files = ArrayList<File>()
-
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageHolder {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_image, parent, false)
-            return ImageHolder(view)
-        }
-
-        override fun getItemCount(): Int {
-            return files.size
-        }
-
-        override fun onBindViewHolder(holder: ImageHolder, position: Int) {
-            Glide.with(holder.itemView.context).load(files[position]).into(holder.image)
-        }
-
-        fun add(file: File) {
-            files.add(file)
-            notifyDataSetChanged()
-        }
-
-        fun addAll(files: List<File>) {
-            this.files.addAll(files)
-            notifyDataSetChanged()
-        }
-
-    }
 }

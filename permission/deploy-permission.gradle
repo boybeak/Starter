@@ -6,8 +6,8 @@ ext {
     // This configuration will result in:
     // compile '<groupId>:<artifactId>:<libVersion>'
     groupId = 'com.github.boybeak' // package name of the project
-    artifactId = "picker" // module name of the library
-    libVersion = "1.0.2"
+    artifactId = "permission" // module name of the library
+    libVersion = "1.0.0"
 }
 version = libVersion
 group = groupId
@@ -23,7 +23,7 @@ bintray {
     // properties (like userOrg, desc, etc).
     pkg {
         repo = "nulldreams" //bintray repo
-        name = "picker" //bintray package
+        name = "permission" //bintray package
         version {
             name = libVersion
         }

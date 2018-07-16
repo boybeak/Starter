@@ -23,8 +23,7 @@
                 android:onClick="changeProfile"
                 android:layout_gravity="center"
                 />
-            <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/name"
+            <android.support.v7.widget.AppCompatImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 app:tint="@android:color/white"
@@ -33,9 +32,12 @@
         </FrameLayout>
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             />
     </android.support.v7.widget.LinearLayoutCompat>
     <android.support.v7.widget.RecyclerView
@@ -43,6 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        app:spanCount="4"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
         />
 </android.support.v7.widget.LinearLayoutCompat>
