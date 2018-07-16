@@ -1,0 +1,192 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Camera - picker</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">picker</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.picker</a>&nbsp;/&nbsp;<a href=".">Camera</a><br/>
+<br/>
+<h1>Camera</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Camera</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-picker/index.html"><span class="identifier">Picker</span></a></code>
+<h3>Annotations</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-quality/index.html">Quality</a></p>
+</td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Quality</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-q-u-a-l-i-t-y_-h-i-g-h.html">QUALITY_HIGH</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">QUALITY_HIGH</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-q-u-a-l-i-t-y_-l-o-w.html">QUALITY_LOW</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">QUALITY_LOW</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-picker/-i-m-a-g-e.html">IMAGE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">IMAGE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-k-e-y_-a-l-l-o-w_-m-u-l-t-i-p-l-e.html">KEY_ALLOW_MULTIPLE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_ALLOW_MULTIPLE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-k-e-y_-d-u-r-a-t-i-o-n_-l-i-m-i-t.html">KEY_DURATION_LIMIT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_DURATION_LIMIT</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-k-e-y_-i-d.html">KEY_ID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_ID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-k-e-y_-m-i-m-e.html">KEY_MIME</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_MIME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-k-e-y_-m-i-m-e_-t-y-p-e.html">KEY_MIME_TYPE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_MIME_TYPE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-k-e-y_-m-o-d-e.html">KEY_MODE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_MODE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-k-e-y_-o-u-t-p-u-t.html">KEY_OUTPUT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_OUTPUT</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-k-e-y_-o-u-t-p-u-t_-f-i-l-e.html">KEY_OUTPUT_FILE</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_OUTPUT_FILE</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-k-e-y_-q-u-a-l-i-t-y.html">KEY_QUALITY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">KEY_QUALITY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/-v-i-d-e-o.html">VIDEO</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">VIDEO</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="duration-limit.html">durationLimit</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">durationLimit</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.picker.Camera$durationLimit(kotlin.Int)/timeInSeconds">timeInSeconds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Camera</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="go.html">go</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">go</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.picker.Camera$go(android.content.Context, com.github.boybeak.picker.SingleCallback)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.picker.Camera$go(android.content.Context, com.github.boybeak.picker.SingleCallback)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="../-single-callback/index.html"><span class="identifier">SingleCallback</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="image.html">image</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">image</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Camera</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="output.html">output</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">output</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.picker.Camera$output(android.net.Uri, java.io.File)/uri">uri</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.picker.Camera$output(android.net.Uri, java.io.File)/file">file</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Camera</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="quality.html">quality</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">quality</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.picker.Camera$quality(kotlin.Int)/quality">quality</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Camera</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="video.html">video</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">video</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Camera</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Inherited Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-picker/camera.html">camera</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">camera</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Camera</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-picker/gallery.html">gallery</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">gallery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-gallery/index.html"><span class="identifier">Gallery</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

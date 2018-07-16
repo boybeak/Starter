@@ -1,12 +1,9 @@
 package com.github.boybeak.starter
 
-import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import com.github.boybeak.safr.Callback
-import com.github.boybeak.safr.SAFR
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,23 +11,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        SAFR.newInstance().byAction(Intent.ACTION_GET_CONTENT).type("image/*").startActivityForResult(this, 100, object : Callback {
-            override fun onResult(requestCode: Int, resultCode: Int, data: Intent?) {
-                var s = "s"
-                when(resultCode) {
-                    Activity.RESULT_OK -> {
-                        s = "OK"
-                    }
-                    Activity.RESULT_CANCELED -> {
-                        s = "CANCELED"
-                    }
-                    Activity.RESULT_FIRST_USER -> {
-                        s = "FIRST_USER"
-                    }
-                }
-                Toast.makeText(this@MainActivity, s, Toast.LENGTH_SHORT).show()
-            }
 
-        })
+    }
+
+    fun goToPicker(view: View) {
+        startActivity(Intent(this, PickerActivity::class.java))
     }
 }

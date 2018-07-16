@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/picker_get_single_image"
+        android:title="Get single image"/>
+    <item android:id="@+id/picker_get_multiple_image"
+        android:title="Get multiple image"/>
+    <item android:id="@+id/picker_get_single_video"
+        android:title="Get single video"/>
+    <item android:id="@+id/picker_get_multiple_videos"
+        android:title="Get multiple videos"/>
+    <item android:id="@+id/picker_capture_image"
+        android:title="Capture image"/>
+    <item android:id="@+id/picker_capture_video"
+        android:title="CaptureVideo"/>
+</menu>

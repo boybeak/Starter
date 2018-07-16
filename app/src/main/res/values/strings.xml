@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Starter</string>
+    <string-array name="get_image">
+        <item>Gallery</item>
+        <item>Camera</item>
+    </string-array>
 </resources>

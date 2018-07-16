@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nulldreams.picker">
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    package="com.github.boybeak.picker">
 
     <application>
-        <activity
-            android:name=".AgentActivity"
-            android:theme="@style/AgentActivity" />
-        <activity android:name=".GalleryActivity"
-            android:label="@string/title_activity_gallery"/>
+        <activity android:name=".PickerAgentActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     </application>
 
 </manifest>
