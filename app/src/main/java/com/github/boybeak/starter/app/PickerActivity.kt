@@ -34,11 +34,7 @@ class PickerActivity : AppCompatActivity() {
                                 0 -> {
                                     Picker.gallery().image().multiple(true).go(this@PickerActivity, object : MultipleCallback {
                                         override fun onGet(id: String, uris: MutableList<Uri>, files: MutableList<File>) {
-                                            adapter!!.addAll(files, object : Converter<File, FileImpl> {
-                                                override fun convert(data: File?, adapter: DataBindingAdapter?): FileImpl {
-                                                    return FileImpl(data)
-                                                }
-                                            }).autoNotify()
+                                            adapter!!.addAll(files, Converter<File, FileImpl> { data, _ -> FileImpl(data) }).autoNotify()
                                         }
 
                                         override fun onCancel(id: String) {
