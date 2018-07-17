@@ -2,13 +2,11 @@
 
 # Starter
 
-中文[Readme.md](https://github.com/boybeak/Starter/blob/master/README_cn.md)
-
-There are 4 libraries in this project.
+本项目中共有4个库.
 
 ## Starter[ ![Starter](https://api.bintray.com/packages/boybeak/nulldreams/starter/images/download.svg) ](https://bintray.com/boybeak/nulldreams/starter/_latestVersion)
 
-This is a quick start package, including BaseActivity, BaseFragment and utils classes;
+这是一个用于项目快速启动的库, 包含 BaseActivity, BaseFragment 以及一些工具类。
 
 ```groovy
 implementation 'com.github.boybeak:starter:0.0.6'
@@ -18,7 +16,7 @@ implementation 'com.github.boybeak:starter:0.0.6'
 
 ## Permission
 
-This is a permission helper. Quickly grant permissions.
+这是一个动态权限的辅助库。能够快速的获取权限，而不用层层检查每次都重写权限结果回调方法。
 
 ```groovy
 implementation 'com.github.boybeak:permission:1.0.0'
@@ -39,13 +37,13 @@ PH.ask(Manifest.permission.WRITE_EXTERNAL_STORAGE,
         })
 ```
 
-**PH** is short for Permission Helper.
+**PH** 是 Permission Helper的简写.
 
 
 
 ## Picker[ ![Picker](https://api.bintray.com/packages/boybeak/nulldreams/picker/images/download.svg) ](https://bintray.com/boybeak/nulldreams/picker/_latestVersion)
 
-A helper library for getting images and videos quickly.
+获取图片视频的辅助类。
 
 ```groovy
 implementation 'com.github.boybeak:picker:1.0.2'
@@ -88,7 +86,7 @@ Picker.camera().image().output(uri, cameraTempFile)
 	    })
 ```
 
-With this library, you can get images easily from gallery and camera. Support getting multiple images and videos from gallery, and getting one image or video from camera.
+用这个库，你能够从系统相册中单选或者多选图片或者视频，可以从相机中获取单个图片或者视频，同时视频支持设置最大时长和视频质量。
 
 
 
@@ -98,7 +96,7 @@ With this library, you can get images easily from gallery and camera. Support ge
 implementation 'com.github.boybeak:safr:0.0.4'
 ```
 
-**SAFR** is short for **startActivityForResult**.
+**SAFR** 是 **startActivityForResult** 的简写。只为在一个回调中处理结果，而不用重写onActivityResult。
 
 ```kotlin
 SAFR.newInstance().extras {
