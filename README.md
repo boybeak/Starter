@@ -23,7 +23,9 @@ implementation 'com.github.boybeak:permission:1.0.0'
 ```
 
 ```kotlin
-PH.ask(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO).go(this, object : Callback {
+PH.ask(Manifest.permission.WRITE_EXTERNAL_STORAGE, 
+	Manifest.permission.CAMERA, 
+	Manifest.permission.RECORD_AUDIO).go(this, object : Callback {
             override fun onGranted(permissions: MutableList<String>) {
 				//TODO do what you want
             }
@@ -49,16 +51,17 @@ implementation 'com.github.boybeak:picker:1.0.2'
 
 ```kotlin
 // Get multiple images from gallery
-Picker.gallery().image().multiple(true).go(this@PickerActivity, object : MultipleCallback {
-                                        override fun onGet(id: String, uris: MutableList<Uri>, files: MutableList<File>) {
-                                            adapter!!.addAll(files, Converter<File, FileImpl> { data, _ -> FileImpl(data) }).autoNotify()
-                                        }
+Picker.gallery().image().multiple(true)
+	.go(this@PickerActivity, object : MultipleCallback {
+		override fun onGet(id: String, uris: MutableList<Uri>, files: MutableList<File>) {
+		    adapter!!.addAll(files, Converter<File, FileImpl> { data, _ -> FileImpl(data) }).autoNotify()
+		}
 
-                                        override fun onCancel(id: String) {
+		override fun onCancel(id: String) {
 
-                                        }
+		}
 
-                                    })
+	    })
 ```
 
 ```kotlin
@@ -70,16 +73,17 @@ if (!dir.exists()) {
 
 val cameraTempFile = File(dir, System.currentTimeMillis().toString() + ".jpg")
 val uri = FileProvider.getUriForFile(this@PickerActivity, "$packageName.provider", cameraTempFile)
-Picker.camera().image().output(uri, cameraTempFile).go(this@PickerActivity, object : SingleCallback {
-                                        override fun onGet(id: String, uri: Uri, file: File) {
-                                            adapter!!.add(FileImpl(file)).autoNotify()
-                                        }
+Picker.camera().image().output(uri, cameraTempFile)
+	.go(this@PickerActivity, object : SingleCallback {
+		override fun onGet(id: String, uri: Uri, file: File) {
+		    adapter!!.add(FileImpl(file)).autoNotify()
+		}
 
-                                        override fun onCancel(id: String) {
+		override fun onCancel(id: String) {
 
-                                        }
+		}
 
-                                    })
+	    })
 ```
 
 With this library, you can get images easily from gallery and camera. Support getting multiple images and videos from gallery, and getting one image or video from camera.
@@ -97,7 +101,8 @@ implementation 'com.github.boybeak:safr:0.0.4'
 ```kotlin
 SAFR.newInstance().extras {
             //fill data here
-        }.byAction(Intent.ACTION_GET_CONTENT).startActivityForResult(this, 100, object : Callback {
+        }.byAction(Intent.ACTION_GET_CONTENT)
+	.startActivityForResult(this, 100, object : Callback {
             override fun onResult(requestCode: Int, resultCode: Int, data: Intent?) {
 
             }
