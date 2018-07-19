@@ -83,6 +83,15 @@ open class BaseActivity: AppCompatActivity(), ILife {
         return findViewById(android.R.id.content)
     }
 
+    fun runOnUiThreadDelayed (action: Runnable, delayMillis: Long) {
+        decorView().postDelayed(object : Runnable {
+            override fun run() {
+                decorView().removeCallbacks(this)
+                action.run()
+            }
+        }, delayMillis)
+    }
+
     /*fun askForPermission (permission: String, callback: PermissionCallback) {
         askForPermissions(Array(1, {permission}), callback)
     }*/

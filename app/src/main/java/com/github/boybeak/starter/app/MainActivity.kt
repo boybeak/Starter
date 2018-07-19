@@ -1,11 +1,11 @@
 package com.github.boybeak.starter.app
 
-import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.github.boybeak.starter.Router
+import com.github.boybeak.starter.activity.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,10 +14,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goToPicker(view: View) {
-        startActivity(Intent(this, PickerActivity::class.java))
+        Router.with(view).goTo(PickerActivity::class.java)
     }
 
     fun gotoPermission(view: View) {
-        startActivity(Intent(this, PermissionActivity::class.java))
+        Router.with(view).goTo(PermissionActivity::class.java)
     }
+
+    fun gotoCalendar(view: View) {
+        Router.with(view).goTo()
+    }
+
 }

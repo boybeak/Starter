@@ -100,9 +100,12 @@ class Router private constructor(private var context: Context?) {
     }
 
     private fun makeOptionBundle(): Bundle? {
-        val elements = Array<Pair<View, String>>(sharedElements.size, {
+        if (sharedElements.isEmpty()) {
+            return null
+        }
+        val elements = Array<Pair<View, String>>(sharedElements.size) {
             sharedElements[it]
-        })
+        }
         return ActivityOptionsCompat.makeSceneTransitionAnimation(context as Activity, *elements).toBundle()
     }
 
