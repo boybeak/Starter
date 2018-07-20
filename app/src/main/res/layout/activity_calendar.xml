@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalendarActivity">
-    <android.support.design.widget.AppBarLayout
+    android:orientation="vertical"
+    tools:context=".CalendarActivity"
+    android:gravity="center_horizontal">
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/size_et"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:maxEms="3"
+        android:inputType="number"
+        />
+    <com.github.boybeak.calendar.MonthLayout
+        android:id="@+id/month_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </android.support.design.widget.CollapsingToolbarLayout>
-    </android.support.design.widget.AppBarLayout>
-</android.support.design.widget.CoordinatorLayout>
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_light"/>
+</android.support.v7.widget.LinearLayoutCompat>

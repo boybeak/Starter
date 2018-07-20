@@ -22,7 +22,7 @@ class MainActivity : BaseActivity() {
     }
 
     fun gotoCalendar(view: View) {
-        Router.with(view).goTo()
+        Router.with(view).goTo(CalendarActivity::class.java)
     }
 
 }
