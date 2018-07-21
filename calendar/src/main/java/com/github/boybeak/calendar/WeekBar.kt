@@ -6,11 +6,16 @@ import android.graphics.Typeface
 import android.support.v7.widget.AppCompatTextView
 import android.support.v7.widget.LinearLayoutCompat
 import android.util.AttributeSet
+import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
 import java.util.*
 
 class WeekBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayoutCompat(context, attrs, defStyleAttr) {
+
+    companion object {
+        private val TAG = WeekBar::class.java.simpleName!!
+    }
 
     private val sundayView: AppCompatTextView = AppCompatTextView(context, attrs, defStyleAttr)
     private val mondayView: AppCompatTextView = AppCompatTextView(context, attrs, defStyleAttr)
@@ -39,8 +44,6 @@ class WeekBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
         addView(fridayView, p)
         addView(saturdayView, p)
 
-        setBackgroundColor(Color.CYAN)
-
         makeDayViewStyles()
     }
 
@@ -64,6 +67,7 @@ class WeekBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
             val day = cal.get(Calendar.DAY_OF_MONTH)
             tv.text = day.toString()
         }
+        Log.v(TAG, "refreshDays")
     }
 
     fun setSunday(timeStamp: Long) {

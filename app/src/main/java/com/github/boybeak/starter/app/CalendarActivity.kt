@@ -23,9 +23,5 @@ class CalendarActivity : AppCompatActivity() {
             true
         }
 
-//        val today = Calendar.getInstance()
-//        today.set(2018, Calendar.JULY, 22)
-//        Toast.makeText(this, "${today.get(Calendar.DAY_OF_WEEK)}", Toast.LENGTH_SHORT).show()
-//        cal.setSunday(today.time)
     }
 }
