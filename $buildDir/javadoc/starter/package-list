@@ -10,5 +10,6 @@ com.github.boybeak.starter.adapter.footer
 com.github.boybeak.starter.broadcast
 com.github.boybeak.starter.fragment
 com.github.boybeak.starter.mvc
+com.github.boybeak.starter.retrofit
 com.github.boybeak.starter.utils
 com.github.boybeak.starter.widget
