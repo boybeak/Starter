@@ -9,7 +9,7 @@
 这是一个用于项目快速启动的库, 包含 BaseActivity, BaseFragment 以及一些工具类。
 
 ```groovy
-implementation 'com.github.boybeak:starter:0.0.6'
+implementation 'com.github.boybeak:starter:x.y.z'
 ```
 
 
@@ -19,7 +19,7 @@ implementation 'com.github.boybeak:starter:0.0.6'
 这是一个动态权限的辅助库。能够快速的获取权限，而不用层层检查每次都重写权限结果回调方法。
 
 ```groovy
-implementation 'com.github.boybeak:permission:1.0.0'
+implementation 'com.github.boybeak:permission:x.y.z'
 ```
 
 ```kotlin
@@ -46,7 +46,7 @@ PH.ask(Manifest.permission.WRITE_EXTERNAL_STORAGE,
 获取图片视频的辅助类。
 
 ```groovy
-implementation 'com.github.boybeak:picker:1.0.2'
+implementation 'com.github.boybeak:picker:x.y.z'
 ```
 
 ```kotlin
@@ -93,7 +93,7 @@ Picker.camera().image().output(uri, cameraTempFile)
 ## SAFR[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/safr/images/download.svg) ](https://bintray.com/boybeak/nulldreams/safr/_latestVersion)
 
 ```groovy
-implementation 'com.github.boybeak:safr:0.0.4'
+implementation 'com.github.boybeak:safr:x.y.z'
 ```
 
 **SAFR** 是 **startActivityForResult** 的简写。只为在一个回调中处理结果，而不用重写onActivityResult。

@@ -11,7 +11,7 @@ There are 4 libraries in this project.
 This is a quick start package, including BaseActivity, BaseFragment and utils classes;
 
 ```groovy
-implementation 'com.github.boybeak:starter:0.0.6'
+implementation 'com.github.boybeak:starter:x.y.z'
 ```
 
 
@@ -21,7 +21,7 @@ implementation 'com.github.boybeak:starter:0.0.6'
 This is a permission helper. Quickly grant permissions.
 
 ```groovy
-implementation 'com.github.boybeak:permission:1.0.0'
+implementation 'com.github.boybeak:permission:x.y.z'
 ```
 
 ```kotlin
@@ -48,7 +48,7 @@ PH.ask(Manifest.permission.WRITE_EXTERNAL_STORAGE,
 A helper library for getting images and videos quickly.
 
 ```groovy
-implementation 'com.github.boybeak:picker:1.0.2'
+implementation 'com.github.boybeak:picker:x.y.z'
 ```
 
 ```kotlin
@@ -95,7 +95,7 @@ With this library, you can get images easily from gallery and camera. Support ge
 ## SAFR[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/safr/images/download.svg) ](https://bintray.com/boybeak/nulldreams/safr/_latestVersion)
 
 ```groovy
-implementation 'com.github.boybeak:safr:0.0.4'
+implementation 'com.github.boybeak:safr:x.y.z'
 ```
 
 **SAFR** is short for **startActivityForResult**.
