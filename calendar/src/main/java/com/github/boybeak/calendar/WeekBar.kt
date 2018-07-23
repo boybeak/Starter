@@ -101,4 +101,14 @@ class WeekBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
         refreshDays()
     }
 
+    fun isCrossMonths(): Boolean {
+        return !isInOneMonth()
+    }
+
+    fun isInOneMonth(): Boolean {
+        val cal = Calendar.getInstance()
+        cal.set(sundayCalendar[Calendar.YEAR], sundayCalendar[Calendar.MONTH], sundayCalendar[Calendar.DAY_OF_MONTH] + 6)
+        return cal[Calendar.MONTH] == sundayCalendar[Calendar.MONTH]
+    }
+
 }

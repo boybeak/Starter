@@ -5,7 +5,6 @@ import android.animation.ObjectAnimator
 import android.content.Context
 import android.os.Parcelable
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.ViewConfiguration
@@ -24,7 +23,7 @@ class MonthLayout : ViewGroup {
     private var year: Int = 0
     private var month: Int = 0
 
-    private var selectedRowIndex = 3
+    private var selectedRowIndex = 0
 
     private val weekBarTitleHeight = context.resources.getDimensionPixelSize(R.dimen.week_bar_title_height)
     private val weekBarHeight = context.resources.getDimensionPixelSize(R.dimen.week_bar_height)
