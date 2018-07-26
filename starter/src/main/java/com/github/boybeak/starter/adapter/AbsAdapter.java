@@ -3,6 +3,7 @@ package com.github.boybeak.starter.adapter;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
+import android.support.annotation.NonNull;
 import android.support.v4.util.SparseArrayCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -26,13 +27,13 @@ public abstract class AbsAdapter extends RecyclerView.Adapter<AbsDataBindingHold
     }
 
     @Override
-    public AbsDataBindingHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AbsDataBindingHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ViewDataBinding binding = DataBindingUtil.inflate(mInflater, viewType, parent, false);
         return getHolder(viewType, binding);
     }
 
     @Override
-    public void onBindViewHolder(AbsDataBindingHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AbsDataBindingHolder holder, int position) {
         holder.bindData(getItem(position), position, this);
     }
 
@@ -75,5 +76,5 @@ public abstract class AbsAdapter extends RecyclerView.Adapter<AbsDataBindingHold
         return layout.getLayout();
     }
 
-    public abstract LayoutImpl getItem (int position);
+    public abstract @NonNull LayoutImpl getItem (int position);
 }

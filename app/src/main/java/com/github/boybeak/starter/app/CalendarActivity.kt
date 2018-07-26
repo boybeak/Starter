@@ -1,12 +1,12 @@
 package com.github.boybeak.starter.app
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.github.boybeak.starter.activity.ToolbarActivity
 import kotlinx.android.synthetic.main.activity_calendar.*
 import java.util.*
 
-class CalendarActivity : AppCompatActivity() {
+class CalendarActivity : ToolbarActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

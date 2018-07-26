@@ -39,10 +39,10 @@ open class BaseActivity: AppCompatActivity(), ILife {
     }
 
     override fun setSupportActionBar(toolbar: Toolbar?) {
-        setSupportActionBar(toolbar, actionBarEnable())
+        setSupportActionBar(toolbar, actionBarAsUpEnable())
     }
 
-    open fun actionBarEnable(): Boolean {
+    open fun actionBarAsUpEnable(): Boolean {
         return false
     }
 

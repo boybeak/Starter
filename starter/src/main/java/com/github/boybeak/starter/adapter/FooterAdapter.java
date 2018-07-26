@@ -2,9 +2,14 @@ package com.github.boybeak.starter.adapter;
 
 import android.content.Context;
 import android.databinding.BindingAdapter;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.ProgressBar;
 
 import com.github.boybeak.starter.R;
@@ -73,6 +78,7 @@ public class FooterAdapter extends DataBindingAdapter {
         mFooterImpl = new FooterImpl(mFooter);
 
         addFooter(mFooterImpl);
+
     }
 
     public void notifyFooter (@Footer.State int state, String message) {

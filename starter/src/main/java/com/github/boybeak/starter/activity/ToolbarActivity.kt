@@ -15,7 +15,11 @@ open class ToolbarActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         super.setContentView(R.layout.activity_toolbar)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(toolbar, actionBarAsUpEnable())
+    }
+
+    override fun actionBarAsUpEnable(): Boolean {
+        return true
     }
 
     fun toolbar(): Toolbar {

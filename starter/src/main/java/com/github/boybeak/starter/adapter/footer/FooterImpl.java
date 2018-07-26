@@ -24,4 +24,5 @@ public class FooterImpl extends BaseLayoutImpl<com.github.boybeak.starter.adapte
     public int getLayout() {
         return R.layout.layout_footer;
     }
+
 }

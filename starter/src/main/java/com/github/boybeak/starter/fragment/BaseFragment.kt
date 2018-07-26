@@ -28,6 +28,10 @@ open class BaseFragment : Fragment(), ILife {
         return activity
     }
 
+    open fun getTitle(context: Context): CharSequence? {
+        return null
+    }
+
     override fun onDetach() {
         super.onDetach()
         activity = null

@@ -1,6 +1,7 @@
 package com.github.boybeak.starter.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.github.boybeak.selector.Selector;
 import java.util.ArrayList;
@@ -31,13 +32,13 @@ public class DataBindingAdapter extends AbsAdapter {
     }
 
     @Override
-    public void onViewAttachedToWindow(AbsDataBindingHolder holder) {
+    public void onViewAttachedToWindow(@NonNull AbsDataBindingHolder holder) {
         super.onViewAttachedToWindow(holder);
         holder.onViewAttachedToWindow();
     }
 
     @Override
-    public void onViewDetachedFromWindow(AbsDataBindingHolder holder) {
+    public void onViewDetachedFromWindow(@NonNull AbsDataBindingHolder holder) {
         super.onViewDetachedFromWindow(holder);
         holder.onViewDetachedFromWindow();
     }
@@ -297,6 +298,20 @@ public class DataBindingAdapter extends AbsAdapter {
 
     public int getAdapterPositionOfData (LayoutImpl layout) {
         return getAdapterPositionOfData(indexOfData(layout));
+    }
+
+    public int getAdapterPositionOfFooter(int positionInFooterList) {
+        return getHeaderSize() + getDataSize() + positionInFooterList;
+    }
+
+    public int getAdapterPositionOfFooter(LayoutImpl layout) {
+        if(mFooterList == null) {
+            return -1;
+        }
+        if(mFooterList.isEmpty() || !mFooterList.contains(layout)) {
+            return -1;
+        }
+        return getAdapterPositionOfFooter(mFooterList.indexOf(layout));
     }
 
     public void notifyFooters () {
