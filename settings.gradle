@@ -1,1 +1,1 @@
-include ':app', ':starter', ':safr', ':picker', ':permission', ':calendar'
+include ':app', ':starter', ':safr', ':picker', ':permission', ':calendar', ':designer'
