@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator
 import android.content.Context
 import android.os.Parcelable
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.ViewConfiguration
@@ -195,6 +196,7 @@ class MonthLayout : ViewGroup {
     }
 
     override fun computeScroll() {
+
         if (scroller.computeScrollOffset()) {
             scrollTo(scroller.currX, scroller.currY)
             invalidate()

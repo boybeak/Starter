@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@mipmap/ic_launcher">
     <android.support.v7.widget.AppCompatButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +23,9 @@
         android:layout_height="wrap_content"
         android:onClick="gotoCalendar"
         android:text="Calendar"/>
-    <com.github.boybeak.starter.app.CVP
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gotoDragExit"
+        android:text="Drag Exit"/>
 </android.support.v7.widget.LinearLayoutCompat>

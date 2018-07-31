@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DragExitLayout">
+        <attr name="edge" format="enum">
+            <enum name="left" value="-1"/>
+            <enum name="right" value="1"/>
+            <enum name="both" value="0"/>
+        </attr>
+        <attr name="exitLineRatio" format="float"/>
+        <attr name="stuckEffect" format="boolean"/>
+        <attr name="lazy" format="float"/>
+        <attr name="alphaEffect" format="boolean"/>
+        <attr name="minAlpha" format="float"/>
+        <attr name="scaleEffect" format="boolean"/>
+        <attr name="scaleMin" format="float"/>
+    </declare-styleable>
+</resources>

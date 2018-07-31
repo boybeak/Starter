@@ -26,4 +26,8 @@ class MainActivity : BaseActivity() {
         Router.with(view).goTo(CalendarActivity::class.java)
     }
 
+    fun gotoDragExit(view: View) {
+        Router.with(view).goTo(DragExitActivity::class.java)
+    }
+
 }

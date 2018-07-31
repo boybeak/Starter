@@ -48,6 +48,7 @@ dependencies {
     implementation project(':safr')
     implementation project(':picker')
     implementation project(':permission')
+    implementation project(':drag-exit')
     implementation 'com.android.support:recyclerview-v7:27.1.1'
 
     annotationProcessor "com.android.databinding:compiler:$android_plugin_version"
