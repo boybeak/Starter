@@ -4,7 +4,6 @@ import android.content.Context
 import android.support.annotation.IntDef
 import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
-import android.util.Log
 import android.view.*
 import android.widget.FrameLayout
 import android.widget.OverScroller
@@ -108,15 +107,11 @@ class DragExitLayout : FrameLayout {
         when (ev.action) {
             MotionEvent.ACTION_DOWN -> {
                 interceptDownX = ev.rawX
-                Log.v(TAG, "onInterceptTouchEvent $isFling ${isValidDownX(interceptDownX)}")
                 if (!isFling and isValidDownX(interceptDownX)) {
                     isInDragMode = true
-                    Log.v(TAG, "onInterceptTouchEvent ACTION_DOWN in slop")
                     return true
                 }
             }
-            MotionEvent.ACTION_MOVE -> Log.v(TAG, "onInterceptTouchEvent ACTION_MOVE result=$result")
-            MotionEvent.ACTION_UP -> Log.v(TAG, "onInterceptTouchEvent ACTION_UP result=$result")
         }
         return super.onInterceptTouchEvent(ev)
     }
@@ -124,7 +119,6 @@ class DragExitLayout : FrameLayout {
     override fun onTouchEvent(event: MotionEvent): Boolean {
         when (event.action) {
             MotionEvent.ACTION_DOWN -> {
-                Log.v(TAG, "onTouchEvent ACTION_DOWN")
 //                if (velocityTracker == null) {
 //                    velocityTracker = VelocityTracker.obtain()
 //                } else {
@@ -156,7 +150,6 @@ class DragExitLayout : FrameLayout {
 
             }
             MotionEvent.ACTION_MOVE -> {
-                Log.v(TAG, "onTouchEvent ACTION_MOVE")
 //                velocityTracker!!.addMovement(event)
 //                velocityTracker!!.computeCurrentVelocity(1000)
                 if (isInDragMode) {
@@ -325,7 +318,6 @@ class DragExitLayout : FrameLayout {
                     } else {
                         theOne().alpha + deltaTransX * alphaUnit
                     }
-                    Log.v(TAG, "onTheOneTransXChanged alpha=$newAlpha")
                     theOne().alpha = Math.max(alphaMin, Math.min(1f, newAlpha))
                 }
             }
@@ -356,7 +348,6 @@ class DragExitLayout : FrameLayout {
 
     private fun calculateAlphaUnit() {
         alphaUnit = (1f - alphaMin) / getExitLineSize()
-        Log.v(TAG, "calculateAlphaUnit alphaUnit=$alphaUnit")
     }
 
     private fun calculateScaleUtil() {

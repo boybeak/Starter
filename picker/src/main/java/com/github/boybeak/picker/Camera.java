@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.IntDef;
 import android.util.Log;
+import android.util.Pair;
 
 import java.io.File;
 import java.lang.annotation.Retention;
@@ -58,6 +59,10 @@ public class Camera extends Picker {
         output = uri;
         outputFile = file;
         return this;
+    }
+
+    public Camera output(Pair<Uri, File> pair) {
+        return output(pair.first, pair.second);
     }
 
     public String go(Context context, SingleCallback callback) {

@@ -113,7 +113,6 @@ class PickerAgentActivity : Activity() {
         this.data = data
 
         Log.v(TAG, "onActivityResult $requestCode $resultCode")
-        Toast.makeText(this, "onActivityResult $requestCode $resultCode", Toast.LENGTH_SHORT).show()
 
         finish()
     }
