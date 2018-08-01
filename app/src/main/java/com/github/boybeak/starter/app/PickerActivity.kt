@@ -13,6 +13,8 @@ import android.net.Uri
 import android.support.v4.content.FileProvider
 import android.support.v7.app.AlertDialog
 import com.bumptech.glide.request.RequestOptions
+import com.github.boybeak.permission.Callback
+import com.github.boybeak.permission.PH
 import com.github.boybeak.picker.*
 import com.github.boybeak.starter.activity.BaseActivity
 import com.github.boybeak.starter.activity.DragExitToolbarActivity
@@ -150,14 +152,25 @@ class PickerActivity : DragExitToolbarActivity() {
                                 Picker.gallery().go(this@PickerActivity, callback)
                             }
                             1 -> {
-                                val dir = File(externalCacheDir, "images")
-                                if (!dir.exists()) {
-                                    dir.mkdirs()
-                                }
+                                PH.ask(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                                        .go(this@PickerActivity, object : Callback {
+                                            override fun onGranted(permissions: MutableList<String>) {
+                                                val dir = File(externalCacheDir, "images")
+                                                if (!dir.exists()) {
+                                                    dir.mkdirs()
+                                                }
 
-                                val cameraTempFile = File(dir, System.currentTimeMillis().toString() + ".jpg")
-                                val uri = FileProvider.getUriForFile(this@PickerActivity, "$packageName.provider", cameraTempFile)
-                                Picker.camera().output(uri, cameraTempFile).go(this@PickerActivity, callback)
+                                                val cameraTempFile = File(dir, System.currentTimeMillis().toString() + ".jpg")
+                                                val uri = FileProvider.getUriForFile(this@PickerActivity, "$packageName.provider", cameraTempFile)
+                                                Picker.camera().output(uri, cameraTempFile).go(this@PickerActivity, callback)
+                                            }
+
+                                            override fun onDenied(permission: String) {
+
+                                            }
+
+                                        })
+
                             }
                         }
                     }
