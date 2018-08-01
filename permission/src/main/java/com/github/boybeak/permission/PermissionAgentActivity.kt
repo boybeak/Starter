@@ -1,12 +1,12 @@
 package com.github.boybeak.permission
 
+import android.app.Activity
 import android.content.pm.PackageManager
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.view.View
 
-class PermissionAgentActivity : AppCompatActivity() {
+class PermissionAgentActivity : Activity() {
 
     private var id: String? = null
     private var permissions: ArrayList<String>? = null

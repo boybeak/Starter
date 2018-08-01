@@ -16,7 +16,7 @@ implementation 'com.github.boybeak:starter:x.y.z'
 
 
 
-## Permission
+## Permission[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/permission/images/download.svg) ](https://bintray.com/boybeak/nulldreams/permission/_latestVersion)
 
 This is a permission helper. Quickly grant permissions.
 
