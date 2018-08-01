@@ -1,6 +1,7 @@
 package com.github.boybeak.de
 
 import android.content.Context
+import android.support.annotation.IntDef
 import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
 import android.util.Log
@@ -22,6 +23,10 @@ class DragExitLayout : FrameLayout {
         private const val ALPHA_MIN_DEFAULT = 0.8f
         private const val SCALE_MIN_DEFAULT = 0.8f
     }
+
+    @IntDef(EDGE_LEFT, EDGE_RIGHT, EDGE_BOTH)
+    @Retention(AnnotationRetention.SOURCE)
+    annotation class Edge
 
     private var edgeSlop = 0
     private var mTouchSlop: Int = 0
@@ -64,24 +69,22 @@ class DragExitLayout : FrameLayout {
 
     private fun initThis(context: Context, attrs: AttributeSet?) {
 
-        checkChildCount()
-
         val configuration = ViewConfiguration.get(context)
         edgeSlop = configuration.scaledEdgeSlop
         mTouchSlop = configuration.scaledTouchSlop
 
         val ta = context.obtainStyledAttributes(attrs, R.styleable.DragExitLayout)
         try {
-            edges = ta.getInt(R.styleable.DragExitLayout_edge, EDGE_BOTH)
+            setActiveEdges(ta.getInt(R.styleable.DragExitLayout_activeEdges, EDGE_BOTH))
             setExitLineRatio(ta.getFloat(R.styleable.DragExitLayout_exitLineRatio, EXIT_LINE_RATION_DEFAULT))
             setLazy(ta.getFloat(R.styleable.DragExitLayout_lazy, LAZY_RATIO_DEFAULT))
 
-            stuckEffect = ta.getBoolean(R.styleable.DragExitLayout_stuckEffect, false)
+            setStuckEffect(ta.getBoolean(R.styleable.DragExitLayout_stuckEffect, false))
 
-            alphaEffect = ta.getBoolean(R.styleable.DragExitLayout_alphaEffect, false)
+            setAlphaEffect(ta.getBoolean(R.styleable.DragExitLayout_alphaEffect, false))
             setAlphaMin(ta.getFloat(R.styleable.DragExitLayout_minAlpha, ALPHA_MIN_DEFAULT))
 
-            scaleEffect = ta.getBoolean(R.styleable.DragExitLayout_scaleEffect, false)
+            setScaleEffect(ta.getBoolean(R.styleable.DragExitLayout_scaleEffect, false))
             setScaleMin(ta.getFloat(R.styleable.DragExitLayout_scaleMin, SCALE_MIN_DEFAULT))
 
         } finally {
@@ -97,11 +100,7 @@ class DragExitLayout : FrameLayout {
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-    }
-
-    override fun onDetachedFromWindow() {
-        super.onDetachedFromWindow()
-
+        checkChildCount()
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
@@ -364,6 +363,10 @@ class DragExitLayout : FrameLayout {
         scaleUnit = (1f - scaleMin) / getExitLineSize()
     }
 
+    fun setActiveEdges(@Edge edge: Int) {
+        this.edges = edge
+    }
+
     fun setExitLineRatio(ratio: Float) {
         if (ratio <= 0f || ratio >= 1f) {
             throw IllegalArgumentException("ratio can not be <= 0f nor >= 1f")
@@ -374,6 +377,14 @@ class DragExitLayout : FrameLayout {
         calculateScaleUtil()
     }
 
+    fun setStuckEffect(stuckEffect: Boolean) {
+        this.stuckEffect = stuckEffect
+    }
+
+    fun setAlphaEffect(alphaEffect: Boolean) {
+        this.alphaEffect = alphaEffect
+    }
+
     fun setAlphaMin(alphaMin: Float) {
         if (alphaMin < 0f || alphaMin > 1f) {
             throw IllegalArgumentException("alphaMin can not be < 0f nor > 1f")
@@ -382,6 +393,10 @@ class DragExitLayout : FrameLayout {
         this.alphaMin = alphaMin
 
         calculateAlphaUnit()
+    }
+
+    fun setScaleEffect(scaleEffect: Boolean) {
+        this.scaleEffect = scaleEffect
     }
 
     fun setScaleMin(scaleMin: Float) {

@@ -1,5 +1,6 @@
 package com.github.boybeak.starter.activity
 
+import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
@@ -92,87 +93,23 @@ open class BaseActivity: AppCompatActivity(), ILife {
         }, delayMillis)
     }
 
-    /*fun askForPermission (permission: String, callback: PermissionCallback) {
-        askForPermissions(Array(1, {permission}), callback)
-    }*/
-
-    /*fun askForPermissions (permissions: Array<out String?>, callback: PermissionCallback) {
-        mPermissionCallback = callback
-        mPermissionRequestCode = Random().nextInt(128)
-        var granted = true
-        permissions.forEach { p ->
-            if (ContextCompat.checkSelfPermission(this@BaseActivity, p!!) != PackageManager.PERMISSION_GRANTED) {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, p)) {
-                    val showed = mPermissionCallback!!.onShouldShowRationale(p)
-                    if (!showed) {
-                        showRequestPermissionRationale(p)
-                    } else {
-                        mPermissionCallback = null
-                        mPermissionRequestCode = 0
-                    }
-                    return
-                } else {
-                }
-                granted = false
-            } else {
-                granted = granted and true
-            }
-        }
-        if (granted) {
-            mPermissionCallback!!.onGranted(permissions)
-            mPermissionCallback = null
-            mPermissionRequestCode = 0
-        } else {
-            ActivityCompat.requestPermissions(this@BaseActivity, permissions, mPermissionRequestCode)
-        }
-    }*/
-
-    /*override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (mPermissionCallback != null && requestCode == mPermissionRequestCode) {
-            var granted = true
-            grantResults.indices.forEach { i ->
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
-                    granted = granted and true
-                } else {
-                    val showed = mPermissionCallback!!.onDenied(permissions[i])
-                    mPermissionCallback = null
-                    mPermissionRequestCode = 0
-                    granted = false
-
-                    if (!showed) {
-                        showRequestPermissionDenied(permissions[i])
-                    }
-                    return
-                }
-            }
-            if (granted) {
-                mPermissionCallback!!.onGranted(permissions)
-                mPermissionCallback = null
-                mPermissionRequestCode = 0
-            }
-        }
-    }*/
-
-    /*private fun showRequestPermissionRationale (permission: String?) {
-        AlertDialog.Builder(this)
-                .setMessage(getString(R.string.text_dialog_permission_need, permission))
-                .setPositiveButton(R.string.text_dialog_positive) { _, _ ->
-                    ActivityCompat.requestPermissions(this@BaseActivity, Array(1, {permission}), mPermissionRequestCode) }
-                .setNegativeButton(R.string.text_dialog_negative, null)
-                .setNeutralButton(R.string.text_dialog_neutral_go_to_permission_setting) { _, _ ->
-                    Intents.settingsTo(this@BaseActivity) }
-                .show()
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
     }
 
-    private fun showRequestPermissionDenied (permission: String?) {
-        AlertDialog.Builder(this)
-                .setMessage(getString(R.string.text_dialog_permission_denied, permission))
-                .setPositiveButton(R.string.text_dialog_positive) { _, _ -> Intents.settingsTo(this@BaseActivity) }
-                .setNegativeButton(R.string.text_dialog_negative, null)
-                .setNeutralButton(R.string.text_dialog_neutral_go_to_permission_setting) { _, _ -> Intents.settingsTo(this@BaseActivity) }
-                .show()
-    }*/
+    override fun startActivity(intent: Intent?) {
+        super.startActivity(intent)
+    }
+
+    override fun startActivity(intent: Intent?, options: Bundle?) {
+        super.startActivity(intent, options)
+    }
+
+    override fun startActivityForResult(intent: Intent?, requestCode: Int) {
+        super.startActivityForResult(intent, requestCode)
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
 
     fun showEmptyViewIn (parent: ViewGroup, params: ViewGroup.LayoutParams,
                          icon: Drawable?, title: CharSequence?, message: CharSequence?, button: CharSequence?,

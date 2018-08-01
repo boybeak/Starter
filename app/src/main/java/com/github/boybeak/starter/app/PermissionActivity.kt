@@ -10,12 +10,13 @@ import com.github.boybeak.permission.PH
 import com.github.boybeak.selector.Operator
 import com.github.boybeak.selector.Path
 import com.github.boybeak.starter.activity.BaseActivity
+import com.github.boybeak.starter.activity.DragExitToolbarActivity
 import com.github.boybeak.starter.adapter.Converter
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import com.github.boybeak.starter.app.adapter.PermissionImpl
 import kotlinx.android.synthetic.main.activity_permission.*
 
-class PermissionActivity : BaseActivity() {
+class PermissionActivity : DragExitToolbarActivity() {
 
     private var adapter: DataBindingAdapter? = null
 

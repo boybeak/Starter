@@ -41,10 +41,10 @@
 <tbody>
 <tr>
 <td>
-<p><a href="action-bar-enable.html">actionBarEnable</a></p>
+<p><a href="action-bar-as-up-enable.html">actionBarAsUpEnable</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">actionBarEnable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">actionBarAsUpEnable</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -66,6 +66,13 @@
 </td>
 <td>
 <code><span class="keyword">fun </span><span class="identifier">dismissEmptyView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="finish.html">finish</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">finish</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -137,11 +144,25 @@
 <td>
 <code><span class="keyword">fun </span><span class="identifier">showEmptyViewIn</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/params">params</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup/LayoutParams.html"><span class="identifier">LayoutParams</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/icon">icon</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/drawable/Drawable.html"><span class="identifier">Drawable</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/button">button</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/autoDismiss">autoDismiss</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$showEmptyViewIn(android.view.ViewGroup, android.view.ViewGroup.LayoutParams, android.graphics.drawable.Drawable, kotlin.CharSequence, kotlin.CharSequence, kotlin.CharSequence, kotlin.Boolean, com.github.boybeak.starter.widget.EmptyView.ActionListener)/listener">listener</span><span class="symbol">:</span>&nbsp;<a href="../../com.github.boybeak.starter.widget/-empty-view/-action-listener/index.html"><span class="identifier">ActionListener</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
+<tr>
+<td>
+<p><a href="start-activity-for-result.html">startActivityForResult</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">startActivityForResult</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$startActivityForResult(android.content.Intent, kotlin.Int)/intent">intent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Intent.html"><span class="identifier">Intent</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.activity.BaseActivity$startActivityForResult(android.content.Intent, kotlin.Int)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
 </tbody>
 </table>
 <h3>Inheritors</h3>
 <table>
 <tbody>
+<tr>
+<td>
+<p><a href="../-base-drag-exit-activity/index.html">BaseDragExitActivity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BaseDragExitActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BaseActivity</span><span class="symbol">, </span><span class="identifier">OnExitListener</span></code></td>
+</tr>
 <tr>
 <td>
 <p><a href="../-data-binding-activity/index.html">DataBindingActivity</a></p>

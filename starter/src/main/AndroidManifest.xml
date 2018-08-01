@@ -5,6 +5,6 @@
 
     <application>
         <activity android:name=".activity.PermissionAgentActivity"
-            android:theme="@style/TransparentTheme"/>
+            android:theme="@style/Transparent.Fullscreen"/>
     </application>
 </manifest>

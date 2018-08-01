@@ -15,13 +15,14 @@ import android.support.v7.app.AlertDialog
 import com.bumptech.glide.request.RequestOptions
 import com.github.boybeak.picker.*
 import com.github.boybeak.starter.activity.BaseActivity
+import com.github.boybeak.starter.activity.DragExitToolbarActivity
 import com.github.boybeak.starter.adapter.Converter
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import com.github.boybeak.starter.app.adapter.FileImpl
 import com.github.boybeak.starter.app.adapter.FooterImpl
 
 
-class PickerActivity : BaseActivity() {
+class PickerActivity : DragExitToolbarActivity() {
 
     private var adapter: DataBindingAdapter? = null
 

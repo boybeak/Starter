@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="DragExitLayout">
-        <attr name="edge" format="enum">
+        <attr name="activeEdges" format="enum">
             <enum name="left" value="-1"/>
             <enum name="right" value="1"/>
             <enum name="both" value="0"/>
