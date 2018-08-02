@@ -14,6 +14,14 @@ This is a quick start package, including BaseActivity, BaseFragment and utils cl
 implementation 'com.github.boybeak:starter:x.y.z'
 ```
 
+## Drag-Exit[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/drag-exit/images/download.svg) ](https://bintray.com/boybeak/nulldreams/drag-exit/_latestVersion)
+
+
+
+```groovy
+implementation 'com.github.boybeak:drag-exit:x.y.z'
+```
+
 
 
 ## Permission[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/permission/images/download.svg) ](https://bintray.com/boybeak/nulldreams/permission/_latestVersion)
