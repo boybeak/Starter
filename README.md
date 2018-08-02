@@ -82,7 +82,7 @@ If set exitLineRation to 0.25.
 
 ![exitLineRation](https://github.com/boybeak/Starter/blob/master/gif/exitLineRation.png)
 
-
+> Don't forget use a transparent theme to your activity when you want a drag-exit activity. Or you can use **BaseDragExitActivity** or **DragExitToolbarActivity** in **Starter** library.
 
 ## Permission[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/permission/images/download.svg) ](https://bintray.com/boybeak/nulldreams/permission/_latestVersion)
 
