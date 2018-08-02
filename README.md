@@ -16,11 +16,11 @@ implementation 'com.github.boybeak:starter:x.y.z'
 
 ## Drag-Exit[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/drag-exit/images/download.svg) ](https://bintray.com/boybeak/nulldreams/drag-exit/_latestVersion)
 
-
-
 ```groovy
 implementation 'com.github.boybeak:drag-exit:x.y.z'
 ```
+
+![demo gif](https://github.com/boybeak/Starter/blob/master/gif/drag-exit.gif)
 
 
 
