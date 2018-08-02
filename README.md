@@ -4,7 +4,7 @@
 
 中文[Readme.md](https://github.com/boybeak/Starter/blob/master/README_cn.md)
 
-There are 4 libraries in this project:[ **Starter**](https://github.com/boybeak/Starter#starter--), [**Drag-Exit**](https://github.com/boybeak/Starter#drag-exit--), [**Permission**](https://github.com/boybeak/Starter#permission--), [**Picker**](https://github.com/boybeak/Starter#picker--), [SAFR](https://github.com/boybeak/Starter#safr--)
+There are 4 libraries in this project:[ **Starter**](https://github.com/boybeak/Starter#starter--), [**Drag-Exit**](https://github.com/boybeak/Starter#drag-exit--), [**Permission**](https://github.com/boybeak/Starter#permission--), [**Picker**](https://github.com/boybeak/Starter#picker--), [**SAFR**](https://github.com/boybeak/Starter#safr--)
 
 ## Starter[ ![Starter](https://api.bintray.com/packages/boybeak/nulldreams/starter/images/download.svg) ](https://bintray.com/boybeak/nulldreams/starter/_latestVersion)
 
