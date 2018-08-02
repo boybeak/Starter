@@ -9,6 +9,13 @@ import kotlinx.android.synthetic.main.activity_drag_exit.*
 
 class DragExitActivity : DragExitToolbarActivity() {
 
+    private val dragListener = object : DragExitLayout.OnExitListener {
+        override fun onExit() {
+
+        }
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_drag_exit)

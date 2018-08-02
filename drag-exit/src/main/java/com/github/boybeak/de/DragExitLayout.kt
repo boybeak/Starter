@@ -81,7 +81,7 @@ class DragExitLayout : FrameLayout {
             setStuckEffect(ta.getBoolean(R.styleable.DragExitLayout_stuckEffect, false))
 
             setAlphaEffect(ta.getBoolean(R.styleable.DragExitLayout_alphaEffect, false))
-            setAlphaMin(ta.getFloat(R.styleable.DragExitLayout_minAlpha, ALPHA_MIN_DEFAULT))
+            setAlphaMin(ta.getFloat(R.styleable.DragExitLayout_alphaMin, ALPHA_MIN_DEFAULT))
 
             setScaleEffect(ta.getBoolean(R.styleable.DragExitLayout_scaleEffect, false))
             setScaleMin(ta.getFloat(R.styleable.DragExitLayout_scaleMin, SCALE_MIN_DEFAULT))

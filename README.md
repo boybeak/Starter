@@ -4,7 +4,7 @@
 
 中文[Readme.md](https://github.com/boybeak/Starter/blob/master/README_cn.md)
 
-There are 4 libraries in this project.
+There are 4 libraries in this project:[ **Starter**](https://github.com/boybeak/Starter#starter--), [**Drag-Exit**](https://github.com/boybeak/Starter#drag-exit--), [**Permission**](https://github.com/boybeak/Starter#permission--), [**Picker**](https://github.com/boybeak/Starter#picker--), [SAFR](https://github.com/boybeak/Starter#safr--)
 
 ## Starter[ ![Starter](https://api.bintray.com/packages/boybeak/nulldreams/starter/images/download.svg) ](https://bintray.com/boybeak/nulldreams/starter/_latestVersion)
 
@@ -21,6 +21,60 @@ implementation 'com.github.boybeak:drag-exit:x.y.z'
 ```
 
 ![demo gif](https://github.com/boybeak/Starter/blob/master/gif/drag-exit.gif)
+
+There's only one FrameLayout's sub class **DragExitLayout**. Use the layout like this:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.boybeak.de.DragExitLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drag_exit_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:lazy="0.25"
+    app:stuckEffect="true"
+    app:activeEdges="left">
+	<WebView 
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </WebView>
+</com.github.boybeak.de.DragExitLayout>
+```
+
+```kotlin
+class DragExitActivity : AppCompatActivity() {
+    
+    private val dragListener = object : DragExitLayout.OnExitListener {
+        override fun onExit() {
+			finish()
+        }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        super.setContentView(R.layout.activity_drag_exit)
+        
+        drag_exit_layout.setOnExitListener(dragListener)
+        
+        web_view.webViewClient = WebViewClient()
+        web_view.webChromeClient = WebChromeClient()
+        web_view.loadUrl("https://github.com/boybeak/Starter")
+    }
+}
+```
+
+Some attributes as below:
+
+- **activeEdges** - *enum*: 3 values are available, **left**, **right** and **both**, which edge can active the drag gesture.
+- **exitLineRatio** - *float*: Available values in range (0, 1), the exit action trigger ratio of layout width.
+- **stuckEffect** - *boolean*:  Whether should the child view stuck at exitLineRation position or not.
+- **lazy** - *float*: Available values in range (0, 1). If set to 0.5, your finger move 100 pixels, the child view actually move 50 pixels.
+- **alphaEffect** - *boolean*: Whether the child view change its alpha when moving.
+- **alphaMin** - *float*: The minimum value of the child view can be. Once the child view moves to exitLineRation position, the alpha will be alphaMin.
+- **scaleEffect** - *boolean*, same as alphaEffect
+- **scaleMin** - *float*: same as alphaMin
 
 
 

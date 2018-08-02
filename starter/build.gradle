@@ -67,7 +67,7 @@ dependencies {
 
 //    implementation project(':drag-exit')
 
-    implementation 'com.github.boybeak:drag-exit:0.0.3'
+    implementation 'com.github.boybeak:drag-exit:0.0.4'
 
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 }
