@@ -76,6 +76,12 @@ Some attributes as below:
 - **scaleEffect** - *boolean*, same as alphaEffect
 - **scaleMin** - *float*: same as alphaMin
 
+More about **exitLineRatio** see the image below:
+
+If set exitLineRation to 0.25.
+
+![exitLineRation](https://github.com/boybeak/Starter/blob/master/gif/exitLineRation.png)
+
 
 
 ## Permission[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/permission/images/download.svg) ](https://bintray.com/boybeak/nulldreams/permission/_latestVersion)
