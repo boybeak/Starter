@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 
 import com.github.boybeak.selector.Selector;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -122,6 +123,14 @@ public class DataBindingAdapter extends AbsAdapter {
         return false;
     }
 
+    public boolean contains(LayoutImpl layout) {
+        return index(layout) >= 0;
+    }
+
+    public boolean contains(Class<? extends LayoutImpl> clz) {
+        return containsInData(clz) || containsInHeader(clz) || containsInFooter(clz);
+    }
+
     public boolean containsInData (Class<? extends LayoutImpl> clz) {
         for (LayoutImpl layout : getDataList()) {
             if (clz.isInstance(layout)) {
@@ -131,8 +140,50 @@ public class DataBindingAdapter extends AbsAdapter {
         return false;
     }
 
+    public boolean containsInFooter(Class<? extends LayoutImpl> clz) {
+        if (mFooterList == null) {
+            return false;
+        }
+        for (LayoutImpl layout : mFooterList) {
+            if (clz.isInstance(layout)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int index(LayoutImpl layout) {
+        int index = indexOfHeader(layout);
+        if (index  >= 0) {
+            return index;
+        }
+        index = getAdapterPositionOfData(layout);
+        if (index >= 0) {
+            return index;
+        }
+        index = getAdapterPositionOfFooter(layout);
+        if (index >= 0) {
+            return index;
+        }
+        return -1;
+    }
+
+    public int indexOfHeader(LayoutImpl layout) {
+        if (mHeaderList == null) {
+            return -1;
+        }
+        return mHeaderList.indexOf(layout);
+    }
+
     public int indexOfData (LayoutImpl layout) {
         return mDataList.indexOf(layout);
+    }
+
+    public int indexOfFooter(LayoutImpl layout) {
+        if (mFooterList == null) {
+            return -1;
+        }
+        return mFooterList.indexOf(layout);
     }
 
     public <T> Selector<T> getDataSelector (Class<T> tClass) {
@@ -183,6 +234,10 @@ public class DataBindingAdapter extends AbsAdapter {
         return addAll(layouts);
     }
 
+    public <Data, Layout extends LayoutImpl> DataChange addAll(Data[] dataArray, Converter<Data, Layout> converter) {
+        return addAll(Arrays.asList(dataArray), converter);
+    }
+
     public <Data> DataChange replaceFirst (Data from, Data to) {
         for (int i = 0; i < getDataSize(); i++) {
             LayoutImpl layout = mDataList.get(i);
@@ -192,6 +247,26 @@ public class DataBindingAdapter extends AbsAdapter {
             }
         }
         return DataChange.doNothingInstance();
+    }
+
+    public <Data> DataChange replaceFirst (String id, Data replacement) {
+        for (int i = 0; i < getDataSize(); i++) {
+            LayoutImpl layout = mDataList.get(i);
+            if (layout.id().equals(id)) {
+                layout.setSource(replacement);
+                return new DataChange(this, getAdapterPositionOfData(i), DataChange.TYPE_ITEM_CHANGED);
+            }
+        }
+        return DataChange.doNothingInstance();
+    }
+
+    public DataChange replace (LayoutImpl layout) {
+        int index = mDataList.indexOf(layout);
+        if (index < 0) {
+            return DataChange.doNothingInstance();
+        }
+        mDataList.set(index, layout);
+        return new DataChange(this, getAdapterPositionOfData(index), DataChange.TYPE_ITEM_CHANGED);
     }
 
     public DataChange remove (LayoutImpl layout) {
@@ -290,6 +365,14 @@ public class DataBindingAdapter extends AbsAdapter {
             mFooterList.clear();
         }
         return new DataChange(this, 0, itemCount, DataChange.TYPE_ITEM_RANGE_REMOVED);
+    }
+
+    public int getAdapterPositionOfHeader (int positionInHeaderList) {
+        return positionInHeaderList;
+    }
+
+    public int getAdapterPositionOfHeader (LayoutImpl layout) {
+        return getAdapterPositionOfHeader(indexOfHeader(layout));
     }
 
     public int getAdapterPositionOfData (int positionInDataList) {

@@ -9,8 +9,17 @@ import com.github.boybeak.starter.adapter.AbsDataBindingHolder;
  */
 
 public interface LayoutImpl<Data, VH extends AbsDataBindingHolder> {
+    String id();
+    void setId(String id);
     Data getSource();
     void setSource(Data data);
     Class<VH> getHolderClass();
     @LayoutRes int getLayout();
+
+    void setSelected(boolean selected);
+    boolean isSelected();
+
+    void setSelectable(boolean selectable);
+    boolean isSelectable();
+
 }

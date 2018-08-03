@@ -9,9 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.github.boybeak.starter.adapter.AbsDataBindingHolder;
-import com.github.boybeak.starter.adapter.LayoutImpl;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
