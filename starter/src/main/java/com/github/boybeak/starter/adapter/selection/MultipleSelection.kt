@@ -106,4 +106,17 @@ class MultipleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
         }
     }
 
+    fun hasSelectedItems(): Boolean {
+        return selectedList.isNotEmpty()
+    }
+
+    fun isAllSelected(): Boolean {
+        for(i in 0 until adapter().itemCount) {
+            if (!adapter().getItem(i).isSelected) {
+                return false
+            }
+        }
+        return true
+    }
+
 }
