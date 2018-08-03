@@ -28,6 +28,10 @@ open class BaseFragment : Fragment(), ILife {
         return activity
     }
 
+    open fun onBackPress(): Boolean {
+        return false
+    }
+
     open fun getTitle(context: Context): CharSequence? {
         return null
     }
