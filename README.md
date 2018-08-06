@@ -19,7 +19,7 @@ implementation 'com.github.boybeak:starter:x.y.z'
 | package       | class                                                        | description                                                  |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **activity**  | BaseActivity,BaseDragExitActivity,DataBindingActivity,DataBindingToolbarActivity,DragExitToolbarActivity, SrlRvActivity, ToolbarActivity,ToolbarViewPagerActivity | Some basic activities                                        |
-| **adapter**   | DataBindingAdapter,FooterAdapter,BaseLayoutImpl,AbsDataBindingHolder | only some main class a presented                             |
+| **adapter**   | DataBindingAdapter,FooterAdapter,BaseLayoutImpl,AbsDataBindingHolder | Only some main class a presented                             |
 | **broadcast** | AbsReceiver, BroadcastUtils                                  | Add isRegistered state in AbsReceiver.Use this with **BroadcastUtils** |
 | **fragment**  | BaseFragment, BaseDialogFragment, BaseBottomDialogFragment, RefreshListFragment, PaginationFragment |                                                              |
 | **mvc**       |                                                              | It's not too useful                                          |
