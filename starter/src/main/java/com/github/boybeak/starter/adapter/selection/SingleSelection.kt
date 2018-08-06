@@ -7,6 +7,8 @@ class SingleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
 
     private var selectedItem: LayoutImpl<*, *>? = null
 
+    private var selectListener: OnSelectChangeListener? = null
+
     override fun select(index: Int) {
         if (!isStarted()) {
             start()
@@ -20,10 +22,13 @@ class SingleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
         }
         if (selectedItem != null) {
             selectedItem!!.isSelected = false
+            adapter().notifyItemChanged(adapter().index(selectedItem))
+            selectListener?.onUnSelect(selectedItem!!)
         }
         selectedItem = layout
         selectedItem!!.isSelected = true
         adapter().notifyItemChanged(index)
+        selectListener?.onSelect(layout)
     }
 
     override fun select(layout: LayoutImpl<*, *>) {
@@ -70,9 +75,15 @@ class SingleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
         return this
     }
 
+    fun listenBy(listener: OnSelectChangeListener): SingleSelection {
+        selectListener = listener
+        return this
+    }
+
     override fun release() {
         super.release()
         Selection.releaseSingle(id())
+        selectListener = null
     }
 
     fun getSelectedItem(): LayoutImpl<*, *>? {
@@ -86,6 +97,11 @@ class SingleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
         } else {
             null
         }
+    }
+
+    interface OnSelectChangeListener {
+        fun onSelect (layout: LayoutImpl<*, *>)
+        fun onUnSelect (layout: LayoutImpl<*, *>)
     }
 
 }

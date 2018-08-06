@@ -68,5 +68,6 @@ interface Selection {
     fun <Data> isSelected(data: Data): Boolean
 
     fun release()
+    fun isReleased(): Boolean
 
 }

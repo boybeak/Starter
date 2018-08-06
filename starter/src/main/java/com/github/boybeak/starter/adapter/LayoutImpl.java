@@ -13,6 +13,7 @@ public interface LayoutImpl<Data, VH extends AbsDataBindingHolder> {
     void setId(String id);
     Data getSource();
     void setSource(Data data);
+    <T> T getSourceUnSafe();
     Class<VH> getHolderClass();
     @LayoutRes int getLayout();
 

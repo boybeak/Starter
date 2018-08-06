@@ -51,4 +51,8 @@ abstract class AbsSelection(private var adapter: DataBindingAdapter?) : Selectio
     override fun release() {
         adapter = null
     }
+
+    override fun isReleased(): Boolean {
+        return adapter == null
+    }
 }

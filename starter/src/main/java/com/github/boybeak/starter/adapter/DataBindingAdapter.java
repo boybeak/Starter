@@ -7,7 +7,9 @@ import com.github.boybeak.selector.Selector;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.function.Predicate;
 
 
 /**
@@ -288,6 +290,39 @@ public class DataBindingAdapter extends AbsAdapter {
         if (removeIndex >= 0) {
             mDataList.remove(removeIndex);
             return new DataChange(this, removeIndex, DataChange.TYPE_ITEM_REMOVED);
+        }
+        return DataChange.doNothingInstance();
+    }
+
+    public DataChange removeMany(Collection<LayoutImpl> layouts) {
+//        Iterator<LayoutImpl> it = mDataList.iterator();
+        boolean removed = mDataList.removeAll(layouts);
+//        while (it.hasNext()) {
+//            LayoutImpl l = it.next();
+//            if (layouts.contains(l)) {
+//                it.remove();
+//                removed = true;
+//            }
+//
+//        }
+        if (removed) {
+            return DataChange.notifyDataSetChangeInstance(this);
+        }
+        return DataChange.doNothingInstance();
+    }
+
+    public <Data> DataChange removeManyData(Collection<Data> dataCollection) {
+        Iterator<LayoutImpl> it = mDataList.iterator();
+        boolean removed = false;
+        while (it.hasNext()) {
+            LayoutImpl l = it.next();
+            if (dataCollection.contains(l.getSource())) {
+                it.remove();
+                removed = true;
+            }
+        }
+        if (removed) {
+            return DataChange.notifyDataSetChangeInstance(this);
         }
         return DataChange.doNothingInstance();
     }

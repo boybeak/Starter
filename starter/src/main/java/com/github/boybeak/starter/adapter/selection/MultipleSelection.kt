@@ -7,6 +7,8 @@ class MultipleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
 
     private val selectedList = ArrayList<LayoutImpl<*, *>>()
 
+    private var selectListener: OnSelectChangeListener? = null
+
     override fun select(index: Int) {
         if (index < 0 || index >= adapter().itemCount) {
             return
@@ -23,9 +25,11 @@ class MultipleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
             if (isSelected(layout)) {
                 selectedList.remove(layout)
                 layout.isSelected = false
+                selectListener?.onUnSelect(layout, selectedList.isEmpty(), selectedCount())
             } else {
                 selectedList.add(layout)
                 layout.isSelected = true
+                selectListener?.onSelect(layout, isAllSelected(), selectedCount())
             }
             adapter().notifyItemChanged(index)
         }
@@ -71,9 +75,15 @@ class MultipleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
         return this
     }
 
+    fun listenBy(listener: OnSelectChangeListener): MultipleSelection {
+        this.selectListener = listener
+        return this
+    }
+
     override fun release() {
         super.release()
         Selection.releaseMultiple(id())
+        selectListener = null
     }
 
     fun selectAll() {
@@ -95,12 +105,12 @@ class MultipleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
         }
     }
 
-    fun getSelectedItems(): List<LayoutImpl<*, *>> {
+    fun selectedItems(): List<LayoutImpl<*, *>> {
         return selectedList
     }
 
     @Suppress("UNCHECKED_CAST")
-    fun <Data> getSelectedData(): List<Data> {
+    fun <Data> selectedData(): List<Data> {
         return List(selectedList.size) {
             selectedList[it].source as Data
         }
@@ -117,6 +127,15 @@ class MultipleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
             }
         }
         return true
+    }
+
+    fun selectedCount(): Int {
+        return selectedList.size
+    }
+
+    interface OnSelectChangeListener {
+        fun onSelect(layout: LayoutImpl<*, *>, isAllSelected: Boolean, selectedCount: Int)
+        fun onUnSelect(layout: LayoutImpl<*, *>, isNothingSelected: Boolean, selectedCount: Int)
     }
 
 }

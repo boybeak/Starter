@@ -42,6 +42,11 @@ public abstract class BaseLayoutImpl<Data, VH extends AbsDataBindingHolder>
     }
 
     @Override
+    public <T> T getSourceUnSafe() {
+        return (T)getSource();
+    }
+
+    @Override
     public void setSource (Data data) {
         this.data = data;
     }
