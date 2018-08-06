@@ -19,7 +19,8 @@ class MainActivity : BaseActivity() {
     }
 
     fun gotoPermission(view: View) {
-        Router.with(view).goTo(PermissionActivity::class.java)
+        Router.with(view)
+                .goTo(PermissionActivity::class.java)
     }
 
     fun gotoCalendar(view: View) {

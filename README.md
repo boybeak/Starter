@@ -26,7 +26,7 @@ implementation 'com.github.boybeak:starter:x.y.z'
 | [**retrofit**](https://github.com/boybeak/Starter/wiki/retrofit) | SimpleCallback, SimpleListCallback, SafeCallback, SafeListCallback | Some quick retrofit callback                                 |
 | [**utils**](https://github.com/boybeak/Starter/wiki/utils)   | AssetUtil, Connectivity, FileUtil, ImeUtil                   | Some useful utils                                            |
 | [**widget**](https://github.com/boybeak/Starter/wiki/widget) | BottomHideBehavior, Chip, EmptyView, OnScrollBottomListener, PagerStateAdapter, ProgressBar, RatioCardView, RatioImageView,RatioViewPager, SearchBar, SimpleViewPagerFragmentAdapter |                                                              |
-| [Others](https://github.com/boybeak/Starter/wiki/Others)     | CrashHandler, GetNothingImpl, ILife, Intents, Memory, Router, SafeHandler |                                                              |
+| [Others](https://github.com/boybeak/Starter/wiki/Others)     | [CrashHandler](https://github.com/boybeak/Starter/wiki/Others/_edit#crashhandler), GetNothingImpl, ILife, [Intents](https://github.com/boybeak/Starter/wiki/Others/_edit#intents), [Memory](https://github.com/boybeak/Starter/wiki/Others/_edit#memory), [Router](https://github.com/boybeak/Starter/wiki/Others/_edit#router), [SafeHandler](https://github.com/boybeak/Starter/wiki/Others/_edit#safehandler) |                                                              |
 
 ## Drag-Exit[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/drag-exit/images/download.svg) ](https://bintray.com/boybeak/nulldreams/drag-exit/_latestVersion)
 
