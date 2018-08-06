@@ -28,6 +28,8 @@ implementation 'com.github.boybeak:starter:x.y.z'
 | [**widget**](https://github.com/boybeak/Starter/wiki/widget) | BottomHideBehavior, Chip, EmptyView, OnScrollBottomListener, PagerStateAdapter, ProgressBar, RatioCardView, RatioImageView,RatioViewPager, SearchBar, SimpleViewPagerFragmentAdapter |                                                              |
 | [Others](https://github.com/boybeak/Starter/wiki/Others)     | [CrashHandler](https://github.com/boybeak/Starter/wiki/Others/_edit#crashhandler), GetNothingImpl, ILife, [Intents](https://github.com/boybeak/Starter/wiki/Others/_edit#intents), [Memory](https://github.com/boybeak/Starter/wiki/Others/_edit#memory), [Router](https://github.com/boybeak/Starter/wiki/Others/_edit#router), [SafeHandler](https://github.com/boybeak/Starter/wiki/Others/_edit#safehandler) |                                                              |
 
+[See full wiki document](https://github.com/boybeak/Starter/wiki)
+
 ## Drag-Exit[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/drag-exit/images/download.svg) ](https://bintray.com/boybeak/nulldreams/drag-exit/_latestVersion)
 
 ```groovy
