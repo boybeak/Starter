@@ -16,17 +16,17 @@ implementation 'com.github.boybeak:starter:x.y.z'
 
 #### Starter structure
 
-| package       | class                                                        | description                                                  |
-| ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **activity**  | BaseActivity,BaseDragExitActivity,DataBindingActivity,DataBindingToolbarActivity,DragExitToolbarActivity, SrlRvActivity, ToolbarActivity,ToolbarViewPagerActivity | Some basic activities                                        |
-| **adapter**   | DataBindingAdapter,FooterAdapter,BaseLayoutImpl,AbsDataBindingHolder | Only some main class a presented                             |
-| **broadcast** | AbsReceiver, BroadcastUtils                                  | Add isRegistered state in AbsReceiver.Use this with **BroadcastUtils** |
-| **fragment**  | BaseFragment, BaseDialogFragment, BaseBottomDialogFragment, RefreshListFragment, PaginationFragment |                                                              |
-| **mvc**       |                                                              | It's not too useful                                          |
-| **retrofit**  | SimpleCallback, SimpleListCallback, SafeCallback, SafeListCallback | Some quick retrofit callback                                 |
-| **utils**     | AssetUtil, Connectivity, FileUtil, ImeUtil                   | Some useful utils                                            |
-| **widget**    | BottomHideBehavior, Chip, EmptyView, OnScrollBottomListener, PagerStateAdapter, ProgressBar, RatioCardView, RatioImageView,RatioViewPager, SearchBar, SimpleViewPagerFragmentAdapter |                                                              |
-| Others        | CrashHandler, GetNothingImpl, ILife, Intents, Memory, Router, SafeHandler |                                                              |
+| package                                                      | class                                                        | description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [**activity**](https://github.com/boybeak/Starter/wiki/activity) | [BaseActivity](https://github.com/boybeak/Starter/wiki/activity#baseactivity),[BaseDragExitActivity](https://github.com/boybeak/Starter/wiki/activity#basedragexitactivity),[DataBindingActivity](https://github.com/boybeak/Starter/wiki/activity#basedragexitactivity),DataBindingToolbarActivity,DragExitToolbarActivity, SrlRvActivity, [ToolbarActivity](https://github.com/boybeak/Starter/wiki/activity#toolbaractivity),ToolbarViewPagerActivity | Some basic activities                                        |
+| [**adapter**](https://github.com/boybeak/Starter/wiki/adapter) | [DataBindingAdapter](https://github.com/boybeak/Starter/wiki/adapter#databindingadapter),[FooterAdapter](https://github.com/boybeak/Starter/wiki/adapter#footeradapter),BaseLayoutImpl,AbsDataBindingHolder, [DataChange](https://github.com/boybeak/Starter/wiki/adapter#datachange) | Only some main class a presented                             |
+| [**broadcast**](https://github.com/boybeak/Starter/wiki/broadcast) | AbsReceiver, BroadcastUtils                                  | Add isRegistered state in AbsReceiver.Use this with **BroadcastUtils** |
+| [**fragment**](https://github.com/boybeak/Starter/wiki/fragment) | BaseFragment, BaseDialogFragment, BaseBottomDialogFragment, RefreshListFragment, PaginationFragment |                                                              |
+| [**mvc**](https://github.com/boybeak/Starter/wiki/mvc)       |                                                              | It's not too useful                                          |
+| [**retrofit**](https://github.com/boybeak/Starter/wiki/retrofit) | SimpleCallback, SimpleListCallback, SafeCallback, SafeListCallback | Some quick retrofit callback                                 |
+| [**utils**](https://github.com/boybeak/Starter/wiki/utils)   | AssetUtil, Connectivity, FileUtil, ImeUtil                   | Some useful utils                                            |
+| [**widget**](https://github.com/boybeak/Starter/wiki/widget) | BottomHideBehavior, Chip, EmptyView, OnScrollBottomListener, PagerStateAdapter, ProgressBar, RatioCardView, RatioImageView,RatioViewPager, SearchBar, SimpleViewPagerFragmentAdapter |                                                              |
+| [Others](https://github.com/boybeak/Starter/wiki/Others)     | CrashHandler, GetNothingImpl, ILife, Intents, Memory, Router, SafeHandler |                                                              |
 
 ## Drag-Exit[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/drag-exit/images/download.svg) ](https://bintray.com/boybeak/nulldreams/drag-exit/_latestVersion)
 

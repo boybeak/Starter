@@ -30,9 +30,6 @@ open class BaseActivity: AppCompatActivity(), ILife {
     private var emptyView: EmptyView? = null
 
     override var isAlive: Boolean = false
-    private var mPermissionRequestCode = 0
-
-//    private var mPermissionCallback: PermissionCallback? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
