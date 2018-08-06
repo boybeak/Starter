@@ -14,6 +14,20 @@ This is a quick start package, including BaseActivity, BaseFragment and utils cl
 implementation 'com.github.boybeak:starter:x.y.z'
 ```
 
+#### Starter structure
+
+| package       | class                                                        | description                                                  |
+| ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **activity**  | BaseActivity,BaseDragExitActivity,DataBindingActivity,DataBindingToolbarActivity,DragExitToolbarActivity, SrlRvActivity, ToolbarActivity,ToolbarViewPagerActivity | Some basic activities                                        |
+| **adapter**   | DataBindingAdapter,FooterAdapter,BaseLayoutImpl,AbsDataBindingHolder | only some main class a presented                             |
+| **broadcast** | AbsReceiver, BroadcastUtils                                  | Add isRegistered state in AbsReceiver.Use this with **BroadcastUtils** |
+| **fragment**  | BaseFragment, BaseDialogFragment, BaseBottomDialogFragment, RefreshListFragment, PaginationFragment |                                                              |
+| **mvc**       |                                                              | It's not too useful                                          |
+| **retrofit**  | SimpleCallback, SimpleListCallback, SafeCallback, SafeListCallback | Some quick retrofit callback                                 |
+| **utils**     | AssetUtil, Connectivity, FileUtil, ImeUtil                   | Some useful utils                                            |
+| **widget**    | BottomHideBehavior, Chip, EmptyView, OnScrollBottomListener, PagerStateAdapter, ProgressBar, RatioCardView, RatioImageView,RatioViewPager, SearchBar, SimpleViewPagerFragmentAdapter |                                                              |
+| Others        | CrashHandler, GetNothingImpl, ILife, Intents, Memory, Router, SafeHandler |                                                              |
+
 ## Drag-Exit[ ![Download](https://api.bintray.com/packages/boybeak/nulldreams/drag-exit/images/download.svg) ](https://bintray.com/boybeak/nulldreams/drag-exit/_latestVersion)
 
 ```groovy
