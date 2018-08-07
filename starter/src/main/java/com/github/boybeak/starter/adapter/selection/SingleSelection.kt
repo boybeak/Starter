@@ -3,7 +3,7 @@ package com.github.boybeak.starter.adapter.selection
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import com.github.boybeak.starter.adapter.LayoutImpl
 
-class SingleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
+class SingleSelection internal constructor(adapter: DataBindingAdapter) : AbsSelection(adapter) {
 
     private var selectedItem: LayoutImpl<*, *>? = null
 

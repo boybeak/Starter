@@ -3,7 +3,7 @@ package com.github.boybeak.starter.adapter.selection
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import com.github.boybeak.starter.adapter.LayoutImpl
 
-class MultipleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
+class MultipleSelection internal constructor(adapter: DataBindingAdapter) : AbsSelection(adapter) {
 
     private val selectedList = ArrayList<LayoutImpl<*, *>>()
 
@@ -25,7 +25,7 @@ class MultipleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
             if (isSelected(layout)) {
                 selectedList.remove(layout)
                 layout.isSelected = false
-                selectListener?.onUnSelect(layout, selectedList.isEmpty(), selectedCount())
+                selectListener?.onUnSelect(layout, isNothingSelected(), selectedCount())
             } else {
                 selectedList.add(layout)
                 layout.isSelected = true
@@ -127,6 +127,10 @@ class MultipleSelection(adapter: DataBindingAdapter) : AbsSelection(adapter) {
             }
         }
         return true
+    }
+
+    fun isNothingSelected(): Boolean {
+        return selectedList.isEmpty()
     }
 
     fun selectedCount(): Int {

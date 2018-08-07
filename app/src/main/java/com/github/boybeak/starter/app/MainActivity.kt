@@ -4,13 +4,14 @@ import android.os.Bundle
 import android.view.View
 import com.github.boybeak.starter.Router
 import com.github.boybeak.starter.activity.BaseActivity
+import com.github.boybeak.starter.adapter.FooterAdapter
+import com.github.boybeak.starter.adapter.selection.MultipleSelection
 
 class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
     }
 

@@ -294,7 +294,7 @@ public class DataBindingAdapter extends AbsAdapter {
         return DataChange.doNothingInstance();
     }
 
-    public DataChange removeMany(Collection<LayoutImpl> layouts) {
+    public DataChange removeMany(Collection<LayoutImpl<?, ?>> layouts) {
 //        Iterator<LayoutImpl> it = mDataList.iterator();
         boolean removed = mDataList.removeAll(layouts);
 //        while (it.hasNext()) {
