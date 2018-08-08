@@ -1,4 +1,4 @@
-package com.github.boybeak.starter.activity
+package com.github.boybeak.starter.activity.de
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import com.github.boybeak.de.DragExitLayout
 import com.github.boybeak.starter.R
+import com.github.boybeak.starter.activity.BaseActivity
 import kotlinx.android.synthetic.main.activity_base_drag_exit.*
 
 open class BaseDragExitActivity : BaseActivity(), DragExitLayout.OnExitListener {

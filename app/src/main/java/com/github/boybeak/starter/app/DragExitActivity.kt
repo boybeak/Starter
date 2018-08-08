@@ -4,8 +4,14 @@ import android.os.Bundle
 import android.webkit.WebChromeClient
 import android.webkit.WebViewClient
 import com.github.boybeak.de.DragExitLayout
-import com.github.boybeak.starter.activity.DragExitToolbarActivity
+import com.github.boybeak.starter.activity.de.DragExitToolbarActivity
 import kotlinx.android.synthetic.main.activity_drag_exit.*
+import android.graphics.drawable.Drawable
+import android.R.attr.data
+import android.content.res.Resources
+import android.util.TypedValue
+
+
 
 class DragExitActivity : DragExitToolbarActivity() {
 

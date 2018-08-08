@@ -1,1 +1,1 @@
-include ':app', ':starter', ':safr', ':picker', ':permission', ':calendar', ':drag-exit'
+include ':app', ':starter', ':safr', ':picker', ':permission', ':calendar', ':drag-exit', ':a-medium'

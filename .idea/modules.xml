@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Starter.iml" filepath="$PROJECT_DIR$/Starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/a-medium/a-medium.iml" filepath="$PROJECT_DIR$/a-medium/a-medium.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/calendar/calendar.iml" filepath="$PROJECT_DIR$/calendar/calendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/drag-exit/drag-exit.iml" filepath="$PROJECT_DIR$/drag-exit/drag-exit.iml" />

@@ -16,8 +16,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.github.boybeak.permission.Callback
 import com.github.boybeak.permission.PH
 import com.github.boybeak.picker.*
-import com.github.boybeak.starter.activity.BaseActivity
-import com.github.boybeak.starter.activity.DragExitToolbarActivity
+import com.github.boybeak.starter.activity.de.DragExitToolbarActivity
 import com.github.boybeak.starter.adapter.Converter
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import com.github.boybeak.starter.app.adapter.FileImpl

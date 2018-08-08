@@ -1,4 +1,4 @@
-package com.github.boybeak.starter.activity
+package com.github.boybeak.starter.activity.de
 
 import android.graphics.drawable.Drawable
 import android.os.Bundle

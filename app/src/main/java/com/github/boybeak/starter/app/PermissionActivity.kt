@@ -1,7 +1,6 @@
 package com.github.boybeak.starter.app
 
 import android.Manifest
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -9,8 +8,7 @@ import com.github.boybeak.permission.Callback
 import com.github.boybeak.permission.PH
 import com.github.boybeak.selector.Operator
 import com.github.boybeak.selector.Path
-import com.github.boybeak.starter.activity.BaseActivity
-import com.github.boybeak.starter.activity.DragExitToolbarActivity
+import com.github.boybeak.starter.activity.de.DragExitToolbarActivity
 import com.github.boybeak.starter.adapter.Converter
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import com.github.boybeak.starter.app.adapter.PermissionImpl

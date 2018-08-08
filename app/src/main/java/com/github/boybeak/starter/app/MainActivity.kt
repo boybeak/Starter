@@ -32,4 +32,9 @@ class MainActivity : BaseActivity() {
         Router.with(view).goTo(DragExitActivity::class.java)
     }
 
+    fun gotoDemo(view: View) {
+        Router.with(view).goTo(DemoActivity::class.java)
+    }
+
+
 }

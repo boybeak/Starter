@@ -28,4 +28,9 @@
         android:layout_height="wrap_content"
         android:onClick="gotoDragExit"
         android:text="Drag Exit"/>
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gotoDemo"
+        android:text="Demo"/>
 </android.support.v7.widget.LinearLayoutCompat>
