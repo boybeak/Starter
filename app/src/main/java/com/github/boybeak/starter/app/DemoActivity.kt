@@ -6,19 +6,24 @@ import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.TypedValue
 import android.widget.Toast
+import com.github.boybeak.starter.activity.BaseActivity
+import com.github.boybeak.starter.activity.de.BaseDragExitActivity
 import com.github.boybeak.starter.activity.de.DragExitToolbarActivity
+import com.github.boybeak.starter.app.fragment.DemoFragment
+import com.github.boybeak.starter.widget.SimpleViewPagerFragmentAdapter
 import kotlinx.android.synthetic.main.activity_demo.*
 
-class DemoActivity : DragExitToolbarActivity() {
+class DemoActivity : BaseActivity() {
+
+    private val list = listOf<DemoFragment>(DemoFragment(), DemoFragment())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_demo)
 
-        Toast.makeText(this, "${view_1.background} ${view_2.background}", Toast.LENGTH_SHORT).show()
+        view_pager.adapter = SimpleViewPagerFragmentAdapter(this, supportFragmentManager, list)
 
-        view_1.background = getBg(theme)
-        view_2.background = getBg(applicationContext.theme)
+        tab_layout.setupWithViewPager(view_pager)
 
     }
 

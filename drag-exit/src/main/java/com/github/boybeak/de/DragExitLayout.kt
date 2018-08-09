@@ -4,6 +4,7 @@ import android.content.Context
 import android.support.annotation.IntDef
 import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
+import android.util.Log
 import android.view.*
 import android.widget.FrameLayout
 import android.widget.OverScroller
@@ -171,6 +172,7 @@ class DragExitLayout : FrameLayout {
             MotionEvent.ACTION_CANCEL -> {
 //                Log.v(TAG, "END SPEED = ${velocityTracker!!.xVelocity}")
 //                velocityTracker!!.clear()
+//                Log.v(TAG, "ACTION_UP or ACTION_CANCEL")
                 val transX = theOne().translationX.toInt()
                 if (isCancelGesture()) {
                     scroller.startScroll(transX, 0, -transX, 0)
