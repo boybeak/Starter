@@ -213,7 +213,7 @@ class DragExitLayout : FrameLayout {
                 //TODO onStartFling
             }
             setTheOneTranslationX(scroller.currX.toFloat())
-            invalidate()
+            postInvalidate()
         } else {
             if (isFling) {
                 isFling = false

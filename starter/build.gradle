@@ -56,7 +56,7 @@ dependencies {
 //    testImplementation 'android.arch.core:core-testing:1.1.0'
     // Test helpers for Room
 //    testImplementation 'android.arch.persistence.room:testing:1.0.0'
-    // Java8 support for Lifecycles
+//     Java8 support for Lifecycles
     api 'android.arch.lifecycle:common-java8:1.1.1'
     annotationProcessor "com.android.databinding:compiler:$android_plugin_version"
 
@@ -67,7 +67,7 @@ dependencies {
 
 //    implementation project(':drag-exit')
 
-    implementation 'com.github.boybeak:drag-exit:0.0.4'
+    implementation 'com.github.boybeak:drag-exit:0.0.5'
 
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 }

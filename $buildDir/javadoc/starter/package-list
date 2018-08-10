@@ -3,6 +3,7 @@ $dokka.linkExtension:html
 
 com.github.boybeak.starter
 com.github.boybeak.starter.activity
+com.github.boybeak.starter.activity.de
 com.github.boybeak.starter.adapter
 com.github.boybeak.starter.adapter.card
 com.github.boybeak.starter.adapter.expandable
