@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="color_black_87">#dd000000</color>
+    <color name="color_black_87">#de000000</color>
+    <color name="color_black_60">#99000000</color>
+    <color name="color_black_38">#61000000</color>
+
+    <color name="color_dark_text_high_emphasis">@color/color_black_87</color>
+    <color name="color_dark_text_medium_emphasis">@color/color_black_60</color>
+    <color name="color_dark_text_disable">@color/color_black_38</color>
+    <color name="color_error_text">#b00020</color>
+    
     <color name="color_bg_chip_nor">#e0e0e0</color>
     <color name="color_bg_chip_pre">#989898</color>
 </resources>

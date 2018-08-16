@@ -3,6 +3,7 @@ package com.github.boybeak.starter.adapter;
 import android.content.Context;
 import android.databinding.BindingAdapter;
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -99,6 +100,14 @@ public class FooterAdapter extends DataBindingAdapter {
         notifyFooter(Footer.LOADING, null);
     }
 
+    public void notifySuccessFooter(@StringRes int msgRes) {
+        notifySuccessFooter(getContext().getString(msgRes));
+    }
+
+    public void notifySuccessFooter(@StringRes int msgRes, Object ... args) {
+        notifySuccessFooter(getContext().getString(msgRes, args));
+    }
+
     public void notifySuccessFooter (String message) {
         notifyFooter(Footer.SUCCESS, message);
     }
@@ -107,12 +116,28 @@ public class FooterAdapter extends DataBindingAdapter {
         notifySuccessFooter(null);
     }
 
+    public void notifyFailedFooter(@StringRes int msgRes) {
+        notifyFailedFooter(getContext().getString(msgRes));
+    }
+
+    public void notifyFailedFooter(@StringRes int msgRes, Object ... args) {
+        notifyFailedFooter(getContext().getString(msgRes, args));
+    }
+
     public void notifyFailedFooter (String message) {
         notifyFooter(Footer.FAILED, message);
     }
 
     public void notifyFailedFooter () {
         notifyFailedFooter(null);
+    }
+
+    public void notifyEmptyFooter(@StringRes int msgRes) {
+        notifyEmptyFooter(getContext().getString(msgRes));
+    }
+
+    public void notifyEmptyFooter(@StringRes int msgRes, Object ... args) {
+        notifyEmptyFooter(getContext().getString(msgRes, args));
     }
 
     public void notifyEmptyFooter (String message) {

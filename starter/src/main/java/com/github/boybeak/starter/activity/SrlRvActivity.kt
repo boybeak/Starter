@@ -27,6 +27,7 @@ open class SrlRvActivity : ToolbarActivity(), SwipeRefreshLayout.OnRefreshListen
                 }
 
             }
+            recyclerView().addOnScrollListener(bottomListener)
         }
 
     }
