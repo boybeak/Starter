@@ -27,7 +27,9 @@ abstract class AbsSelection(private var adapter: DataBindingAdapter?) : Selectio
     override fun start(): Selection {
         for(i in 0 until adapter().itemCount) {
             val layout = adapter().getItem(i)
-            layout.isSelectable = true
+            if (layout.supportSelect()) {
+                layout.isSelectable = true
+            }
         }
         adapter().notifyDataSetChanged()
         isStarted = true
@@ -38,7 +40,9 @@ abstract class AbsSelection(private var adapter: DataBindingAdapter?) : Selectio
         isStarted = false
         for(i in 0 until adapter().itemCount) {
             val layout = adapter().getItem(i)
-            layout.isSelectable = false
+            if (layout.supportSelect()) {
+                layout.isSelectable = false
+            }
         }
         adapter().notifyDataSetChanged()
         return this

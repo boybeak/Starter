@@ -23,4 +23,6 @@ public interface LayoutImpl<Data, VH extends AbsDataBindingHolder> {
     void setSelectable(boolean selectable);
     boolean isSelectable();
 
+    boolean supportSelect();
+
 }

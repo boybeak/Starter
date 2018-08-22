@@ -56,9 +56,9 @@ class MultipleSelection internal constructor(adapter: DataBindingAdapter) : AbsS
     }
 
     override fun <Data> isSelected(data: Data): Boolean {
-        for (i in 0 until adapter().itemCount) {
-            if (adapter().getItem(i).source == data) {
-                return isSelected(i)
+        selectedList.forEach {
+            if (it.source == data) {
+                return true
             }
         }
         return false
@@ -66,6 +66,25 @@ class MultipleSelection internal constructor(adapter: DataBindingAdapter) : AbsS
 
     override fun start(): MultipleSelection {
         super.start()
+        return this
+    }
+
+    fun start(translation: SelectionMapper): MultipleSelection {
+        start()
+        var changed = false
+        for (i in 0 until adapter().itemCount) {
+            val layout = adapter().getItem(i)
+            if (layout.isSelectable) {
+                layout.isSelected = translation.isAlreadySelected(i, adapter())
+                if (layout.isSelected && !selectedList.contains(layout)) {
+                    selectedList.add(layout)
+                    changed = true
+                }
+            }
+        }
+        if (changed) {
+            adapter().notifyDataSetChanged()
+        }
         return this
     }
 
@@ -140,6 +159,10 @@ class MultipleSelection internal constructor(adapter: DataBindingAdapter) : AbsS
     interface OnSelectChangeListener {
         fun onSelect(layout: LayoutImpl<*, *>, isAllSelected: Boolean, selectedCount: Int)
         fun onUnSelect(layout: LayoutImpl<*, *>, isNothingSelected: Boolean, selectedCount: Int)
+    }
+
+    interface SelectionMapper {
+        fun isAlreadySelected(index: Int, adapter: DataBindingAdapter): Boolean
     }
 
 }

@@ -57,7 +57,7 @@ public abstract class BaseLayoutImpl<Data, VH extends AbsDataBindingHolder>
             return false;
         }
         if (obj instanceof LayoutImpl) {
-            return id().equals(((LayoutImpl) obj).id());
+            return id().equals(((LayoutImpl) obj).id()) || getSource().equals(((LayoutImpl) obj).getSource());
         } else if (data.getClass().isInstance(obj)) {
             return data.equals(obj);
         }
@@ -79,11 +79,19 @@ public abstract class BaseLayoutImpl<Data, VH extends AbsDataBindingHolder>
 
     @Override
     public void setSelectable(boolean selectable) {
+        if (!supportSelect()) {
+            return;
+        }
         isSelectable = selectable;
     }
 
     @Override
     public boolean isSelectable() {
         return isSelectable;
+    }
+
+    @Override
+    public boolean supportSelect() {
+        return false;
     }
 }
