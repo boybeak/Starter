@@ -28,7 +28,7 @@ class PermissionActivity : DragExitToolbarActivity() {
         adapter = DataBindingAdapter(this)
         recycler_view.adapter = adapter
         adapter!!.addAll(permissionList, object : Converter<String, PermissionImpl> {
-            override fun convert(data: String?, adapter: DataBindingAdapter?): PermissionImpl {
+            override fun convert(data: String?, adapter: DataBindingAdapter): PermissionImpl {
                 return PermissionImpl(data)
             }
 

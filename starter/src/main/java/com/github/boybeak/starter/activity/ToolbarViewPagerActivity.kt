@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager
 import android.support.v7.widget.Toolbar
 import android.view.Gravity
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import com.github.boybeak.starter.R
 import kotlinx.android.synthetic.main.activity_toolbar_view_pager.*
 
@@ -18,13 +19,18 @@ open class ToolbarViewPagerActivity : ToolbarActivity(){
         setContentView(R.layout.activity_toolbar_view_pager)
 
         if (showTabLayout()) {
-            tabLayout = TabLayout(this)
-            buildTabLayout(tabLayout!!)
+            decorView().viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    decorView().viewTreeObserver.removeOnGlobalLayoutListener(this)
+                    tabLayout = TabLayout(this@ToolbarViewPagerActivity)
+                    buildTabLayout(tabLayout!!)
 
+                    toolbar().addView(tabLayout, buildTabLayoutParams())
 
-            toolbar().addView(tabLayout, buildTabLayoutParams())
+                    tabLayout!!.setupWithViewPager(viewPager(), true)
+                }
 
-            tabLayout!!.setupWithViewPager(viewPager(), true)
+            })
         }
     }
 

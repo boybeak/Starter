@@ -3,19 +3,16 @@ package com.github.boybeak.starter.adapter.card;
 import android.content.Context;
 import android.support.annotation.StringRes;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.github.boybeak.starter.R;
 import com.github.boybeak.starter.adapter.DataChange;
-import com.github.boybeak.starter.adapter.card.CardAdapter;
-import com.github.boybeak.starter.adapter.card.CardListHolder;
 import com.github.boybeak.starter.adapter.expandable.Group;
 import com.github.boybeak.starter.adapter.expandable.GroupList;
 import com.github.boybeak.starter.adapter.footer.Footer;
 import com.github.boybeak.starter.adapter.footer.FooterHolder;
-import com.github.boybeak.starter.adapter.footer.FooterImpl;
+import com.github.boybeak.starter.adapter.footer.FooterLayout;
 import com.github.boybeak.starter.databinding.LayoutFooterBinding;
 
 import java.util.ArrayList;
@@ -34,7 +31,7 @@ public class GroupCardAdapter extends RecyclerView.Adapter {
     private GroupList mGroupList = null;
 
     private Footer mFooter;
-    private FooterImpl mFooterImpl;
+    private FooterLayout mFooterImpl;
 
     public GroupCardAdapter(Context context, boolean footerEnable) {
         mContext = context;
@@ -42,7 +39,7 @@ public class GroupCardAdapter extends RecyclerView.Adapter {
         mGroupList = new GroupList();
         if (footerEnable) {
             mFooter = new Footer();
-            mFooterImpl = new FooterImpl(mFooter);
+            mFooterImpl = new FooterLayout(mFooter);
         }
     }
 

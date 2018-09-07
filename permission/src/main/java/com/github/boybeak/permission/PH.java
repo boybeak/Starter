@@ -2,6 +2,9 @@ package com.github.boybeak.permission;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,6 +34,16 @@ public class PH {
             callback.onDenied(permission);
         }
         releaseCallback(id);
+    }
+
+    public static boolean isPermissionGranted(Context context, String ... permissions) {
+        for (String p : permissions) {
+            int result = ContextCompat.checkSelfPermission(context, p);
+            if (result != PackageManager.PERMISSION_GRANTED) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private static void releaseCallback(String id) {

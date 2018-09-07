@@ -31,4 +31,50 @@
     <declare-styleable name="ProgressBar">
         <attr name="progressColor" format="color|reference" />
     </declare-styleable>
+
+    <attr name="period" format="integer"/>
+    <attr name="gapWidth" format="dimension"/>
+
+    <declare-styleable name="AmplitudeView">
+        <attr name="period"/>
+    </declare-styleable>
+
+    <declare-styleable name="AmplitudeBarView">
+        <attr name="gapWidth"/>
+        <attr name="barColor" format="color|reference"/>
+        <attr name="barColorDark" format="color|reference"/>
+        <attr name="barWidth" format="dimension|reference"/>
+
+        <attr name="direction" format="enum">
+            <enum name="left_to_right" value="1"/>
+            <enum name="right_to_left" value="-1"/>
+        </attr>
+        <attr name="maxValue" format="integer|reference"/>
+        <attr name="minValue" format="integer|reference"/>
+        <attr name="maxDuration" format="integer|reference"/>
+        <attr name="maxAmplitude" format="integer|reference"/>
+        <attr name="debug" format="boolean|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="AmplitudeBezierView">
+        <attr name="showHintLine" format="boolean|reference"/>
+        <attr name="hintLineColor" format="color|reference"/>
+        <attr name="hintLineWidth" format="dimension|reference"/>
+        <attr name="lineColor" format="color|reference"/>
+        <attr name="lineWidth" format="dimension|reference"/>
+        <attr name="waveCount" format="integer|reference"/>
+        <attr name="moveSpeed" format="integer|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="VisualizerView">
+        <attr name="period"/>
+        <attr name="captureSize" format="integer|reference"/>
+        <attr name="waveformEnable" format="boolean|reference"/>
+        <attr name="fftEnable" format="boolean|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="VisualizerBarView">
+        <attr name="skipCount" format="integer|reference"/>
+    </declare-styleable>
+
 </resources>

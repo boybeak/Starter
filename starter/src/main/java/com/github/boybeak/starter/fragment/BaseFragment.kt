@@ -14,31 +14,12 @@ open class BaseFragment : Fragment(), ILife {
 
     override var isAlive: Boolean = false
 
-    private var activity: BaseActivity? = null
-
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
-        if (context !is BaseActivity) {
-            throw IllegalStateException("BaseFragment must work with BaseActivity")
-        }
-        activity = context
-    }
-
-    fun activity(): BaseActivity? {
-        return activity
-    }
-
     open fun onBackPress(): Boolean {
         return false
     }
 
     open fun getTitle(context: Context): CharSequence? {
         return null
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        activity = null
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -4,9 +4,14 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.github.boybeak.selector.Selector;
+import com.github.boybeak.starter.adapter.selection.MultipleSelection;
+import com.github.boybeak.starter.adapter.selection.Selection;
+import com.github.boybeak.starter.adapter.selection.SingleSelection;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
@@ -240,6 +245,18 @@ public class DataBindingAdapter extends AbsAdapter {
         return addAll(Arrays.asList(dataArray), converter);
     }
 
+    public <Data> DataChange addAll(Collection<Data> dataList, ListConverter<Data> converter) {
+        List<LayoutImpl> layouts = new ArrayList<>();
+        for (Data data : dataList) {
+            layouts.addAll(converter.convert(data, this));
+        }
+        return addAll(layouts);
+    }
+
+    public <Data> DataChange add(Data data, ListConverter<Data> converter) {
+        return addAll(converter.convert(data, this));
+    }
+
     public <Data> DataChange replaceFirst (Data from, Data to) {
         for (int i = 0; i < getDataSize(); i++) {
             LayoutImpl layout = mDataList.get(i);
@@ -434,6 +451,14 @@ public class DataBindingAdapter extends AbsAdapter {
 
     public void notifyFooters () {
         notifyItemRangeChanged(getFooterStartPosition(), getFooterSize());
+    }
+
+    public SingleSelection singleSelection() {
+        return Selection.Companion.obtainSingle(this);
+    }
+
+    public MultipleSelection multipleSelection() {
+        return Selection.Companion.obtainMultiple(this);
     }
 
 }

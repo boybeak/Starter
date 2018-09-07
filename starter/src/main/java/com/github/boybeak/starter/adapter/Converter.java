@@ -1,8 +1,7 @@
 package com.github.boybeak.starter.adapter;
 
-import com.github.boybeak.starter.adapter.DataBindingAdapter;
-import com.github.boybeak.starter.adapter.LayoutImpl;
+import android.support.annotation.NonNull;
 
 public interface Converter<Data, Layout extends LayoutImpl> {
-    Layout convert (Data data, DataBindingAdapter adapter);
+    Layout convert (Data data, @NonNull DataBindingAdapter adapter);
 }

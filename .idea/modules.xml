@@ -6,10 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/calendar/calendar.iml" filepath="$PROJECT_DIR$/calendar/calendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/drag-exit/drag-exit.iml" filepath="$PROJECT_DIR$/drag-exit/drag-exit.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pdk/pdk.iml" filepath="$PROJECT_DIR$/pdk/pdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/permission/permission.iml" filepath="$PROJECT_DIR$/permission/permission.iml" />
       <module fileurl="file://$PROJECT_DIR$/picker/picker.iml" filepath="$PROJECT_DIR$/picker/picker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pinterest/pinterest.iml" filepath="$PROJECT_DIR$/pinterest/pinterest.iml" />
       <module fileurl="file://$PROJECT_DIR$/safr/safr.iml" filepath="$PROJECT_DIR$/safr/safr.iml" />
       <module fileurl="file://$PROJECT_DIR$/starter/starter.iml" filepath="$PROJECT_DIR$/starter/starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/web-auth/web-auth.iml" filepath="$PROJECT_DIR$/web-auth/web-auth.iml" />

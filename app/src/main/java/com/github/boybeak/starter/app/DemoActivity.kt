@@ -7,10 +7,9 @@ import android.os.Bundle
 import android.util.TypedValue
 import android.widget.Toast
 import com.github.boybeak.starter.activity.BaseActivity
-import com.github.boybeak.starter.activity.de.BaseDragExitActivity
-import com.github.boybeak.starter.activity.de.DragExitToolbarActivity
+import com.github.boybeak.starter.adapter.*
 import com.github.boybeak.starter.app.fragment.DemoFragment
-import com.github.boybeak.starter.widget.SimpleViewPagerFragmentAdapter
+import com.github.boybeak.starter.widget.SimpleFragmentStatePagerAdapter
 import kotlinx.android.synthetic.main.activity_demo.*
 
 class DemoActivity : BaseActivity() {
@@ -21,10 +20,11 @@ class DemoActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_demo)
 
-        view_pager.adapter = SimpleViewPagerFragmentAdapter(this, supportFragmentManager, list)
+        view_pager.adapter = SimpleFragmentStatePagerAdapter(this, supportFragmentManager, list)
 
         tab_layout.setupWithViewPager(view_pager)
 
+        val adapter = FooterAdapter(this)
     }
 
     private fun getBg(theme: Resources.Theme): Drawable {

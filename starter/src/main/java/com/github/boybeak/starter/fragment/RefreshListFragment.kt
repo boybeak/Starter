@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.annotation.DrawableRes
 import android.support.annotation.StringRes
 import android.support.v4.widget.SwipeRefreshLayout
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -60,7 +61,9 @@ abstract class RefreshListFragment : BaseFragment(), SwipeRefreshLayout.OnRefres
     abstract fun getAdapter(): RecyclerView.Adapter<*>
 
     @NotNull
-    abstract fun getLayoutManager():RecyclerView.LayoutManager
+    open fun getLayoutManager():RecyclerView.LayoutManager {
+        return LinearLayoutManager(context)
+    }
 
 
     private fun showEmptyViewIn (parent: ViewGroup, params: ViewGroup.LayoutParams,

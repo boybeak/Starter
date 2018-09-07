@@ -12,6 +12,7 @@ import java.io.File
 import android.net.Uri
 import android.support.v4.content.FileProvider
 import android.support.v7.app.AlertDialog
+import android.support.v7.widget.GridLayoutManager
 import com.bumptech.glide.request.RequestOptions
 import com.github.boybeak.permission.Callback
 import com.github.boybeak.permission.PH
@@ -21,6 +22,7 @@ import com.github.boybeak.starter.adapter.Converter
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import com.github.boybeak.starter.app.adapter.FileImpl
 import com.github.boybeak.starter.app.adapter.FooterImpl
+import com.github.boybeak.starter.widget.BorderDecoration
 
 
 class PickerActivity : DragExitToolbarActivity() {
@@ -78,8 +80,24 @@ class PickerActivity : DragExitToolbarActivity() {
         setContentView(R.layout.activity_picker)
 
         adapter = DataBindingAdapter(this)
+        val glm = recycler_view.layoutManager as GridLayoutManager
         adapter!!.addFooter(FooterImpl(footerEvent))
+        val lookup = object : GridLayoutManager.SpanSizeLookup() {
+            override fun getSpanSize(position: Int): Int {
+                if (position == 0) {
+                    return glm.spanCount
+                }
+                return 1
+            }
+
+            override fun isSpanIndexCacheEnabled(): Boolean {
+                return true
+            }
+
+        }
         recycler_view.adapter = adapter
+        glm.spanSizeLookup = lookup
+        recycler_view.addItemDecoration(BorderDecoration(24))
 
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), 100)
 
@@ -181,7 +199,7 @@ class PickerActivity : DragExitToolbarActivity() {
     private fun getSingleImage() {
         Picker.gallery().image().go(this, object : SingleCallback {
             override fun onGet(id: String, uri: Uri, file: File) {
-//                adapter!!.add()
+                adapter!!.add(FileImpl(file)).autoNotify()
             }
 
             override fun onCancel(id: String) {
@@ -194,7 +212,12 @@ class PickerActivity : DragExitToolbarActivity() {
     private fun getMultipleImages() {
         Picker.gallery().image().multiple(true).go(this, object : MultipleCallback {
             override fun onGet(id: String, uris: MutableList<Uri>, files: MutableList<File>) {
-//                adapter!!.addAll()
+                adapter!!.addAll(files, object : Converter<File, FileImpl> {
+                    override fun convert(data: File?, adapter: DataBindingAdapter): FileImpl {
+                        return FileImpl(data)
+                    }
+
+                }).autoNotify()
             }
 
             override fun onCancel(id: String) {
