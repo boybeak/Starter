@@ -1,0 +1,25 @@
+apply plugin: 'java-library'
+//apply plugin: 'maven'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'org.jetbrains.dokka-android'
+apply plugin: 'maven-publish'
+
+apply from: '../bintray-user.gradle'
+
+dokka {
+    outputFormat = 'html'
+    outputDirectory = '$buildDir/javadoc'
+}
+
+apply from: 'deploy-j-loader.gradle'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
