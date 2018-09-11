@@ -44,8 +44,10 @@
         <activity
             android:name=".DragExitActivity"
             android:theme="@style/Transparent" />
-        <activity android:name=".DemoActivity"
-            android:theme="@style/Transparent"/>
+        <activity
+            android:name=".DemoActivity"
+            android:theme="@style/Transparent" />
+        <activity android:name=".activity.DownloaderActivity"></activity>
     </application>
 
 </manifest>

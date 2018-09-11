@@ -6,6 +6,7 @@ import com.github.boybeak.starter.Router
 import com.github.boybeak.starter.activity.BaseActivity
 import com.github.boybeak.starter.adapter.FooterAdapter
 import com.github.boybeak.starter.adapter.selection.MultipleSelection
+import com.github.boybeak.starter.app.activity.DownloaderActivity
 
 class MainActivity : BaseActivity() {
 
@@ -36,5 +37,8 @@ class MainActivity : BaseActivity() {
         Router.with(view).goTo(DemoActivity::class.java)
     }
 
+    fun gotoDownload(view: View) {
+        Router.with(view).goTo(DownloaderActivity::class.java)
+    }
 
 }

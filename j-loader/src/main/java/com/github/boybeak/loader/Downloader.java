@@ -15,7 +15,7 @@ public class Downloader {
 		return new Downloader();
 	}
 	
-	public static long getFileSize(String url) {
+	public static int getFileSize(String url) {
 		try {
 			return getFileSize(new URL(url));
 		} catch (MalformedURLException e) {
@@ -24,7 +24,7 @@ public class Downloader {
 		}
 	}
 	
-	public static long getFileSize(URL url) {
+	public static int getFileSize(URL url) {
 		URLConnection conn = null;
 	    try {
 	        conn = url.openConnection();
@@ -43,7 +43,7 @@ public class Downloader {
 	}
 	
 	private URL from;
-	private long size;
+	private int size;
 	private File to, toTmp;
 	private Callback callback;
 	private boolean autoContinueOnBreakPointIfPossible = false;
@@ -52,11 +52,16 @@ public class Downloader {
 		
 	}
 	
+	public Downloader autoContinueOnBreakPointIfPossible(boolean auto) {
+		autoContinueOnBreakPointIfPossible = auto;
+		return this;
+	}
+
 	public Downloader from(URL url) {
 		from = url;
 		return this;
 	}
-	
+
 	public Downloader from(String url) {
 		try {
 			return from(new URL(url));
@@ -65,7 +70,7 @@ public class Downloader {
 		}
 		throw new IllegalStateException("can not make a URL by {" + url + "}");
 	}
-	
+
 	public Downloader to(File file) {
 		to = file;
 		if (!to.getParentFile().exists()) {
@@ -74,16 +79,11 @@ public class Downloader {
 		toTmp = new File(to.getParentFile(), "." + to.getName() + ".tmp");
 		return this;
 	}
-	
+
 	public Downloader to(String path) {
 		return to(new File(path));
 	}
-	
-	public Downloader autoContinueOnBreakPointIfPossible(boolean auto) {
-		autoContinueOnBreakPointIfPossible = auto;
-		return this;
-	}
-	
+
 	public Downloader listenBy(Callback callback) {
 		this.callback = callback;
 		return this;
@@ -94,7 +94,7 @@ public class Downloader {
 		if (toTmp.exists() && toTmp.length() > size) {
 			toTmp.delete();
 			/*if (autoContinueOnBreakPointIfPossible) {
-				
+
 			} else {
 				throw new IllegalStateException("Already download file larger than total file");
 			}*/
@@ -127,14 +127,13 @@ public class Downloader {
 		    long bytesCount = toTmp.length();
 		    int notifyLoopIndex = 0;
 		    inStream.skip(bytesCount);
+		    final int updateLoopSize = size / 100 / dataBuffer.length;
 		    
 		    while ((bytesRead = inStream.read(dataBuffer, 0, dataBuffer.length)) != -1) {
 		    	bytesCount += bytesRead;
 		    	outStream.write(dataBuffer, 0, bytesRead);
-		        if (notifyLoopIndex == 4) {
-		        	/*if (bytesCount >= size/2) {
-		        		System.exit(2);
-		        	}*/
+
+		        if (notifyLoopIndex == updateLoopSize) {
 		        	if (callback != null) {
 		        		callback.onProgress(size, bytesCount, from);
 		        	}
@@ -167,9 +166,9 @@ public class Downloader {
 
 	}
 	
-	/*private void tempTo() {
-		return new File()
-	}*/
+	public File getToFile() {
+		return to;
+	}
 	
 	public interface Callback {
 		void onStart(long fileSize, URL url);
