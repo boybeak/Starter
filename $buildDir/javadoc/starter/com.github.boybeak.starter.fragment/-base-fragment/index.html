@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.fragment</a>&nbsp;/&nbsp;<a href=".">BaseFragment</a><br/>
+<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.fragment</a>&nbsp;/&nbsp;<a href="./index.html">BaseFragment</a><br/>
 <br/>
 <h1>BaseFragment</h1>
 <code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BaseFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><a href="../../com.github.boybeak.starter/-i-life/index.html"><span class="identifier">ILife</span></a></code>
@@ -41,24 +41,10 @@
 <tbody>
 <tr>
 <td>
-<p><a href="activity.html">activity</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">activity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.activity/-base-activity/index.html"><span class="identifier">BaseActivity</span></a><span class="symbol">?</span></code></td>
-</tr>
-<tr>
-<td>
 <p><a href="get-title.html">getTitle</a></p>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getTitle</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.BaseFragment$getTitle(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-char-sequence/index.html"><span class="identifier">CharSequence</span></a><span class="symbol">?</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-attach.html">onAttach</a></p>
-</td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onAttach</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.BaseFragment$onAttach(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -73,13 +59,6 @@
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onDestroyView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="on-detach.html">onDetach</a></p>
-</td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onDetach</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -98,7 +77,7 @@
 <p><a href="../-data-binding-fragment/index.html">DataBindingFragment</a></p>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataBindingFragment</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">B</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BaseFragment</span></code>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">DataBindingFragment</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">B</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewDataBinding</span><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseFragment</span></a></code>
 <p>Created by gaoyunfei on 2018/2/6.</p>
 </td>
 </tr>
@@ -107,7 +86,7 @@
 <p><a href="../-refresh-list-fragment/index.html">RefreshListFragment</a></p>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">RefreshListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">BaseFragment</span><span class="symbol">, </span><span class="identifier">OnRefreshListener</span></code>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">RefreshListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">BaseFragment</span></a><span class="symbol">, </span><span class="identifier">OnRefreshListener</span></code>
 <p>Created by gaoyunfei on 2018/1/28.</p>
 </td>
 </tr>

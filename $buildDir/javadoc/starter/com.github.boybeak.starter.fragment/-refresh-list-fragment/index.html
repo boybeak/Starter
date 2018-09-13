@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="../../../style.css">
 </HEAD>
 <BODY>
-<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.fragment</a>&nbsp;/&nbsp;<a href=".">RefreshListFragment</a><br/>
+<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.fragment</a>&nbsp;/&nbsp;<a href="./index.html">RefreshListFragment</a><br/>
 <br/>
 <h1>RefreshListFragment</h1>
 <code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">RefreshListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-base-fragment/index.html"><span class="identifier">BaseFragment</span></a><span class="symbol">, </span><span class="identifier">OnRefreshListener</span></code>
@@ -58,7 +58,7 @@
 <p><a href="get-layout-manager.html">getLayoutManager</a></p>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">getLayoutManager</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LayoutManager</span></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getLayoutManager</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LayoutManager</span></code></td>
 </tr>
 <tr>
 <td>
@@ -128,13 +128,6 @@
 <tbody>
 <tr>
 <td>
-<p><a href="../-base-fragment/activity.html">activity</a></p>
-</td>
-<td>
-<code><span class="keyword">fun </span><span class="identifier">activity</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../../com.github.boybeak.starter.activity/-base-activity/index.html"><span class="identifier">BaseActivity</span></a><span class="symbol">?</span></code></td>
-</tr>
-<tr>
-<td>
 <p><a href="../-base-fragment/get-title.html">getTitle</a></p>
 </td>
 <td>
@@ -142,24 +135,10 @@
 </tr>
 <tr>
 <td>
-<p><a href="../-base-fragment/on-attach.html">onAttach</a></p>
-</td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onAttach</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.fragment.BaseFragment$onAttach(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
 <p><a href="../-base-fragment/on-back-press.html">onBackPress</a></p>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onBackPress</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="../-base-fragment/on-detach.html">onDetach</a></p>
-</td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onDetach</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -171,7 +150,7 @@
 <p><a href="../-pagination-fragment/index.html">PaginationFragment</a></p>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PaginationFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">RefreshListFragment</span></code>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">PaginationFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">RefreshListFragment</span></a></code>
 <p>Created by gaoyunfei on 2018/1/29.</p>
 </td>
 </tr>

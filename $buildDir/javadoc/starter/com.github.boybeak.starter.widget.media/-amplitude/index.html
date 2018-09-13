@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Amplitude - starter</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.widget.media</a>&nbsp;/&nbsp;<a href="./index.html">Amplitude</a><br/>
+<br/>
+<h1>Amplitude</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">Amplitude</span></code>
+<p>Created by gaoyunfei on 2017/5/5.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">Amplitude</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.media.Amplitude$<init>(kotlin.Int, kotlin.IntArray)/period">period</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.widget.media.Amplitude$<init>(kotlin.Int, kotlin.IntArray)/amplitudeArray">amplitudeArray</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html"><span class="identifier">IntArray</span></a><span class="symbol">)</span></code><br/>
+<code><span class="identifier">Amplitude</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.media.Amplitude$<init>(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/period">period</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.widget.media.Amplitude$<init>(kotlin.Int, kotlin.collections.MutableList((kotlin.Int)))/amplitudeList">amplitudeList</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="flush-to.html">flushTo</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">flushTo</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.media.Amplitude$flushTo(java.io.File)/to">to</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">flushTo</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.media.Amplitude$flushTo(kotlin.String)/to">to</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="from-file.html">fromFile</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromFile</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.media.Amplitude$fromFile(kotlin.String)/path">path</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Amplitude</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromFile</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.media.Amplitude$fromFile(java.io.File)/file">file</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Amplitude</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="from-stream.html">fromStream</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">fromStream</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.widget.media.Amplitude$fromStream(java.io.InputStream)/stream">stream</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/io/InputStream.html"><span class="identifier">InputStream</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">Amplitude</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-amplitude-array.html">getAmplitudeArray</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAmplitudeArray</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html"><span class="identifier">IntArray</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-amplitude-list.html">getAmplitudeList</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getAmplitudeList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-period.html">getPeriod</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getPeriod</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="to-string.html">toString</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">toString</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

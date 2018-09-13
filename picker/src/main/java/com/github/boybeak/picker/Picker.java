@@ -80,7 +80,7 @@ public abstract class Picker {
     }
 
     static String getRealPathFromURI(Context context, Uri contentURI, String mime) {
-        String result = null;
+        /*String result = null;
         Cursor cursor = context.getContentResolver().query(contentURI, null, null, null, null);
         if (cursor == null) { // Source is Dropbox or other similar local file path
             result = contentURI.getPath();
@@ -92,11 +92,13 @@ public abstract class Picker {
             } else if (mime.contains(VIDEO)) {
                 idx = cursor.getColumnIndex(MediaStore.Video.VideoColumns.DATA);
             }
-
+            Log.v(TAG, "getRealPathFromURI idx=" + idx);
             result = cursor.getString(idx);
             cursor.close();
         }
-        return result;
+        return result;*/
+//        return UriUtils.INSTANCE.getUriRealPath(context, contentURI);
+        return UriParser.INSTANCE.getRealPath(context, contentURI, mime);
     }
 
     private @Mime String mime = IMAGE;

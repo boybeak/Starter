@@ -207,8 +207,8 @@ public class DataBindingAdapter extends AbsAdapter {
     }
 
     public DataChange add (int position, LayoutImpl layout) {
-        mDataList.add(position - getHeaderSize(), layout);
-        return new DataChange(this, position, DataChange.TYPE_ITEM_INSERTED);
+        mDataList.add(position, layout);
+        return new DataChange(this, getHeaderSize() + position, DataChange.TYPE_ITEM_INSERTED);
     }
 
     public DataChange addIfNotExist (LayoutImpl layout) {
@@ -449,8 +449,22 @@ public class DataBindingAdapter extends AbsAdapter {
         return getAdapterPositionOfFooter(mFooterList.indexOf(layout));
     }
 
-    public void notifyFooters () {
-        notifyItemRangeChanged(getFooterStartPosition(), getFooterSize());
+    public boolean hasFooters() {
+        return getFooterSize() > 0;
+    }
+    public void notifyFooters() {
+        if (hasFooters()) {
+            notifyItemRangeChanged(getFooterStartPosition(), getFooterSize());
+        }
+    }
+
+    public boolean hasHeaders() {
+        return getHeaderSize() > 0;
+    }
+    public void notifiyHeaders() {
+        if (hasHeaders()) {
+            notifyItemRangeChanged(0, getHeaderSize());
+        }
     }
 
     public SingleSelection singleSelection() {
