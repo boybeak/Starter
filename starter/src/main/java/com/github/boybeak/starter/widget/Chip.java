@@ -66,6 +66,7 @@ public class Chip extends LinearLayout {
         mTextView = new AppCompatTextView(context, attrs, defStyleAttr);
         mTextView.setDuplicateParentStateEnabled(true);
         mTextView.setMaxLines(1);
+        mTextView.setMinWidth(context.getResources().getDimensionPixelSize(R.dimen.chip_min_label_width));
         mTextView.setEllipsize(TextUtils.TruncateAt.END);
         mTextView.setTextColor(getResources().getColorStateList(R.color.text_color_chip));
         mTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
@@ -81,6 +82,7 @@ public class Chip extends LinearLayout {
         if (showImage) {
 
             mImageView = new AppCompatImageView(context, attrs, defStyleAttr);
+            mImageView.setId(R.id.chip_icon);
 
             LayoutParams params = new LayoutParams(mHeightPx, mHeightPx);
             this.addView(mImageView, 0, params);

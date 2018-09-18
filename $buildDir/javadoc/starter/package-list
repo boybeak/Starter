@@ -1,6 +1,8 @@
 $dokka.format:html
 $dokka.linkExtension:html
-
+$dokka.location:com.github.boybeak.starter.widget$foreachChild(android.view.ViewGroup, kotlin.Function1((android.view.View, kotlin.Unit)))com.github.boybeak.starter.widget/android.view.-view-group/foreach-child.html
+$dokka.location:com.github.boybeak.starter.widget$foreachChildIndexed(android.view.ViewGroup, kotlin.Function2((kotlin.Int, android.view.View, kotlin.Unit)))com.github.boybeak.starter.widget/android.view.-view-group/foreach-child-indexed.html
+$dokka.location:com.github.boybeak.starter.widget$get(android.view.ViewGroup, kotlin.Int)com.github.boybeak.starter.widget/android.view.-view-group/get.html
 com.github.boybeak.starter
 com.github.boybeak.starter.activity
 com.github.boybeak.starter.activity.de

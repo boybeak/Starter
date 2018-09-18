@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <item name="chip_icon" type="id"/>
     <item name="chip_action_btn" type="id"/>
 </resources>
