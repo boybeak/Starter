@@ -1,9 +1,10 @@
 package com.github.boybeak.starter.adapter.selection
 
+import com.github.boybeak.starter.adapter.AbsAdapter
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import java.util.*
 
-abstract class AbsSelection(private var adapter: DataBindingAdapter?) : Selection {
+abstract class AbsSelection(private var adapter: AbsAdapter?) : Selection {
 
     private var id = UUID.randomUUID().toString()
 
@@ -17,7 +18,7 @@ abstract class AbsSelection(private var adapter: DataBindingAdapter?) : Selectio
         this.id = id
     }
 
-    fun adapter(): DataBindingAdapter {
+    fun adapter(): AbsAdapter {
         if (adapter == null) {
             throw IllegalStateException("you can not use this Selection after release")
         }

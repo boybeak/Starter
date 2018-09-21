@@ -1,5 +1,6 @@
 package com.github.boybeak.starter.adapter.selection
 
+import com.github.boybeak.starter.adapter.AbsAdapter
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import com.github.boybeak.starter.adapter.LayoutImpl
 
@@ -10,13 +11,13 @@ interface Selection {
         private val singleSelectionMap = HashMap<String, SingleSelection>()
         private val multipleSelectionMap = HashMap<String, MultipleSelection>()
 
-        fun obtainSingle(adapter: DataBindingAdapter): SingleSelection {
+        fun obtainSingle(adapter: AbsAdapter): SingleSelection {
             val sel = SingleSelection(adapter)
             singleSelectionMap[sel.id()] = sel
             return sel
         }
 
-        fun obtainSingle(id: String, adapter: DataBindingAdapter): SingleSelection {
+        fun obtainSingle(id: String, adapter: AbsAdapter): SingleSelection {
             return if (singleSelectionMap.containsKey(id)) {
                 singleSelectionMap[id]!!
             } else {
@@ -27,13 +28,13 @@ interface Selection {
             }
         }
 
-        fun obtainMultiple(adapter: DataBindingAdapter): MultipleSelection {
+        fun obtainMultiple(adapter: AbsAdapter): MultipleSelection {
             val sel = MultipleSelection(adapter)
             multipleSelectionMap[sel.id()] = sel
             return sel
         }
 
-        fun obtainMultiple(id: String, adapter: DataBindingAdapter): MultipleSelection {
+        fun obtainMultiple(id: String, adapter: AbsAdapter): MultipleSelection {
             return if (multipleSelectionMap.containsKey(id)) {
                 multipleSelectionMap[id]!!
             } else {

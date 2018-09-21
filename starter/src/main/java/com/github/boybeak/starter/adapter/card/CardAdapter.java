@@ -25,6 +25,11 @@ public class CardAdapter extends AbsAdapter {
         return mGroup.get(position);
     }
 
+    @Override
+    public int index(LayoutImpl layout) {
+        return mGroup.indexOf(layout);
+    }
+
 
     @Override
     public int getItemCount() {

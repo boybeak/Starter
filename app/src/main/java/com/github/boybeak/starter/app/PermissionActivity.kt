@@ -50,11 +50,11 @@ class PermissionActivity : DragExitToolbarActivity() {
 
         PH.ask(*parray).go(this, object : Callback {
             override fun onGranted(permissions: MutableList<String>) {
-
+                Toast.makeText(this@PermissionActivity, "onGranted ", Toast.LENGTH_SHORT).show()
             }
 
             override fun onDenied(permission: String) {
-
+                Toast.makeText(this@PermissionActivity, "onDenied ", Toast.LENGTH_SHORT).show()
             }
 
         })

@@ -18,7 +18,7 @@ import com.github.boybeak.starter.adapter.expandable.GroupList;
 public class ExpandableAdapter extends AbsAdapter {
 
 
-    private com.github.boybeak.starter.adapter.expandable.GroupList mGroupList = null;
+    private GroupList mGroupList = null;
 
     public ExpandableAdapter(Context context) {
         super(context);
@@ -33,6 +33,11 @@ public class ExpandableAdapter extends AbsAdapter {
     @Override
     public LayoutImpl getItem(int position) {
         return mGroupList.getItem(position);
+    }
+
+    @Override
+    public int index(LayoutImpl layout) {
+        return mGroupList.indexOf(layout);
     }
 
     public void addGroup (Group group) {

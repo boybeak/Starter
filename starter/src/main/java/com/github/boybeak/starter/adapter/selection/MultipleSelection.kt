@@ -1,9 +1,10 @@
 package com.github.boybeak.starter.adapter.selection
 
+import com.github.boybeak.starter.adapter.AbsAdapter
 import com.github.boybeak.starter.adapter.DataBindingAdapter
 import com.github.boybeak.starter.adapter.LayoutImpl
 
-class MultipleSelection internal constructor(adapter: DataBindingAdapter) : AbsSelection(adapter) {
+class MultipleSelection internal constructor(adapter: AbsAdapter) : AbsSelection(adapter) {
 
     private val selectedList = ArrayList<LayoutImpl<*, *>>()
 
@@ -162,7 +163,7 @@ class MultipleSelection internal constructor(adapter: DataBindingAdapter) : AbsS
     }
 
     interface SelectionMapper {
-        fun isAlreadySelected(index: Int, adapter: DataBindingAdapter): Boolean
+        fun isAlreadySelected(index: Int, adapter: AbsAdapter): Boolean
     }
 
 }

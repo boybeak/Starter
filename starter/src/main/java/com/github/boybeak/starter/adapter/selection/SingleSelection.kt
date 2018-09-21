@@ -1,9 +1,11 @@
 package com.github.boybeak.starter.adapter.selection
 
-import com.github.boybeak.starter.adapter.DataBindingAdapter
+import com.github.boybeak.starter.adapter.AbsAdapter
 import com.github.boybeak.starter.adapter.LayoutImpl
+import com.github.boybeak.starter.adapter.forEach
+import com.github.boybeak.starter.adapter.forEachIndexed
 
-class SingleSelection internal constructor(adapter: DataBindingAdapter) : AbsSelection(adapter) {
+class SingleSelection internal constructor(adapter: AbsAdapter) : AbsSelection(adapter) {
 
     private var selectedItem: LayoutImpl<*, *>? = null
 
@@ -24,6 +26,13 @@ class SingleSelection internal constructor(adapter: DataBindingAdapter) : AbsSel
             selectedItem!!.isSelected = false
             adapter().notifyItemChanged(adapter().index(selectedItem))
             selectListener?.onUnSelect(selectedItem!!)
+        } else {
+            adapter().forEachIndexed(LayoutImpl::class.java) {layoutImpl, index ->
+                if (layoutImpl.isSelected) {
+                    layoutImpl.isSelected = false
+                    adapter().notifyItemChanged(index)
+                }
+            }
         }
         selectedItem = layout
         selectedItem!!.isSelected = true
@@ -87,7 +96,18 @@ class SingleSelection internal constructor(adapter: DataBindingAdapter) : AbsSel
     }
 
     fun getSelectedItem(): LayoutImpl<*, *>? {
-        return selectedItem
+        return if (selectedItem != null) {
+            selectedItem
+        } else {
+            var item: LayoutImpl<*, *>? = null
+            adapter().forEach(LayoutImpl::class.java) {
+                if (it.isSelected) {
+                    item = it
+                    return@forEach
+                }
+            }
+            item
+        }
     }
 
     @Suppress("UNCHECKED_CAST")
@@ -95,7 +115,14 @@ class SingleSelection internal constructor(adapter: DataBindingAdapter) : AbsSel
         return if (selectedItem != null) {
             selectedItem!!.source as Data
         } else {
-            null
+            var t: Data? = null
+            adapter().forEach(LayoutImpl::class.java) {
+                if (it.isSelected) {
+                    t = it.source as Data
+                    return@forEach
+                }
+            }
+            t
         }
     }
 

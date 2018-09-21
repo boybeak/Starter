@@ -80,6 +80,17 @@ public class Group {
 		data.addAll(layouts);
 	}
 
+	public int indexOf(LayoutImpl layout) {
+		if (header.equals(layout)) {
+			return 0;
+		}
+		int index = data.indexOf(layout);
+		if (index >= 0) {
+			return index + 1;
+		}
+		return  -1;
+	}
+
 	@Override
 	public boolean equals(Object obj) {
 		return obj instanceof Group && header.equals(((Group) obj).header);

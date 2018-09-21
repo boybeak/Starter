@@ -52,13 +52,13 @@ public final class DataChange {
     private List payloads;
 
     /**
-     * @param adapter
-     * @param from
+     * @param adapter the adapter
+     * @param from the from position
      * @param countOrToPosition if {@link DataChange#type} is {@link DataChange#TYPE_ITEM_MOVED},
      *                          this params is toPosition, else is itemCount. And this will not work for
      *                          {@link DataChange#TYPE_ITEM_INSERTED},{@link DataChange#TYPE_ITEM_CHANGED},
      *                          and {@link DataChange#TYPE_ITEM_REMOVED}
-     * @param type
+     * @param type type of change
      */
     public DataChange (RecyclerView.Adapter adapter, int from, int countOrToPosition, @Type int type) {
         this (adapter, from, countOrToPosition, type, null);

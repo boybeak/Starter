@@ -74,4 +74,5 @@ public abstract class AbsAdapter extends RecyclerView.Adapter<AbsDataBindingHold
     }
 
     public abstract @NonNull LayoutImpl getItem (int position);
+    public abstract int index(LayoutImpl layout);
 }

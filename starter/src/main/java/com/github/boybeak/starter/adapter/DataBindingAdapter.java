@@ -159,6 +159,7 @@ public class DataBindingAdapter extends AbsAdapter {
         return false;
     }
 
+    @Override
     public int index(LayoutImpl layout) {
         int index = indexOfHeader(layout);
         if (index  >= 0) {

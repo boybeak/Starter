@@ -5,13 +5,13 @@ import com.github.boybeak.starter.adapter.expandable.Group;
 
 import java.util.LinkedList;
 
-public class GroupList extends LinkedList<com.github.boybeak.starter.adapter.expandable.Group> {
+public class GroupList extends LinkedList<Group> {
 
 	public LayoutImpl getItem (int position) {
 
 		int cursor = 0;
 
-		for (com.github.boybeak.starter.adapter.expandable.Group group : this) {
+		for (Group group : this) {
 			int cursorNext = cursor + group.size();
 			if (position >= cursor && position < cursorNext) {
 				return group.get(position - cursor);
@@ -24,7 +24,7 @@ public class GroupList extends LinkedList<com.github.boybeak.starter.adapter.exp
 
 	public int getItemCount () {
 		int size = 0;
-		for (com.github.boybeak.starter.adapter.expandable.Group group : this) {
+		for (Group group : this) {
 			size += group.size();
 		}
 		return size;

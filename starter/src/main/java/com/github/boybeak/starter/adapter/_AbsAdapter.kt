@@ -1,6 +1,6 @@
 package com.github.boybeak.starter.adapter
 
-inline fun <T : LayoutImpl<*, *>> DataBindingAdapter.forEach (clz: Class<T>, action: (T) -> Unit) {
+inline fun <T : LayoutImpl<*, *>> AbsAdapter.forEach (clz: Class<T>, action: (T) -> Unit) {
     for(i in 0 until itemCount) {
         val item = getItem(i)
         if (clz.isInstance(item)) {
@@ -9,7 +9,7 @@ inline fun <T : LayoutImpl<*, *>> DataBindingAdapter.forEach (clz: Class<T>, act
     }
 }
 
-inline fun <T : LayoutImpl<*, *>> DataBindingAdapter.forEachIndexed (clz: Class<T>, action: (T, index: Int) -> Unit) {
+inline fun <T : LayoutImpl<*, *>> AbsAdapter.forEachIndexed (clz: Class<T>, action: (T, index: Int) -> Unit) {
     for(i in 0 until itemCount) {
         val item = getItem(i)
         if (clz.isInstance(item)) {
@@ -18,7 +18,7 @@ inline fun <T : LayoutImpl<*, *>> DataBindingAdapter.forEachIndexed (clz: Class<
     }
 }
 
-inline fun <T : LayoutImpl<*, *>> DataBindingAdapter.forEachSource (clz: Class<T>, action: (T) -> Unit) {
+inline fun <T : LayoutImpl<*, *>> AbsAdapter.forEachSource (clz: Class<T>, action: (T) -> Unit) {
     for(i in 0 until itemCount) {
         val source = getItem(i).source
         if (clz.isInstance(source)) {
@@ -27,7 +27,7 @@ inline fun <T : LayoutImpl<*, *>> DataBindingAdapter.forEachSource (clz: Class<T
     }
 }
 
-inline fun <T : LayoutImpl<*, *>> DataBindingAdapter.forEachSourceIndexed (clz: Class<T>, action: (T, index: Int) -> Unit) {
+inline fun <T : LayoutImpl<*, *>> AbsAdapter.forEachSourceIndexed (clz: Class<T>, action: (T, index: Int) -> Unit) {
     for(i in 0 until itemCount) {
         val source = getItem(i).source
         if (clz.isInstance(source)) {

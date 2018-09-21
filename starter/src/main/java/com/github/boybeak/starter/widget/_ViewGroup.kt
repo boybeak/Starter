@@ -22,6 +22,6 @@ inline fun ViewGroup.foreachChildIndexed(action: (index: Int, View) -> Unit) {
     }
 }
 
-inline operator fun ViewGroup.get(index: Int): View {
+operator fun ViewGroup.get(index: Int): View {
     return getChildAt(index)
 }
