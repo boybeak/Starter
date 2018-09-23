@@ -10,14 +10,14 @@ class MultipleSelection internal constructor(adapter: AbsAdapter) : AbsSelection
 
     private var selectListener: OnSelectChangeListener? = null
 
-    override fun select(index: Int): Selection {
+    override fun select(index: Int): MultipleSelection {
         if (index < 0 || index >= adapter().itemCount) {
             return this
         }
         return select(adapter().getItem(index))
     }
 
-    override fun select(layout: LayoutImpl<*, *>): Selection {
+    override fun select(layout: LayoutImpl<*, *>): MultipleSelection {
         if (!isStarted()) {
             start()
         }
@@ -37,7 +37,7 @@ class MultipleSelection internal constructor(adapter: AbsAdapter) : AbsSelection
         return this
     }
 
-    override fun <Data> select(data: Data): Selection {
+    override fun <Data> select(data: Data): MultipleSelection {
         for (i in 0 until adapter().itemCount) {
             if (adapter().getItem(i).source == data) {
                 select(i)

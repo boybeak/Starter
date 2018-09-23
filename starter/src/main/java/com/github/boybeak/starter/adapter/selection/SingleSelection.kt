@@ -11,7 +11,7 @@ class SingleSelection internal constructor(adapter: AbsAdapter) : AbsSelection(a
 
     private var selectListener: OnSelectChangeListener? = null
 
-    override fun select(index: Int): Selection {
+    override fun select(index: Int): SingleSelection {
         if (!isStarted()) {
             start()
         }
@@ -42,11 +42,11 @@ class SingleSelection internal constructor(adapter: AbsAdapter) : AbsSelection(a
         return this
     }
 
-    override fun select(layout: LayoutImpl<*, *>): Selection {
+    override fun select(layout: LayoutImpl<*, *>): SingleSelection {
         return select(adapter().index(layout))
     }
 
-    override fun <Data> select(data: Data): Selection {
+    override fun <Data> select(data: Data): SingleSelection {
         for (i in 0 until adapter().itemCount) {
             if (adapter().getItem(i).source == data) {
                 select(i)
