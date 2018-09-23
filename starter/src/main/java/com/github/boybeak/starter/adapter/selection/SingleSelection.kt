@@ -92,6 +92,12 @@ class SingleSelection internal constructor(adapter: AbsAdapter) : AbsSelection(a
         return this
     }
 
+    override fun reset() {
+        selectedItem?.isSelected = false
+        adapter().notifyItemChanged(adapter().index(selectedItem))
+        selectedItem = null
+    }
+
     override fun release() {
         super.release()
         Selection.releaseSingle(id())

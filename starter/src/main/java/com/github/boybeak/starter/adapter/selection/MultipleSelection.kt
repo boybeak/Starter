@@ -102,6 +102,14 @@ class MultipleSelection internal constructor(adapter: AbsAdapter) : AbsSelection
         return this
     }
 
+    override fun reset() {
+        selectedList.forEach {
+            it.isSelected = false
+            adapter().notifyItemChanged(adapter().index(it))
+        }
+        selectedList.clear()
+    }
+
     override fun release() {
         super.release()
         Selection.releaseMultiple(id())

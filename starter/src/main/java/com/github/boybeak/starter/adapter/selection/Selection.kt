@@ -68,6 +68,7 @@ interface Selection {
     fun isSelected(layout: LayoutImpl<*, *>): Boolean
     fun <Data> isSelected(data: Data): Boolean
 
+    fun reset()
     fun release()
     fun isReleased(): Boolean
 

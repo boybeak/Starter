@@ -19,7 +19,7 @@ public abstract class OnScrollBottomListener extends RecyclerView.OnScrollListen
         final int positionInAdapter = recyclerView.getChildAdapterPosition(lastChild);
         if (recyclerView.getAdapter() != null
                 && positionInAdapter == recyclerView.getAdapter().getItemCount() - 1
-                && newState == RecyclerView.SCROLL_STATE_IDLE && mLastDy >= 0) {
+                && newState == RecyclerView.SCROLL_STATE_IDLE && mLastDy > 0) {
             onScrollBottom(recyclerView, newState);
         }
     }
@@ -27,7 +27,9 @@ public abstract class OnScrollBottomListener extends RecyclerView.OnScrollListen
     @Override
     public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
         super.onScrolled(recyclerView, dx, dy);
-        mLastDy = dy;
+        if (dy != 0) {
+            mLastDy = dy;
+        }
     }
 
     public abstract void onScrollBottom (RecyclerView recyclerView, int newState);
