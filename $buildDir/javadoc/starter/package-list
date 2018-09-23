@@ -1,5 +1,10 @@
 $dokka.format:html
 $dokka.linkExtension:html
+$dokka.location:com.github.boybeak.starter$connect(kotlin.Array((com.github.boybeak.starter.connect.T)), kotlin.Char, kotlin.Function2((com.github.boybeak.starter.connect.T, kotlin.Int, kotlin.String)))com.github.boybeak.starter/kotlin.-array/connect.html
+$dokka.location:com.github.boybeak.starter$connect(kotlin.CharArray, kotlin.Char, kotlin.Function2((kotlin.Char, kotlin.Int, kotlin.String)))com.github.boybeak.starter/kotlin.-char-array/connect.html
+$dokka.location:com.github.boybeak.starter$connect(kotlin.IntArray, kotlin.Char, kotlin.Function2((kotlin.Int, , kotlin.String)))com.github.boybeak.starter/kotlin.-int-array/connect.html
+$dokka.location:com.github.boybeak.starter$connect(kotlin.collections.Iterable((com.github.boybeak.starter.connect.T)), kotlin.Char, kotlin.Function2((com.github.boybeak.starter.connect.T, kotlin.Int, kotlin.String)))com.github.boybeak.starter/kotlin.collections.-iterable/connect.html
+$dokka.location:com.github.boybeak.starter$convertDpToPixel(android.content.Context, kotlin.Float)com.github.boybeak.starter/android.content.-context/convert-dp-to-pixel.html
 $dokka.location:com.github.boybeak.starter.widget$foreachChild(android.view.ViewGroup, kotlin.Function1((android.view.View, kotlin.Unit)))com.github.boybeak.starter.widget/android.view.-view-group/foreach-child.html
 $dokka.location:com.github.boybeak.starter.widget$foreachChildIndexed(android.view.ViewGroup, kotlin.Function2((kotlin.Int, android.view.View, kotlin.Unit)))com.github.boybeak.starter.widget/android.view.-view-group/foreach-child-indexed.html
 $dokka.location:com.github.boybeak.starter.widget$get(android.view.ViewGroup, kotlin.Int)com.github.boybeak.starter.widget/android.view.-view-group/get.html

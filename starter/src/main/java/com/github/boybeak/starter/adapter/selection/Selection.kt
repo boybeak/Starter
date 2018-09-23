@@ -60,9 +60,9 @@ interface Selection {
     fun start(): Selection
     fun end(): Selection
 
-    fun select(index: Int)
-    fun select(layout: LayoutImpl<*, *>)
-    fun <Data> select(data: Data)
+    fun select(index: Int): Selection
+    fun select(layout: LayoutImpl<*, *>): Selection
+    fun <Data> select(data: Data): Selection
 
     fun isSelected(index: Int): Boolean
     fun isSelected(layout: LayoutImpl<*, *>): Boolean

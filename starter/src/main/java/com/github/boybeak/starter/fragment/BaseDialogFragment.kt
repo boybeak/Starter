@@ -19,23 +19,12 @@ open class BaseDialogFragment : DialogFragment(), ILife {
 
     override var isAlive: Boolean = false
 
-    private var activity: BaseActivity? = null
-
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-        if (context !is BaseActivity) {
-            throw IllegalStateException("BaseFragment must work with BaseActivity")
-        }
-        activity = context
-    }
-
-    fun activity(): BaseActivity? {
-        return activity
     }
 
     override fun onDetach() {
         super.onDetach()
-        activity = null
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

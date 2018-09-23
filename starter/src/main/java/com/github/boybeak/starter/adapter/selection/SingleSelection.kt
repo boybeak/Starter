@@ -11,16 +11,16 @@ class SingleSelection internal constructor(adapter: AbsAdapter) : AbsSelection(a
 
     private var selectListener: OnSelectChangeListener? = null
 
-    override fun select(index: Int) {
+    override fun select(index: Int): Selection {
         if (!isStarted()) {
             start()
         }
         if (index < 0 || index >= adapter().itemCount) {
-            return
+            return this
         }
         val layout = adapter().getItem(index)
         if (layout == selectedItem) {
-            return
+            return this
         }
         if (selectedItem != null) {
             selectedItem!!.isSelected = false
@@ -38,19 +38,22 @@ class SingleSelection internal constructor(adapter: AbsAdapter) : AbsSelection(a
         selectedItem!!.isSelected = true
         adapter().notifyItemChanged(index)
         selectListener?.onSelect(layout)
+
+        return this
     }
 
-    override fun select(layout: LayoutImpl<*, *>) {
-        select(adapter().index(layout))
+    override fun select(layout: LayoutImpl<*, *>): Selection {
+        return select(adapter().index(layout))
     }
 
-    override fun <Data> select(data: Data) {
+    override fun <Data> select(data: Data): Selection {
         for (i in 0 until adapter().itemCount) {
             if (adapter().getItem(i).source == data) {
                 select(i)
-                return
+                return this
             }
         }
+        return this
     }
 
     override fun isSelected(index: Int): Boolean {

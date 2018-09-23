@@ -3,6 +3,7 @@ package com.github.boybeak.starter.app
 import android.os.Bundle
 import android.widget.Toast
 import com.github.boybeak.starter.activity.ToolbarActivity
+import com.github.boybeak.starter.connect
 import kotlinx.android.synthetic.main.activity_calendar.*
 import java.util.*
 
