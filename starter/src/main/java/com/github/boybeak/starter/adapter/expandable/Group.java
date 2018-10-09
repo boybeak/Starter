@@ -1,6 +1,6 @@
 package com.github.boybeak.starter.adapter.expandable;
 
-import com.github.boybeak.starter.adapter.LayoutImpl;
+import com.github.boybeak.adapter.LayoutImpl;
 
 import java.util.ArrayList;
 import java.util.List;

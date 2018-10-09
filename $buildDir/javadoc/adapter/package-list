@@ -1,0 +1,5 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+com.github.boybeak.adapter
+com.github.boybeak.adapter.selection

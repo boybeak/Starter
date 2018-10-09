@@ -27,13 +27,14 @@ open class DragExitSrlRvActivity : DragExitToolbarActivity(), SwipeRefreshLayout
                 }
 
             }
+            recycler_view.addOnScrollListener(bottomListener!!)
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
         if (bottomListener != null) {
-            recyclerView().removeOnScrollListener(bottomListener)
+            recyclerView().removeOnScrollListener(bottomListener!!)
         }
     }
 

@@ -1,7 +1,7 @@
 package com.github.boybeak.starter.adapter.footer;
 
-import com.github.boybeak.starter.adapter.AbsDataBindingHolder;
-import com.github.boybeak.starter.adapter.BaseLayoutImpl;
+import com.github.boybeak.adapter.AbsDataBindingHolder;
+import com.github.boybeak.adapter.BaseLayoutImpl;
 
 public abstract class AbsFooterLayout<VH extends AbsDataBindingHolder>
         extends BaseLayoutImpl<Footer, VH> {

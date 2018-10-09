@@ -27,7 +27,7 @@ open class SrlRvActivity : ToolbarActivity(), SwipeRefreshLayout.OnRefreshListen
                 }
 
             }
-            recyclerView().addOnScrollListener(bottomListener)
+            recyclerView().addOnScrollListener(bottomListener!!)
         }
 
     }
@@ -35,7 +35,7 @@ open class SrlRvActivity : ToolbarActivity(), SwipeRefreshLayout.OnRefreshListen
     override fun onDestroy() {
         super.onDestroy()
         if (bottomListener != null) {
-            recyclerView().removeOnScrollListener(bottomListener)
+            recyclerView().removeOnScrollListener(bottomListener!!)
         }
     }
 

@@ -1,7 +1,6 @@
 package com.github.boybeak.starter.adapter.expandable;
 
-import com.github.boybeak.starter.adapter.LayoutImpl;
-import com.github.boybeak.starter.adapter.expandable.Group;
+import com.github.boybeak.adapter.LayoutImpl;
 
 import java.util.LinkedList;
 

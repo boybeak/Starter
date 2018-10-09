@@ -17,7 +17,7 @@ class BorderDecoration(val border: Int) : RecyclerView.ItemDecoration(){
 
     constructor(context: Context, @DimenRes dimen: Int): this(context.resources.getDimensionPixelSize(dimen))
 
-    override fun getItemOffsets(outRect: Rect?, view: View?, parent: RecyclerView?, state: RecyclerView.State?) {
+    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
         when(parent!!.layoutManager) {
             is LinearLayoutManager -> {
@@ -32,7 +32,7 @@ class BorderDecoration(val border: Int) : RecyclerView.ItemDecoration(){
         }
     }
 
-    private fun getItemOffsetsLinearLayoutManager(glm: GridLayoutManager, outRect: Rect?, view: View?, parent: RecyclerView?, state: RecyclerView.State?) {
+    private fun getItemOffsetsLinearLayoutManager(glm: GridLayoutManager, outRect: Rect?, view: View, parent: RecyclerView, state: RecyclerView.State) {
         val spanCount = glm.spanCount
         val lookup = glm.spanSizeLookup
 

@@ -6,8 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.github.boybeak.adapter.DataChange;
 import com.github.boybeak.starter.R;
-import com.github.boybeak.starter.adapter.DataChange;
 import com.github.boybeak.starter.adapter.expandable.Group;
 import com.github.boybeak.starter.adapter.expandable.GroupList;
 import com.github.boybeak.starter.adapter.footer.Footer;

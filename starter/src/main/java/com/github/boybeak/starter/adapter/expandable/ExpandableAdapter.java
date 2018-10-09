@@ -1,15 +1,9 @@
 package com.github.boybeak.starter.adapter.expandable;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
 
-import com.github.boybeak.starter.adapter.AbsAdapter;
-import com.github.boybeak.starter.adapter.AbsDataBindingHolder;
-import com.github.boybeak.starter.adapter.LayoutImpl;
-import com.github.boybeak.starter.adapter.expandable.Group;
-import com.github.boybeak.starter.adapter.expandable.GroupList;
+import com.github.boybeak.adapter.AbsAdapter;
+import com.github.boybeak.adapter.LayoutImpl;
 
 /**
  * Created by gaoyunfei on 2018/3/28.

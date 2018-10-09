@@ -18,8 +18,8 @@ import com.github.boybeak.permission.Callback
 import com.github.boybeak.permission.PH
 import com.github.boybeak.picker.*
 import com.github.boybeak.starter.activity.de.DragExitToolbarActivity
-import com.github.boybeak.starter.adapter.Converter
-import com.github.boybeak.starter.adapter.DataBindingAdapter
+import com.github.boybeak.adapter.Converter
+import com.github.boybeak.adapter.DataBindingAdapter
 import com.github.boybeak.starter.app.adapter.FileImpl
 import com.github.boybeak.starter.app.adapter.FooterImpl
 import com.github.boybeak.starter.widget.BorderDecoration
@@ -27,7 +27,7 @@ import com.github.boybeak.starter.widget.BorderDecoration
 
 class PickerActivity : DragExitToolbarActivity() {
 
-    private var adapter: DataBindingAdapter? = null
+    private var adapter: com.github.boybeak.adapter.DataBindingAdapter? = null
 
     private val footerEvent = object : FooterEvent {
         override fun onFooterClick() {
@@ -38,7 +38,7 @@ class PickerActivity : DragExitToolbarActivity() {
                                 0 -> {
                                     Picker.gallery().image().multiple(true).go(this@PickerActivity, object : MultipleCallback {
                                         override fun onGet(id: String, uris: MutableList<Uri>, files: MutableList<File>) {
-                                            adapter!!.addAll(files, Converter<File, FileImpl> { data, _ -> FileImpl(data) }).autoNotify()
+                                            adapter!!.addAll(files, com.github.boybeak.adapter.Converter<File, FileImpl> { data, _ -> FileImpl(data) }).autoNotify()
                                         }
 
                                         override fun onCancel(id: String) {
@@ -79,7 +79,7 @@ class PickerActivity : DragExitToolbarActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_picker)
 
-        adapter = DataBindingAdapter(this)
+        adapter = com.github.boybeak.adapter.DataBindingAdapter(this)
         val glm = recycler_view.layoutManager as GridLayoutManager
         adapter!!.addFooter(FooterImpl(footerEvent))
         val lookup = object : GridLayoutManager.SpanSizeLookup() {
@@ -212,8 +212,8 @@ class PickerActivity : DragExitToolbarActivity() {
     private fun getMultipleImages() {
         Picker.gallery().image().multiple(true).go(this, object : MultipleCallback {
             override fun onGet(id: String, uris: MutableList<Uri>, files: MutableList<File>) {
-                adapter!!.addAll(files, object : Converter<File, FileImpl> {
-                    override fun convert(data: File?, adapter: DataBindingAdapter): FileImpl {
+                adapter!!.addAll(files, object : com.github.boybeak.adapter.Converter<File, FileImpl> {
+                    override fun convert(data: File?, adapter: com.github.boybeak.adapter.DataBindingAdapter): FileImpl {
                         return FileImpl(data)
                     }
 

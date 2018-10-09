@@ -1,12 +1,9 @@
 package com.github.boybeak.starter.adapter;
 
 import android.content.Context;
-import android.databinding.BindingAdapter;
 import android.support.annotation.StringRes;
-import android.support.v7.widget.AppCompatTextView;
-import android.view.View;
-import android.widget.ProgressBar;
 
+import com.github.boybeak.adapter.DataBindingAdapter;
 import com.github.boybeak.starter.R;
 import com.github.boybeak.starter.adapter.footer.AbsFooterLayout;
 import com.github.boybeak.starter.adapter.footer.Footer;

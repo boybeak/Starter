@@ -9,14 +9,14 @@ import com.github.boybeak.permission.PH
 import com.github.boybeak.selector.Operator
 import com.github.boybeak.selector.Path
 import com.github.boybeak.starter.activity.de.DragExitToolbarActivity
-import com.github.boybeak.starter.adapter.Converter
-import com.github.boybeak.starter.adapter.DataBindingAdapter
+import com.github.boybeak.adapter.Converter
+import com.github.boybeak.adapter.DataBindingAdapter
 import com.github.boybeak.starter.app.adapter.PermissionImpl
 import kotlinx.android.synthetic.main.activity_permission.*
 
 class PermissionActivity : DragExitToolbarActivity() {
 
-    private var adapter: DataBindingAdapter? = null
+    private var adapter: com.github.boybeak.adapter.DataBindingAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +25,10 @@ class PermissionActivity : DragExitToolbarActivity() {
         val permissionList = listOf(
                 Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
 
-        adapter = DataBindingAdapter(this)
+        adapter = com.github.boybeak.adapter.DataBindingAdapter(this)
         recycler_view.adapter = adapter
-        adapter!!.addAll(permissionList, object : Converter<String, PermissionImpl> {
-            override fun convert(data: String?, adapter: DataBindingAdapter): PermissionImpl {
+        adapter!!.addAll(permissionList, object : com.github.boybeak.adapter.Converter<String, PermissionImpl> {
+            override fun convert(data: String?, adapter: com.github.boybeak.adapter.DataBindingAdapter): PermissionImpl {
                 return PermissionImpl(data)
             }
 

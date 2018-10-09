@@ -2,8 +2,8 @@ package com.github.boybeak.starter.adapter.card;
 
 import android.content.Context;
 
-import com.github.boybeak.starter.adapter.AbsAdapter;
-import com.github.boybeak.starter.adapter.LayoutImpl;
+import com.github.boybeak.adapter.AbsAdapter;
+import com.github.boybeak.adapter.LayoutImpl;
 import com.github.boybeak.starter.adapter.expandable.Group;
 
 public class CardAdapter extends AbsAdapter {

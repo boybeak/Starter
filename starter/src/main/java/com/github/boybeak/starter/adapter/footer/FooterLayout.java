@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import com.github.boybeak.starter.R;
-import com.github.boybeak.starter.adapter.BaseLayoutImpl;
 
 /**
  * Created by gaoyunfei on 2018/3/9.
