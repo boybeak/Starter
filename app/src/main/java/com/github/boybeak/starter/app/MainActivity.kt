@@ -6,7 +6,7 @@ import android.view.View
 import com.github.boybeak.starter.Router
 import com.github.boybeak.starter.activity.BaseActivity
 import com.github.boybeak.starter.app.activity.DownloaderActivity
-
+import com.github.boybeak.starter.app.activity.FooterActivity
 
 
 class MainActivity : BaseActivity() {
@@ -48,6 +48,10 @@ class MainActivity : BaseActivity() {
 
     fun gotoDownload(view: View) {
         Router.with(view).goTo(DownloaderActivity::class.java)
+    }
+
+    fun gotoFooter(view: View) {
+        Router.with(view).goTo(FooterActivity::class.java)
     }
 
 }

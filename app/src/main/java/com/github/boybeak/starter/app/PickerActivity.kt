@@ -18,10 +18,8 @@ import com.github.boybeak.permission.Callback
 import com.github.boybeak.permission.PH
 import com.github.boybeak.picker.*
 import com.github.boybeak.starter.activity.de.DragExitToolbarActivity
-import com.github.boybeak.adapter.Converter
-import com.github.boybeak.adapter.DataBindingAdapter
+import com.github.boybeak.adapter.extension.Footer
 import com.github.boybeak.starter.app.adapter.FileImpl
-import com.github.boybeak.starter.app.adapter.FooterImpl
 import com.github.boybeak.starter.widget.BorderDecoration
 
 
@@ -81,7 +79,6 @@ class PickerActivity : DragExitToolbarActivity() {
 
         adapter = com.github.boybeak.adapter.DataBindingAdapter(this)
         val glm = recycler_view.layoutManager as GridLayoutManager
-        adapter!!.addFooter(FooterImpl(footerEvent))
         val lookup = object : GridLayoutManager.SpanSizeLookup() {
             override fun getSpanSize(position: Int): Int {
                 if (position == 0) {

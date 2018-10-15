@@ -4,7 +4,7 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.github.boybeak.starter.adapter.AbsDataBindingHolder;
+import com.github.boybeak.adapter.AbsDataBindingHolder;
 import com.github.boybeak.starter.app.databinding.LayoutPermissionBinding;
 
 import org.jetbrains.annotations.NotNull;

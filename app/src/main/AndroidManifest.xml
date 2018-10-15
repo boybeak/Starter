@@ -47,7 +47,8 @@
         <activity
             android:name=".DemoActivity"
             android:theme="@style/Transparent" />
-        <activity android:name=".activity.DownloaderActivity"></activity>
+        <activity android:name=".activity.DownloaderActivity" />
+        <activity android:name=".activity.FooterActivity"></activity>
     </application>
 
 </manifest>

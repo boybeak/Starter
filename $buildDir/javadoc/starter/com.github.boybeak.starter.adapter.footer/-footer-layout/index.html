@@ -8,7 +8,7 @@
 <a href="../../index.html">starter</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.starter.adapter.footer</a>&nbsp;/&nbsp;<a href="./index.html">FooterLayout</a><br/>
 <br/>
 <h1>FooterLayout</h1>
-<code><span class="keyword">class </span><span class="identifier">FooterLayout</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="../-abs-footer-layout/index.html"><span class="identifier">AbsFooterLayout</span></a><span class="symbol">&lt;</span><a href="../-footer-holder/index.html"><span class="identifier">FooterHolder</span></a><span class="symbol">&gt;</span></code>
+<code><span class="keyword">class </span><span class="identifier">FooterLayout</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AbsFooterLayout</span></code>
 <p>Created by gaoyunfei on 2018/3/9.</p>
 <h3>Constructors</h3>
 <table>
@@ -18,13 +18,27 @@
 <p><a href="-init-.html">&lt;init&gt;</a></p>
 </td>
 <td>
-<code><span class="identifier">FooterLayout</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.footer.FooterLayout$<init>(com.github.boybeak.starter.adapter.footer.Footer)/footer">footer</span><span class="symbol">:</span>&nbsp;<a href="../-footer/index.html"><span class="identifier">Footer</span></a><span class="symbol">)</span></code></td>
+<code><span class="identifier">FooterLayout</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.footer.FooterLayout$<init>(com.github.boybeak.adapter.extension.Footer)/footer">footer</span><span class="symbol">:</span>&nbsp;<span class="identifier">Footer</span><span class="symbol">)</span></code></td>
 </tr>
 </tbody>
 </table>
 <h3>Functions</h3>
 <table>
 <tbody>
+<tr>
+<td>
+<p><a href="get-action-listener.html">getActionListener</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getActionListener</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-action-text.html">getActionText</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getActionText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
 <tr>
 <td>
 <p><a href="get-holder-class.html">getHolderClass</a></p>
@@ -41,22 +55,17 @@
 </tr>
 <tr>
 <td>
-<p><a href="set-state.html">setState</a></p>
+<p><a href="set-action-listener.html">setActionListener</a></p>
 </td>
 <td>
-<code><span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">setState</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.footer.FooterLayout$setState(android.view.View, kotlin.Int, kotlin.String)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.footer.FooterLayout$setState(android.view.View, kotlin.Int, kotlin.String)/state">state</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.starter.adapter.footer.FooterLayout$setState(android.view.View, kotlin.Int, kotlin.String)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">fun </span><span class="identifier">setActionListener</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.footer.FooterLayout$setActionListener(android.view.View.OnClickListener)/actionListener">actionListener</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
-</tbody>
-</table>
-<h3>Inherited Functions</h3>
-<table>
-<tbody>
 <tr>
 <td>
-<p><a href="../-abs-footer-layout/get-source.html">getSource</a></p>
+<p><a href="set-action-text.html">setActionText</a></p>
 </td>
 <td>
-<code><span class="keyword">fun </span><span class="identifier">getSource</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-footer/index.html"><span class="identifier">Footer</span></a></code></td>
+<code><span class="keyword">fun </span><span class="identifier">setActionText</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.starter.adapter.footer.FooterLayout$setActionText(kotlin.String)/actionText">actionText</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>

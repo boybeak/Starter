@@ -1,9 +1,9 @@
 package com.github.boybeak.starter.app.adapter;
 
-import com.github.boybeak.starter.adapter.BaseLayoutImpl;
+import com.github.boybeak.adapter.AbsLayoutImpl;
 import com.github.boybeak.starter.app.R;
 
-public class PermissionImpl extends BaseLayoutImpl<String, PermissionHolder> {
+public class PermissionImpl extends AbsLayoutImpl<String> {
 
     private boolean isChecked;
 

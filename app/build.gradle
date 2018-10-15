@@ -52,5 +52,8 @@ dependencies {
     implementation project(':a-loader')
     implementation 'com.android.support:recyclerview-v7:27.1.1'
 
+    implementation 'com.github.boybeak:adapter:5.1.6'
+    annotationProcessor 'com.github.boybeak:adapter-compiler:5.1.6'
+
     annotationProcessor "com.android.databinding:compiler:$android_plugin_version"
 }

@@ -6,7 +6,7 @@ import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.github.boybeak.starter.adapter.AbsDataBindingHolder;
+import com.github.boybeak.adapter.AbsDataBindingHolder;
 import com.github.boybeak.starter.app.adapter.FileImpl;
 import com.github.boybeak.starter.app.databinding.LayoutFileBinding;
 
@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 
-public class FileHolder extends AbsDataBindingHolder<FileImpl, LayoutFileBinding>{
+public class FileHolder extends AbsDataBindingHolder<FileImpl, LayoutFileBinding> {
 
     @BindingAdapter({"thumb"})
     public static void thumb(AppCompatImageView iv, File file) {

@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Starter.iml" filepath="$PROJECT_DIR$/Starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/a-loader/a-loader.iml" filepath="$PROJECT_DIR$/a-loader/a-loader.iml" />
-      <module fileurl="file://$PROJECT_DIR$/adapter/adapter.iml" filepath="$PROJECT_DIR$/adapter/adapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/calendar/calendar.iml" filepath="$PROJECT_DIR$/calendar/calendar.iml" />
       <module fileurl="file://$PROJECT_DIR$/drag-exit/drag-exit.iml" filepath="$PROJECT_DIR$/drag-exit/drag-exit.iml" />

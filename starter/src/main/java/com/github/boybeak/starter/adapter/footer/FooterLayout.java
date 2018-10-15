@@ -1,65 +1,19 @@
 package com.github.boybeak.starter.adapter.footer;
 
-import android.content.Context;
-import android.databinding.BindingAdapter;
-import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
-import android.widget.ProgressBar;
 
+import com.github.boybeak.adapter.extension.AbsFooterLayout;
+import com.github.boybeak.adapter.extension.Footer;
 import com.github.boybeak.starter.R;
 
 /**
  * Created by gaoyunfei on 2018/3/9.
  */
 
-public final class FooterLayout extends AbsFooterLayout<FooterHolder> {
+public final class FooterLayout extends AbsFooterLayout {
 
-    @BindingAdapter({"footerState", "footerMessage"})
-    public static void setState (View view, @Footer.State int state, String message) {
-        ProgressBar pb = view.findViewById(R.id.footer_pb);
-        AppCompatTextView msgTv = view.findViewById(R.id.footer_msg);
-
-        if (message == null) {
-            Context context = view.getContext();
-            switch (state) {
-                case Footer.LOADING:
-                    message = "";
-                    break;
-                case Footer.SUCCESS:
-                    message = context.getString(R.string.text_done);
-                    break;
-                case Footer.FAILED:
-                    message = context.getString(R.string.text_failed);
-                    break;
-                case Footer.EMPTY:
-                    message = context.getString(R.string.text_no_more);
-                    break;
-            }
-        }
-        msgTv.setText(message);
-
-        int pbV = View.GONE;
-        int msgV = View.GONE;
-
-        switch (state) {
-            case Footer.LOADING:
-                pbV = View.VISIBLE;
-                msgV = View.GONE;
-                break;
-            case Footer.SUCCESS:
-            case Footer.FAILED:
-            case Footer.EMPTY:
-                pbV = View.GONE;
-                msgV = View.VISIBLE;
-                break;
-        }
-        pb.setVisibility(pbV);
-        msgTv.setVisibility(msgV);
-
-
-
-    }
-
+    private View.OnClickListener actionListener;
+    private String actionText;
 
     public FooterLayout(Footer footer) {
         super(footer);
@@ -75,4 +29,19 @@ public final class FooterLayout extends AbsFooterLayout<FooterHolder> {
         return R.layout.layout_footer;
     }
 
+    public View.OnClickListener getActionListener() {
+        return actionListener;
+    }
+
+    public void setActionListener(View.OnClickListener actionListener) {
+        this.actionListener = actionListener;
+    }
+
+    public String getActionText() {
+        return actionText;
+    }
+
+    public void setActionText(String actionText) {
+        this.actionText = actionText;
+    }
 }

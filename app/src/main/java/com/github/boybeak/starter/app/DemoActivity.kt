@@ -5,9 +5,7 @@ import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.TypedValue
-import android.widget.Toast
 import com.github.boybeak.starter.activity.BaseActivity
-import com.github.boybeak.starter.adapter.*
 import com.github.boybeak.starter.app.fragment.DemoFragment
 import com.github.boybeak.starter.widget.SimpleFragmentStatePagerAdapter
 import kotlinx.android.synthetic.main.activity_demo.*
@@ -24,7 +22,6 @@ class DemoActivity : BaseActivity() {
 
         tab_layout.setupWithViewPager(view_pager)
 
-        val adapter = FooterAdapter(this)
     }
 
     private fun getBg(theme: Resources.Theme): Drawable {

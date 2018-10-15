@@ -7,10 +7,10 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.github.boybeak.adapter.DataChange;
+import com.github.boybeak.adapter.extension.Footer;
 import com.github.boybeak.starter.R;
 import com.github.boybeak.starter.adapter.expandable.Group;
 import com.github.boybeak.starter.adapter.expandable.GroupList;
-import com.github.boybeak.starter.adapter.footer.Footer;
 import com.github.boybeak.starter.adapter.footer.FooterHolder;
 import com.github.boybeak.starter.adapter.footer.FooterLayout;
 import com.github.boybeak.starter.databinding.LayoutFooterBinding;
@@ -170,7 +170,7 @@ public class GroupCardAdapter extends RecyclerView.Adapter {
             return;
         }
         String msg = null;
-        if (state == Footer.EMPTY && !mGroupList.isEmpty()) {
+        if (state == Footer.NO_ONE && !mGroupList.isEmpty()) {
             msg = getContext().getString(R.string.text_no_more);
         }
         notifyFooter(state, msg);
@@ -201,7 +201,7 @@ public class GroupCardAdapter extends RecyclerView.Adapter {
     }
 
     public void notifyEmptyFooter (String message) {
-        notifyFooter(Footer.EMPTY, message);
+        notifyFooter(Footer.NO_ONE, message);
     }
 
     public void notifyEmptyFooter () {
