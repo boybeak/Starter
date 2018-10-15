@@ -65,8 +65,8 @@ dependencies {
     api 'io.reactivex.rxjava2:rxandroid:2.1.0'
     api 'io.reactivex.rxjava2:rxjava:2.2.0'
 
-    implementation 'com.github.boybeak:adapter:5.1.9'
-    annotationProcessor 'com.github.boybeak:adapter-compiler:5.1.9'
+    implementation 'com.github.boybeak:adapter:5.2.0'
+    annotationProcessor 'com.github.boybeak:adapter-compiler:5.2.0'
 
     implementation 'com.github.boybeak:drag-exit:0.0.5'
 

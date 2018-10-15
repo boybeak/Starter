@@ -1,11 +1,12 @@
-package com.github.boybeak.starter.adapter.footer
+package com.github.boybeak.starter.adapter
 
 import android.content.Context
 import android.view.View
 import com.github.boybeak.adapter.extension.Footer
 import com.github.boybeak.adapter.extension.FooterAdapter
+import com.github.boybeak.starter.adapter.footer.FooterLayout
 
-class OneAdapter(context: Context,
+open class OneAdapter(context: Context,
                  actionText: String?,
                  actionListener: View.OnClickListener?) : FooterAdapter(context, FooterLayout(Footer())) {
 

@@ -21,7 +21,6 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textStyle="bold"
                 />
             <ProgressBar
                 android:id="@+id/footer_pb"
@@ -48,9 +47,11 @@
                 />
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/footer_none_msg"
-                android:layout_width="240dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:maxWidth="240dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:gravity="center"
                 android:maxLines="5"
                 android:ellipsize="end"/>
             <Button

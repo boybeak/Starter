@@ -45,6 +45,7 @@ class FooterHolder(binding: LayoutFooterBinding) : com.github.boybeak.adapter.Ab
                 binding().footerMsg.visibility = View.GONE
                 binding().footerPb.visibility = View.GONE
                 binding().footerNoneActionBtn.visibility = visiblityOfAction(layout)
+                binding().footerNoneMsg.text = msg
             }
             Footer.NO_MORE -> {
                 binding().footerNotNone.visibility = View.VISIBLE
