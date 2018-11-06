@@ -7,7 +7,7 @@ ext {
     // compile '<groupId>:<artifactId>:<libVersion>'
     groupId = 'com.github.boybeak' // package name of the project
     artifactId = "starter" // module name of the library
-    libVersion = "0.2.16"
+    libVersion = "0.2.20"
 }
 version = libVersion
 group = groupId

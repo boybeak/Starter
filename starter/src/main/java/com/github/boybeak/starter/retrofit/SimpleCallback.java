@@ -6,7 +6,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public abstract class SimpleCallback<T> implements Callback<T> {
+public abstract class SimpleCallback<T> implements CallbackImpl<T> {
 
     private Callback<T> mCallback = null;
 
@@ -16,6 +16,11 @@ public abstract class SimpleCallback<T> implements Callback<T> {
 
     public SimpleCallback(Callback<T> callback) {
         mCallback = callback;
+    }
+
+    @Override
+    public void onPreCall() {
+
     }
 
     public void onPreResponse() {
