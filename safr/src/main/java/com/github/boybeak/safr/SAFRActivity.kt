@@ -19,19 +19,23 @@ class SAFRActivity : Activity() {
 
         id = intent.getStringExtra(SAFR.KEY_ID)
 
-        val it = Intent()
-        val extras = intent.extras
-        it.putExtras(extras)
-        it.type = intent.getStringExtra(SAFR.KEY_TYPE)
+        var it = intent.getParcelableExtra<Intent>(SAFR.KEY_INTENT)
+        if (it == null) {
+            it = Intent()
+            val extras = intent.extras
+            it.putExtras(extras)
+            it.type = intent.getStringExtra(SAFR.KEY_TYPE)
 
-        val action = intent.getStringExtra(SAFR.KEY_ACTION)
-        if (action != null) {
-            it.action = action
-        } else {
-            val clzName = intent.getStringExtra(SAFR.KEY_CLASS)
-            val clz = Class.forName(clzName)
-            it.setClass(this, clz)
+            val action = intent.getStringExtra(SAFR.KEY_ACTION)
+            if (action != null) {
+                it.action = action
+            } else {
+                val clzName = intent.getStringExtra(SAFR.KEY_CLASS)
+                val clz = Class.forName(clzName)
+                it.setClass(this, clz)
+            }
         }
+
         val requestCode = intent.getIntExtra(SAFR.KEY_REQUEST_CODE, 0)
         startActivityForResult(it, requestCode)
     }

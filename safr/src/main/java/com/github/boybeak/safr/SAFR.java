@@ -15,6 +15,7 @@ public class SAFR {
     private static final String TAG = SAFR.class.getSimpleName();
 
     static final String KEY_ID = "com.github.boybeak.safr.ID",
+            KEY_INTENT = "com.github.boybeak.safr.INTENT",
             KEY_ACTION = "com.github.boybeak.safr.ACTION",
             KEY_TYPE = "com.github.boybeak.safr.TYPE",
             KEY_CLASS = "com.github.boybeak.safr.CLASS",
@@ -35,12 +36,22 @@ public class SAFR {
         return new SAFR();
     }
 
+    private Intent mIntent = null;
     private Bundle mExtras = null;
     private String action, type;
     private Class<? extends Activity> aClass;
 
     private SAFR() {
         mExtras = new Bundle();
+    }
+
+    public SAFR byIntent(Intent intent) {
+        mIntent = intent;
+        mExtras = null;
+        action = null;
+        type = null;
+        aClass = null;
+        return this;
     }
 
     public SAFR byAction (String action) {
@@ -67,7 +78,7 @@ public class SAFR {
 
     public void startActivityForResult (Context context, int requestCode, Callback callback) {
 
-        if (action == null && aClass == null) {
+        if (action == null && aClass == null && mIntent == null) {
             throw new IllegalStateException("You must set action or class by method byAction or byClass");
         }
 
@@ -76,15 +87,18 @@ public class SAFR {
 
         Intent safrIt = new Intent(context, SAFRActivity.class);
         safrIt.putExtra(KEY_ID, id);
-        safrIt.putExtra(KEY_TYPE, type);
-        safrIt.putExtra(KEY_REQUEST_CODE, requestCode);
-        if (action != null) {
-            safrIt.putExtra(KEY_ACTION, action);
-        } else if (aClass != null) {
-            safrIt.putExtra(KEY_CLASS, aClass.getName());
+        if (mIntent != null) {
+            safrIt.putExtra(KEY_INTENT, mIntent);
+        } else {
+            safrIt.putExtra(KEY_TYPE, type);
+            safrIt.putExtra(KEY_REQUEST_CODE, requestCode);
+            if (action != null) {
+                safrIt.putExtra(KEY_ACTION, action);
+            } else if (aClass != null) {
+                safrIt.putExtra(KEY_CLASS, aClass.getName());
+            }
+            safrIt.putExtras(mExtras);
         }
-
-        safrIt.putExtras(mExtras);
         context.startActivity(safrIt);
 
     }

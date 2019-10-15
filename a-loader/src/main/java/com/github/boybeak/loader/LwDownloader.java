@@ -156,7 +156,15 @@ public class LwDownloader extends AsyncTask<Void, Float, Void> {
     @Override
     protected final Void doInBackground(Void... voids) {
         Log.v(TAG, "doInBackground thread=" + Thread.currentThread().getName());
-        size = getFileSize(from);
+        try {
+            size = getFileSize(from);
+        } catch (Exception e) {
+            e.printStackTrace();
+            if (callback != null) {
+                callback.onError(e);
+            }
+            return null;
+        }
         if (toTmp.exists() && toTmp.length() > size) {
             toTmp.delete();
 			/*if (autoContinueOnBreakPointIfPossible) {
@@ -171,7 +179,10 @@ public class LwDownloader extends AsyncTask<Void, Float, Void> {
             }
             doDownload();
         } else {
-            throw new IllegalStateException("The download url {" + from.toString() + "} seems doesn't exist");
+            Exception e = new IllegalStateException("The download url {" + from.toString() + "} seems doesn't exist");
+            if (callback != null) {
+                callback.onError(e);
+            }
         }
         return null;
     }

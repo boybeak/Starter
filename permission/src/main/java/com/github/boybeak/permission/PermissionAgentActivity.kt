@@ -48,7 +48,9 @@ class PermissionAgentActivity : Activity() {
             grantResults!!.forEachIndexed { index, i ->
                 result = result and (i == PackageManager.PERMISSION_GRANTED)
                 if (!result) {
-                    PH.actionDenied(id, permissions!![index])
+                    val permission = permissions!![index]
+                    PH.actionDenied(id, permission,
+                        ActivityCompat.shouldShowRequestPermissionRationale(this, permission))
                     return
                 }
             }

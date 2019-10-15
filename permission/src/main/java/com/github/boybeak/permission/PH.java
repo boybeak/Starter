@@ -28,15 +28,26 @@ public class PH {
         releaseCallback(id);
     }
 
-    static void actionDenied(String id, String permission) {
+    static void actionDenied(String id, String permission, boolean shouldShowRequestPermissionRationale) {
         Callback callback = sKeyCallbackMap.get(id);
         if (callback != null) {
-            callback.onDenied(permission);
+            callback.onDenied(permission, shouldShowRequestPermissionRationale);
         }
         releaseCallback(id);
     }
 
     public static boolean isPermissionGranted(Context context, String ... permissions) {
+        /*for (String p : permissions) {
+            int result = ContextCompat.checkSelfPermission(context, p);
+            if (result != PackageManager.PERMISSION_GRANTED) {
+                return false;
+            }
+        }
+        return true;*/
+        return isPermissionGranted(context, Arrays.asList(permissions));
+    }
+
+    public static boolean isPermissionGranted(Context context, List<String> permissions) {
         for (String p : permissions) {
             int result = ContextCompat.checkSelfPermission(context, p);
             if (result != PackageManager.PERMISSION_GRANTED) {
@@ -67,6 +78,11 @@ public class PH {
     }
 
     public void go(Context context, Callback callback) {
+
+        if (PH.isPermissionGranted(context, permissions)) {
+            callback.onGranted(permissions);
+            return;
+        }
 
         String id = UUID.randomUUID().toString();
 
