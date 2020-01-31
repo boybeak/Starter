@@ -7,7 +7,7 @@ ext {
     // compile '<groupId>:<artifactId>:<libVersion>'
     groupId = 'com.github.boybeak' // package name of the project
     artifactId = "picker" // module name of the library
-    libVersion = "1.1.1"
+    libVersion = "1.1.2"
 }
 version = libVersion
 group = groupId

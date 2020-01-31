@@ -48,7 +48,7 @@ open class CopyTask(context: Context, private var callback: Callback?) : AsyncTa
             val outFileTmp = File(outDir, "$outFileNameMD5.tmp")
             val outStream = FileOutputStream(outFileTmp)
             var size = 0
-            val bytes = ByteArray(1024)
+            val bytes = ByteArray(1024 * 8)
             do {
                 val length = inStream.read(bytes)
                 if (length != -1) {
