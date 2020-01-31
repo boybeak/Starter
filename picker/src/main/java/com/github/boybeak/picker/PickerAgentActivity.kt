@@ -234,6 +234,11 @@ class PickerAgentActivity : AppCompatActivity() {
         finish()
     }
 
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(0, R.anim.fade_out)
+    }
+
     inner class Triple(val uri: Uri, var file: File?, val isMatch: Boolean)
 
 }
