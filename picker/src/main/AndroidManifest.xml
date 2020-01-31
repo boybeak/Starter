@@ -8,7 +8,7 @@
     <application>
         <activity android:name=".PickerAgentActivity"
             android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+            android:theme="@style/Theme.AppCompat.Translucent"/>
     </application>
 
 </manifest>

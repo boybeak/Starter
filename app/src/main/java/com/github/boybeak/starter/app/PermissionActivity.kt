@@ -53,7 +53,7 @@ class PermissionActivity : DragExitToolbarActivity() {
                 Toast.makeText(this@PermissionActivity, "onGranted ", Toast.LENGTH_SHORT).show()
             }
 
-            override fun onDenied(permission: String) {
+            override fun onDenied(permission: String, shouldShowRequestPermissionRationale: Boolean) {
                 Toast.makeText(this@PermissionActivity, "onDenied ", Toast.LENGTH_SHORT).show()
             }
 

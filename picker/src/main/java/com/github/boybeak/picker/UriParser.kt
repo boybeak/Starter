@@ -57,7 +57,7 @@ object UriParser {
         var result: String?
         val cursor = context.contentResolver.query(uri, null, null, null, null)
         if (cursor == null) { // Source is Dropbox or other similar local file path
-            result = uri.getPath()
+            result = uri.path
         } else {
             cursor.moveToFirst()
             var idx = 0
@@ -65,6 +65,9 @@ object UriParser {
                 idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA)
             } else if (mime.contains(Picker.VIDEO)) {
                 idx = cursor.getColumnIndex(MediaStore.Video.VideoColumns.DATA)
+            }
+            if (idx < 0) {
+                return ""
             }
             result = cursor.getString(idx)
             cursor.close()

@@ -1,5 +1,6 @@
 package com.github.boybeak.picker;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
@@ -11,6 +12,7 @@ import android.util.Log;
 import java.io.File;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -54,19 +56,19 @@ public abstract class Picker {
         return id;
     }
 
-    static void actionCallback (String id, Uri uri, File file) {
+    static void actionCallback (String id, Uri uri, File file, boolean isMatch) {
         Callback callback = sIdCallbackMap.get(id);
         Log.v(TAG, "actionCallback id=" + id + " callback=" + callback);
         if (callback != null && callback instanceof SingleCallback) {
-            ((SingleCallback) callback).onGet(id, uri, file);
+            ((SingleCallback) callback).onGet(id, uri, file, isMatch);
         }
         releaseCallback(id);
     }
 
-    static void actionCallback (String id, List<Uri> uris, List<File> files) {
+    static void actionCallback (String id, List<Uri> uris, List<File> files, List<Boolean> isMatchList) {
         Callback callback = sIdCallbackMap.get(id);
         if (callback != null && callback instanceof MultipleCallback) {
-            ((MultipleCallback) callback).onGet(id, uris, files);
+            ((MultipleCallback) callback).onGet(id, uris, files, isMatchList);
         }
         releaseCallback(id);
     }
@@ -77,28 +79,6 @@ public abstract class Picker {
 
     private static void releaseCallback (String id) {
         sIdCallbackMap.remove(id);
-    }
-
-    static String getRealPathFromURI(Context context, Uri contentURI, String mime) {
-        /*String result = null;
-        Cursor cursor = context.getContentResolver().query(contentURI, null, null, null, null);
-        if (cursor == null) { // Source is Dropbox or other similar local file path
-            result = contentURI.getPath();
-        } else {
-            cursor.moveToFirst();
-            int idx = 0;
-            if (mime.contains(IMAGE)) {
-                idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
-            } else if (mime.contains(VIDEO)) {
-                idx = cursor.getColumnIndex(MediaStore.Video.VideoColumns.DATA);
-            }
-            Log.v(TAG, "getRealPathFromURI idx=" + idx);
-            result = cursor.getString(idx);
-            cursor.close();
-        }
-        return result;*/
-//        return UriUtils.INSTANCE.getUriRealPath(context, contentURI);
-        return UriParser.INSTANCE.getRealPath(context, contentURI, mime);
     }
 
     private @Mime String mime = IMAGE;

@@ -91,7 +91,6 @@ public class SAFR {
             safrIt.putExtra(KEY_INTENT, mIntent);
         } else {
             safrIt.putExtra(KEY_TYPE, type);
-            safrIt.putExtra(KEY_REQUEST_CODE, requestCode);
             if (action != null) {
                 safrIt.putExtra(KEY_ACTION, action);
             } else if (aClass != null) {
@@ -99,6 +98,7 @@ public class SAFR {
             }
             safrIt.putExtras(mExtras);
         }
+        safrIt.putExtra(KEY_REQUEST_CODE, requestCode);
         context.startActivity(safrIt);
 
     }

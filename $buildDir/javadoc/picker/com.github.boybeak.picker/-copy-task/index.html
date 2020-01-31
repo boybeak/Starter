@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CopyTask - picker</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">picker</a>&nbsp;/&nbsp;<a href="../index.html">com.github.boybeak.picker</a>&nbsp;/&nbsp;<a href="./index.html">CopyTask</a><br/>
+<br/>
+<h1>CopyTask</h1>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">CopyTask</span>&nbsp;<span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/AsyncTask.html"><span class="identifier">AsyncTask</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/android/util/ArrayMap.html"><span class="identifier">ArrayMap</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-callback/index.html">Callback</a></p>
+</td>
+<td>
+<code><span class="keyword">interface </span><span class="identifier">Callback</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CopyTask</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.picker.CopyTask$<init>(android.content.Context, com.github.boybeak.picker.CopyTask.Callback)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">, </span><span class="identifier" id="com.github.boybeak.picker.CopyTask$<init>(android.content.Context, com.github.boybeak.picker.CopyTask.Callback)/callback">callback</span><span class="symbol">:</span>&nbsp;<a href="-callback/index.html"><span class="identifier">Callback</span></a><span class="symbol">?</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="do-in-background.html">doInBackground</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">doInBackground</span><span class="symbol">(</span><span class="keyword">vararg</span> <span class="identifier" id="com.github.boybeak.picker.CopyTask$doInBackground(kotlin.Array((android.net.Uri)))/uris">uris</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/util/ArrayMap.html"><span class="identifier">ArrayMap</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-cancelled.html">onCancelled</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCancelled</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code><br/>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCancelled</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.picker.CopyTask$onCancelled(android.util.ArrayMap((android.net.Uri, java.io.File)))/result">result</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/util/ArrayMap.html"><span class="identifier">ArrayMap</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-post-execute.html">onPostExecute</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onPostExecute</span><span class="symbol">(</span><span class="identifier" id="com.github.boybeak.picker.CopyTask$onPostExecute(android.util.ArrayMap((android.net.Uri, java.io.File)))/result">result</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/util/ArrayMap.html"><span class="identifier">ArrayMap</span></a><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/net/Uri.html"><span class="identifier">Uri</span></a><span class="symbol">,</span>&nbsp;<a href="https://developer.android.com/reference/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">&gt;</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
