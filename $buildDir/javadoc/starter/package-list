@@ -10,7 +10,6 @@ $dokka.location:com.github.boybeak.starter.widget$foreachChildIndexed(android.vi
 $dokka.location:com.github.boybeak.starter.widget$get(android.view.ViewGroup, kotlin.Int)com.github.boybeak.starter.widget/android.view.-view-group/get.html
 com.github.boybeak.starter
 com.github.boybeak.starter.activity
-com.github.boybeak.starter.activity.de
 com.github.boybeak.starter.adapter
 com.github.boybeak.starter.adapter.card
 com.github.boybeak.starter.adapter.expandable

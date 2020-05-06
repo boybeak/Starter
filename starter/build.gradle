@@ -68,7 +68,7 @@ dependencies {
     implementation "com.github.boybeak:adapter:$adapter_version"
     annotationProcessor "com.github.boybeak:adapter-compiler:$adapter_version"
 
-    implementation 'com.github.boybeak:drag-exit:0.0.5'
+//    implementation 'com.github.boybeak:drag-exit:0.0.5'
 
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 }
