@@ -1,7 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'org.jetbrains.dokka-android'
-apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 27
@@ -34,10 +31,3 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
-
-dokka {
-    outputFormat = 'html'
-    outputDirectory = '$buildDir/javadoc'
-}
-
-apply from: 'deploy-a-loader.gradle'

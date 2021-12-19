@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Starter.iml" filepath="$PROJECT_DIR$/Starter.iml" group="Starter" />
-      <module fileurl="file://$PROJECT_DIR$/a-loader/a-loader.iml" filepath="$PROJECT_DIR$/a-loader/a-loader.iml" group="Starter/a-loader" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Starter/app" />
-      <module fileurl="file://$PROJECT_DIR$/calendar/calendar.iml" filepath="$PROJECT_DIR$/calendar/calendar.iml" group="Starter/calendar" />
-      <module fileurl="file://$PROJECT_DIR$/drag-exit/drag-exit.iml" filepath="$PROJECT_DIR$/drag-exit/drag-exit.iml" group="Starter/drag-exit" />
-      <module fileurl="file://$PROJECT_DIR$/j-loader/j-loader.iml" filepath="$PROJECT_DIR$/j-loader/j-loader.iml" group="Starter/j-loader" />
-      <module fileurl="file://$PROJECT_DIR$/permission/permission.iml" filepath="$PROJECT_DIR$/permission/permission.iml" group="Starter/permission" />
-      <module fileurl="file://$PROJECT_DIR$/picker/picker.iml" filepath="$PROJECT_DIR$/picker/picker.iml" group="Starter/picker" />
-      <module fileurl="file://$PROJECT_DIR$/safr/safr.iml" filepath="$PROJECT_DIR$/safr/safr.iml" group="Starter/safr" />
-      <module fileurl="file://$PROJECT_DIR$/starter/starter.iml" filepath="$PROJECT_DIR$/starter/starter.iml" group="Starter/starter" />
+      <module fileurl="file://$PROJECT_DIR$/Starter.iml" filepath="$PROJECT_DIR$/Starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/a-loader/Starter.a-loader.iml" filepath="$PROJECT_DIR$/.idea/modules/a-loader/Starter.a-loader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Starter.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Starter.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/calendar/Starter.calendar.iml" filepath="$PROJECT_DIR$/.idea/modules/calendar/Starter.calendar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/drag-exit/Starter.drag-exit.iml" filepath="$PROJECT_DIR$/.idea/modules/drag-exit/Starter.drag-exit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/j-loader/Starter.j-loader.iml" filepath="$PROJECT_DIR$/.idea/modules/j-loader/Starter.j-loader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/permission/Starter.permission.iml" filepath="$PROJECT_DIR$/.idea/modules/permission/Starter.permission.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/picker/Starter.picker.iml" filepath="$PROJECT_DIR$/.idea/modules/picker/Starter.picker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/safr/Starter.safr.iml" filepath="$PROJECT_DIR$/.idea/modules/safr/Starter.safr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/starter/Starter.starter.iml" filepath="$PROJECT_DIR$/.idea/modules/starter/Starter.starter.iml" />
     </modules>
   </component>
 </project>

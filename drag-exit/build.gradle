@@ -1,14 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'org.jetbrains.dokka-android'
-apply plugin: 'maven-publish'
+
+apply from: '../publish-script.gradle'
 
 android {
     compileSdkVersion 27
-
-
 
     defaultConfig {
         minSdkVersion 21
@@ -39,10 +36,3 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
-
-dokka {
-    outputFormat = 'html'
-    outputDirectory = '$buildDir/javadoc'
-}
-
-apply from: 'deploy-drag-exit.gradle'

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="Starter.a-loader" target="1.8" />
+      <module name="Starter.app" target="1.8" />
+      <module name="Starter.calendar" target="1.8" />
+      <module name="Starter.drag-exit" target="1.8" />
+      <module name="Starter.permission" target="1.8" />
+      <module name="Starter.picker" target="1.8" />
+      <module name="Starter.safr" target="1.8" />
+      <module name="Starter.starter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

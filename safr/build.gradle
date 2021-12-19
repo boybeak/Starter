@@ -1,7 +1,8 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'org.jetbrains.dokka-android'
-apply plugin: 'maven-publish'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: '../publish-script.gradle'
 
 android {
     compileSdkVersion 27
@@ -35,21 +36,3 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
-
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-
-task dokka(overwrite: true, type: org.jetbrains.dokka.gradle.DokkaAndroidTask) {
-    outputFormat = 'html'
-    outputDirectory = '$buildDir/javadoc'
-    // Do not create index pages for empty packages
-    skipEmptyPackages = true
-
-    //Do not output deprecated members. Applies globally, can be overridden by packageOptions
-    skipDeprecated = false
-
-    //No default documentation link to kotlin-stdlib
-    noStdlibLink = false
-}
-
-apply from: 'deploy-safr.gradle'

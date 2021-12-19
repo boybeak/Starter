@@ -125,7 +125,6 @@ class PickerAgentActivity : AppCompatActivity() {
             if (mime == Picker.VIDEO) {
                 if (durationLimit > 0) {
                     it.putExtra(MediaStore.EXTRA_DURATION_LIMIT, durationLimit)
-                    MediaStore.EXTRA_VIDEO_QUALITY
                 }
                 it.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, quality)
             }

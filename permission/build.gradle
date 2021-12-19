@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'org.jetbrains.dokka-android'
-apply plugin: 'maven-publish'
+
+apply from: '../publish-script.gradle'
 
 android {
     compileSdkVersion 27
@@ -39,10 +38,3 @@ dependencies {
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
-dokka {
-    outputFormat = 'html'
-    outputDirectory = '$buildDir/javadoc'
-}
-
-apply from: 'deploy-permission.gradle'
